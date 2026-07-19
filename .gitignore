@@ -1,0 +1,22 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# AI stuff and directories
+.claude/
+.gemini/
+.cursor/
+.cursorrules
+.mcp.json
+.system_generated/
+scratch/
+
+# Claude and Markdown files
+CLAUDE.md
+*.md
+
+# Gitignore itself
+.gitignore
+
+# Beckett Addon
+addons/beckett/

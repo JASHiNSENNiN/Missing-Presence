@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://Scenes/Shared/paper_panel.gdshader" id="1_shader"]
+
+[resource]
+shader = ExtResource("1_shader")
+shader_parameter/panel_color = Color(0.667, 0.424, 0.263, 1)
+shader_parameter/node_size = Vector2(440, 190)
+shader_parameter/corner_radius = 22.0
+shader_parameter/edge_softness = 1.5
+shader_parameter/grain_strength = 0.05
+shader_parameter/grain_scale = 180.0
+shader_parameter/flicker_speed = 0.5

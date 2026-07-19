@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://btk0x3i3nvl8y"]
+
+[ext_resource type="Shader" uid="uid://b5jrb75kfrpgc" path="res://Scenes/DialogicUI/kraft_frame_mask.gdshader" id="1_mwa45"]
+
+[resource]
+shader = ExtResource("1_mwa45")
+shader_parameter/frame_color = Color(0.831, 0.643, 0.376, 1)
+shader_parameter/window_position = Vector2(71, 61)
+shader_parameter/window_size = Vector2(1010, 551)
+shader_parameter/corner_radius = 26.0
+shader_parameter/edge_softness = 1.5
+shader_parameter/grain_strength = 0.04
+shader_parameter/grain_scale = 180.0
+shader_parameter/flicker_speed = 0.5

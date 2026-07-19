@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://cmrquawtn8twk"]
+
+[ext_resource type="Script" uid="uid://dplkvd0ub7jum" path="res://Scenes/Main Menu/main_menu.gd" id="1_nyrqo"]
+[ext_resource type="Script" uid="uid://byv37rso2gnv1" path="res://Scenes/Shared/menu_background.gd" id="2_pwxul"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/cloud_drift_material.tres" id="3_c212r"]
+[ext_resource type="Texture2D" uid="uid://c243wnyyjkbs" path="res://Mocks/main menu/Background/Layer 1.png" id="4_6gba3"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/grass_sway_hill_material.tres" id="5_48bge"]
+[ext_resource type="Texture2D" uid="uid://nxefcxsx1sk" path="res://Mocks/main menu/Background/Layer 2.png" id="6_i7aiw"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/hair_sway_material.tres" id="7_c0ou2"]
+[ext_resource type="Texture2D" uid="uid://wk81rx8sa2ki" path="res://Mocks/main menu/Background/Layer 3.png" id="8_ob51s"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/grass_sway_mid_material.tres" id="9_ax8fy"]
+[ext_resource type="Texture2D" uid="uid://dh1oaitep7t0j" path="res://Mocks/main menu/Background/Layer 4.png" id="10_ifuh0"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/grass_sway_front_material.tres" id="11_54ong"]
+[ext_resource type="Texture2D" uid="uid://u8lv5cw5lrv2" path="res://Mocks/main menu/Background/Layer 5.png" id="12_ta1cb"]
+[ext_resource type="Material" uid="uid://blwxljm8gux5m" path="res://Scenes/Shared/paper_grain_material.tres" id="13_0dm6f"]
+[ext_resource type="Texture2D" uid="uid://bse5tqky6ki" path="res://Mocks/main menu/Mask group.png" id="14_oobkp"]
+[ext_resource type="Script" uid="uid://cmtljkubyskp8" path="res://Scenes/Shared/quality_gated_material.gd" id="15_d7a83"]
+[ext_resource type="Texture2D" uid="uid://dovogbtkwg7ws" path="res://Mocks/main menu/highlight.png" id="17_8ntr4"]
+
+[node name="MainMenu" type="Node2D" unique_id=373517807]
+script = ExtResource("1_nyrqo")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1387117317]
+
+[node name="BackgroundLayers" type="Node2D" parent="CanvasLayer" unique_id=1967551499]
+script = ExtResource("2_pwxul")
+
+[node name="Sky" type="Sprite2D" parent="CanvasLayer/BackgroundLayers" unique_id=1719749015]
+material = ExtResource("3_c212r")
+position = Vector2(1500, 843.5)
+texture = ExtResource("4_6gba3")
+
+[node name="Hill" type="Sprite2D" parent="CanvasLayer/BackgroundLayers" unique_id=1948977139]
+material = ExtResource("5_48bge")
+position = Vector2(1500, 986.5)
+texture = ExtResource("6_i7aiw")
+
+[node name="GrassMid" type="Sprite2D" parent="CanvasLayer/BackgroundLayers" unique_id=201585098]
+material = ExtResource("9_ax8fy")
+position = Vector2(3596, 570.9998)
+scale = Vector2(1.142, 1.6787757)
+texture = ExtResource("10_ifuh0")
+
+[node name="Character" type="Sprite2D" parent="CanvasLayer/BackgroundLayers" unique_id=2115267695]
+z_index = 1
+material = ExtResource("7_c0ou2")
+position = Vector2(2105, 982)
+texture = ExtResource("8_ob51s")
+
+[node name="GrassFront" type="Sprite2D" parent="CanvasLayer/BackgroundLayers" unique_id=1382714668]
+z_index = 1
+material = ExtResource("11_54ong")
+position = Vector2(1865.0001, 967.99994)
+scale = Vector2(1.1140001, 1.5794101)
+texture = ExtResource("12_ta1cb")
+
+[node name="MenuLayout" type="Node" parent="CanvasLayer" unique_id=672181933]
+
+[node name="PaperPanel2" type="TextureRect" parent="CanvasLayer/MenuLayout" unique_id=1480991900]
+material = ExtResource("13_0dm6f")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2073.0002
+offset_top = 706.00006
+offset_right = 1156.1614
+offset_bottom = 768.60767
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 2.3329258
+mouse_filter = 2
+texture = ExtResource("14_oobkp")
+expand_mode = 1
+script = ExtResource("15_d7a83")
+
+[node name="PaperPanel3" type="TextureRect" parent="CanvasLayer/MenuLayout" unique_id=1614896866]
+material = ExtResource("13_0dm6f")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2293.0
+offset_top = 577.0
+offset_right = 1376.1611
+offset_bottom = 639.60754
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 2.4724395
+mouse_filter = 2
+texture = ExtResource("14_oobkp")
+expand_mode = 1
+script = ExtResource("15_d7a83")
+
+[node name="PaperPanel" type="TextureRect" parent="CanvasLayer/MenuLayout" unique_id=633882043]
+material = ExtResource("13_0dm6f")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1963.9999
+offset_top = 819.0
+offset_right = 1047.1611
+offset_bottom = 881.6074
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 2.0442762
+scale = Vector2(0.88742214, 1.0153102)
+mouse_filter = 2
+texture = ExtResource("14_oobkp")
+expand_mode = 1
+script = ExtResource("15_d7a83")
+
+[node name="HighlightIcon" type="TextureRect" parent="CanvasLayer/MenuLayout" unique_id=779278729]
+anchors_preset = -1
+anchor_left = 0.11
+anchor_top = 0.4
+anchor_right = 0.36
+anchor_bottom = 0.47
+offset_left = -11.235779
+offset_top = -27.200012
+offset_right = -11.235809
+offset_bottom = -27.200012
+mouse_filter = 2
+texture = ExtResource("17_8ntr4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StartLabel" type="Label" parent="CanvasLayer/MenuLayout" unique_id=1383788249]
+offset_left = 415.81342
+offset_top = 232.0
+offset_right = 991.8134
+offset_bottom = 277.0
+theme_override_colors/font_color = Color(0.32, 0.2, 0.1, 1)
+theme_override_font_sizes/font_size = 32
+text = "start"
+
+[node name="LoadLabel" type="Label" parent="CanvasLayer/MenuLayout" unique_id=762691797]
+offset_left = 1822.0
+offset_top = 235.00002
+offset_right = 2398.0
+offset_bottom = 280.0
+rotation = -0.022991398
+theme_override_colors/font_color = Color(0.32, 0.2, 0.1, 1)
+theme_override_font_sizes/font_size = 32
+text = "load"
+
+[node name="ExitLabel" type="Label" parent="CanvasLayer/MenuLayout" unique_id=523840090]
+offset_left = 1543.0
+offset_top = 378.0
+offset_right = 2119.0
+offset_bottom = 423.0
+theme_override_colors/font_color = Color(0.32, 0.2, 0.1, 1)
+theme_override_font_sizes/font_size = 32
+text = "exit"
+
+[node name="OptionsLabel" type="Label" parent="CanvasLayer/MenuLayout" unique_id=1714304906]
+offset_left = 1357.0
+offset_top = 611.0
+offset_right = 1933.0
+offset_bottom = 656.0
+rotation = 0.30435404
+theme_override_colors/font_color = Color(0.32, 0.2, 0.1, 1)
+theme_override_font_sizes/font_size = 32
+text = "options"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2091874217]

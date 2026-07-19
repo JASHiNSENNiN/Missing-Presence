@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://c3us8bmo44mdy"]
+
+[ext_resource type="Script" uid="uid://dr6qe1t5vj8f" path="res://Scenes/Shared/confirm_popup.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bse5tqky6ki" path="res://Mocks/main menu/Mask group.png" id="2_paper_tex"]
+[ext_resource type="Material" uid="uid://blwxljm8gux5m" path="res://Scenes/Shared/paper_grain_material.tres" id="3_grain"]
+[ext_resource type="Script" uid="uid://cmtljkubyskp8" path="res://Scenes/Shared/quality_gated_material.gd" id="4_quality"]
+[ext_resource type="Texture2D" uid="uid://dovogbtkwg7ws" path="res://Mocks/main menu/highlight.png" id="5_highlight"]
+
+[node name="ConfirmPopup" type="CanvasLayer" unique_id=40970126]
+process_mode = 3
+layer = 10
+script = ExtResource("1_script")
+
+[node name="DimBackground" type="ColorRect" parent="." unique_id=409239458]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.07, 0.04, 0.55)
+
+[node name="PaperPanel" type="TextureRect" parent="." unique_id=1734739040]
+material = ExtResource("3_grain")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -140.0
+offset_right = 230.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_paper_tex")
+expand_mode = 1
+script = ExtResource("4_quality")
+
+[node name="Margin" type="MarginContainer" parent="PaperPanel" unique_id=775563312]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 34
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 34
+theme_override_constants/margin_bottom = 40
+
+[node name="VBox" type="VBoxContainer" parent="PaperPanel/Margin" unique_id=1534017245]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="MessageLabel" type="Label" parent="PaperPanel/Margin/VBox" unique_id=242083911]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.29, 0.27, 0.25, 1)
+theme_override_font_sizes/font_size = 19
+text = "Are you sure?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ChoiceArea" type="Control" parent="PaperPanel/Margin/VBox" unique_id=64816394]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="ChoiceHighlight" type="TextureRect" parent="PaperPanel/Margin/VBox/ChoiceArea" unique_id=259476898]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -18.0
+offset_right = 55.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_highlight")
+expand_mode = 1
+
+[node name="ChoiceVBox" type="VBoxContainer" parent="PaperPanel/Margin/VBox/ChoiceArea" unique_id=1606792583]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="ConfirmLabel" type="Label" parent="PaperPanel/Margin/VBox/ChoiceArea/ChoiceVBox" unique_id=64816395]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.32, 0.2, 0.1, 1)
+theme_override_font_sizes/font_size = 22
+text = "Confirm"
+horizontal_alignment = 1
+
+[node name="CancelLabel" type="Label" parent="PaperPanel/Margin/VBox/ChoiceArea/ChoiceVBox" unique_id=64816396]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.32, 0.2, 0.1, 1)
+theme_override_font_sizes/font_size = 22
+text = "Cancel"
+horizontal_alignment = 1
+
+[node name="BackTab" type="ColorRect" parent="." unique_id=1965357744]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -158.0
+offset_right = -180.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.12
+mouse_default_cursor_shape = 2
+color = Color(0.58, 0.7, 0.5, 1)
+
+[node name="BackLabel" type="Label" parent="BackTab" unique_id=1606792582]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 4.0
+offset_right = 76.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.32, 0.2, 0.1, 1)
+theme_override_font_sizes/font_size = 16
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1

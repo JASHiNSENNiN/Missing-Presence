@@ -1,0 +1,100 @@
+# ================================================================
+# ACT 1 - Scene 2: INT. COLLEGE HALLWAY - NOON  (script p.2-3)
+# Persona-style spotlight: Maya + Ethan both joined at "leftmost" for the
+# whole scene; only the speaker shows. Instant In/Out.
+# FLAG(art): no hallway bg - reusing "image 2.png" (courtyard).
+# ================================================================
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+[background arg="res://Mocks/Novel UI/image 2.png" fade="0.6"]
+
+The lunch bell rings. Students pour out of the classrooms.
+
+join Maya (default) left [animation="Instant In"]
+join Ethan (default) right [animation="Instant In"]
+Maya and Ethan walk together.
+
+Ethan: Mukhang ninerbyos ka kanina ah.
+
+Maya: Ughhh, nooo...[pause=0.4] Super halata ba?
+
+Ethan: Medj.
+
+Maya: Shucks, nakakahiya.
+
+Ethan: Pshh, hindi naman.[pause=0.2] Lots of people don't know what to do in life.
+
+Maya: ...But everyone had answers to what they want in their future.
+
+Ethan: Hindi naman lahat...[pause=0.3] Trust me, maraming nagkukunwari lang.
+
+Maya chuckles, a little nervous.
+
+Ethan: Pero real - okay ka lang ba?
+
+- Open up to him
+	set {Route.affinity_ethan} += 1
+	set {Route.self_honesty} += 1
+	Maya: Yeah...[pause=0.5] Actually, wait. No.
+	Maya: Not really. Hindi ko talaga alam gusto kong gawin.
+	Something loosens in her chest. Just a little.
+- Brush it off
+	Maya: Yeah.[pause=0.3] Okay lang. Really.
+	Ethan doesn't push. But he doesn't look convinced either.
+	Maya: ...Okay, hindi. Hindi ko talaga alam gusto kong gawin.
+
+Ethan: And that's okay.
+
+Maya: 'Bat parang hindi.
+
+Ethan: Maya, we're twenty-one.[pause=0.3] Hindi naman kailangan alam mo agad lahat.
+
+Maya: Sana ganyan din tingin ng parents ko.
+
+Ethan catches the seriousness in her voice.
+
+Ethan: Are things okay at home?
+
+Maya: Okay naman.
+
+A pause.
+
+Maya: Just...[pause=0.4] a lot of expectations placed on my lap now.
+
+Ethan: Gets.
+
+Maya notices Ethan looking away.
+
+Maya: Ikaw?
+
+Ethan: Huh?
+
+Maya: May problema ka rin ba?
+
+Ethan: [pause=0.7]...Medyo.
+
+Maya: What happened?
+
+Ethan: Just family stuff.
+
+She waits. Patiently. Letting the silence make room for him.
+
+Ethan: Mom and Dad aren't really doing great.
+
+Maya: I'm sorry.
+
+Ethan: It's okay.
+
+Maya: No, seriously.
+
+Ethan: We'll figure it out.
+
+Maya: If you need someone to talk to...
+
+Ethan: I know.[pause=0.4] Thanks.
+
+The two keep walking. For a moment, neither of them feels completely alone.
+
+leave Maya [animation="Instant Out"]
+leave Ethan [animation="Instant Out"]
+
+jump act1_dinner/

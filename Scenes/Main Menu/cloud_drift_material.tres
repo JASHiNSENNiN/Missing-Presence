@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://Scenes/Main Menu/cloud_drift.gdshader" id="1"]
+
+[resource]
+shader = ExtResource("1")
+shader_parameter/scroll_amplitude = 0.05
+shader_parameter/scroll_speed = 0.25

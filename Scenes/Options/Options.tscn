@@ -1,0 +1,501 @@
+[gd_scene format=3 uid="uid://tn1p614jhvbk"]
+
+[ext_resource type="Script" uid="uid://catnedm0it8l5" path="res://Scenes/Options/options_menu.gd" id="1_ya65m"]
+[ext_resource type="Script" uid="uid://byv37rso2gnv1" path="res://Scenes/Shared/menu_background.gd" id="2_lmhfv"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/cloud_drift_material.tres" id="3_odi3q"]
+[ext_resource type="StyleBox" uid="uid://bur7ttyhe4mun" path="res://Scenes/Options/brown_frame_style.tres" id="3_pmi7j"]
+[ext_resource type="StyleBox" uid="uid://dr6vqid1wrchw" path="res://Scenes/Options/cream_page_style.tres" id="4_ju5ps"]
+[ext_resource type="Texture2D" uid="uid://c243wnyyjkbs" path="res://Mocks/main menu/Background/Layer 1.png" id="4_pgaf7"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/grass_sway_hill_material.tres" id="5_5kh2y"]
+[ext_resource type="Script" uid="uid://dc8jw7m07nyqu" path="res://Scenes/Options/page_divider.gd" id="5_e1euh"]
+[ext_resource type="Texture2D" uid="uid://nxefcxsx1sk" path="res://Mocks/main menu/Background/Layer 2.png" id="6_ifxif"]
+[ext_resource type="Texture2D" uid="uid://bacsqiv47jkfm" path="res://Mocks/options/labels/title.png" id="6_w1vr6"]
+[ext_resource type="Texture2D" uid="uid://bpjkqna0vlvtd" path="res://Mocks/options/labels/Display.png" id="7_tw3iw"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/hair_sway_material.tres" id="7_x6utn"]
+[ext_resource type="Texture2D" uid="uid://wk81rx8sa2ki" path="res://Mocks/main menu/Background/Layer 3.png" id="8_217lb"]
+[ext_resource type="Texture2D" uid="uid://7h5mabmnhrag" path="res://Mocks/options/labels/Full Screen Windowed.png" id="8_xg44c"]
+[ext_resource type="Texture2D" uid="uid://dfjlo0glv11vh" path="res://Mocks/options/checkbox/check box 1.png" id="9_8ee0a"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/grass_sway_mid_material.tres" id="9_84sol"]
+[ext_resource type="Texture2D" uid="uid://dkro870vruldh" path="res://Mocks/options/checkbox/check.png" id="10_46r36"]
+[ext_resource type="Texture2D" uid="uid://dh1oaitep7t0j" path="res://Mocks/main menu/Background/Layer 4.png" id="10_n6dgy"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/grass_sway_front_material.tres" id="11_wmyak"]
+[ext_resource type="Texture2D" uid="uid://tyy0xg5ywic4" path="res://Mocks/options/labels/Text.png" id="11_xcivj"]
+[ext_resource type="Texture2D" uid="uid://c1m68vu4qfri7" path="res://Mocks/options/labels/Text Speed Forward Speed.png" id="12_bnt03"]
+[ext_resource type="Texture2D" uid="uid://u8lv5cw5lrv2" path="res://Mocks/main menu/Background/Layer 5.png" id="12_hdj52"]
+[ext_resource type="Material" uid="uid://blwxljm8gux5m" path="res://Scenes/Shared/paper_grain_material.tres" id="13_28prt"]
+[ext_resource type="Texture2D" uid="uid://bdmq1q2vprve3" path="res://Mocks/options/progress bar/Rectangle 29.png" id="13_tor1p"]
+[ext_resource type="StyleBox" uid="uid://bmwukq1fsg2f4" path="res://Scenes/Options/slider_groove_style.tres" id="14_hccrg"]
+[ext_resource type="StyleBox" uid="uid://b48pt2u01v8o5" path="res://Scenes/Options/slider_empty_style.tres" id="15_rd7ph"]
+[ext_resource type="Script" uid="uid://cmtljkubyskp8" path="res://Scenes/Shared/quality_gated_material.gd" id="15_w3tbs"]
+[ext_resource type="Texture2D" uid="uid://cjhvt3rqp2cwb" path="res://Mocks/options/progress bar/Slow.png" id="16_s06ti"]
+[ext_resource type="Texture2D" uid="uid://es7s5pbg3sqx" path="res://Mocks/options/progress bar/Default.png" id="17_f10da"]
+[ext_resource type="Texture2D" uid="uid://cr7tvl1d7ik0s" path="res://Mocks/options/progress bar/Fast.png" id="18_dvrf6"]
+[ext_resource type="Texture2D" uid="uid://d0hltwbpaoogp" path="res://Mocks/options/labels/Volume.png" id="19_2v3bh"]
+[ext_resource type="Texture2D" uid="uid://c07no4h7iq62g" path="res://Mocks/options/labels/Background Music Sound Effects UI Sounds.png" id="20_5117f"]
+[ext_resource type="Texture2D" uid="uid://vmud7ee7rimx" path="res://Mocks/options/volume bar/Rectangle 35.png" id="21_arqlo"]
+
+[node name="OptionsMenu" type="Node2D" unique_id=373517807]
+process_mode = 3
+script = ExtResource("1_ya65m")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1387117317]
+
+[node name="BackgroundLayers" type="Node2D" parent="CanvasLayer" unique_id=1730633901]
+script = ExtResource("2_lmhfv")
+
+[node name="Sky" type="Sprite2D" parent="CanvasLayer/BackgroundLayers" unique_id=953890390]
+material = ExtResource("3_odi3q")
+position = Vector2(1500, 843.5)
+texture = ExtResource("4_pgaf7")
+
+[node name="Hill" type="Sprite2D" parent="CanvasLayer/BackgroundLayers" unique_id=685387542]
+material = ExtResource("5_5kh2y")
+position = Vector2(1500, 986.5)
+texture = ExtResource("6_ifxif")
+
+[node name="Character" type="Sprite2D" parent="CanvasLayer/BackgroundLayers" unique_id=233251353]
+material = ExtResource("7_x6utn")
+position = Vector2(2028, 1021)
+texture = ExtResource("8_217lb")
+
+[node name="GrassMid" type="Sprite2D" parent="CanvasLayer/BackgroundLayers" unique_id=1865021426]
+material = ExtResource("9_84sol")
+position = Vector2(1519, 947.5006)
+scale = Vector2(1.142, 1.6787757)
+texture = ExtResource("10_n6dgy")
+
+[node name="GrassFront" type="Sprite2D" parent="CanvasLayer/BackgroundLayers" unique_id=234238222]
+material = ExtResource("11_wmyak")
+position = Vector2(1489, 966.0007)
+scale = Vector2(1.1140001, 1.5794101)
+texture = ExtResource("12_hdj52")
+
+[node name="MenuLayout" type="Control" parent="CanvasLayer" unique_id=1569200199]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BookRoot" type="Control" parent="CanvasLayer/MenuLayout" unique_id=479074599]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="BookFrame" type="Panel" parent="CanvasLayer/MenuLayout/BookRoot" unique_id=1241173166]
+material = ExtResource("13_28prt")
+layout_mode = 0
+offset_left = 148.0
+offset_top = 47.0
+offset_right = 1002.0
+offset_bottom = 622.0
+theme_override_styles/panel = ExtResource("3_pmi7j")
+script = ExtResource("15_w3tbs")
+
+[node name="StickyBlue" type="ColorRect" parent="CanvasLayer/MenuLayout/BookRoot" unique_id=2072909543]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 268.0
+offset_right = 169.0
+offset_bottom = 313.0
+color = Color(0.494, 0.714, 0.784, 1)
+
+[node name="StickyRed" type="ColorRect" parent="CanvasLayer/MenuLayout/BookRoot" unique_id=2054055374]
+layout_mode = 0
+offset_left = 980.0
+offset_top = 88.0
+offset_right = 1018.0
+offset_bottom = 133.0
+color = Color(0.812, 0.392, 0.349, 1)
+
+[node name="StickyYellow" type="ColorRect" parent="CanvasLayer/MenuLayout/BookRoot" unique_id=897068757]
+layout_mode = 0
+offset_left = 957.0
+offset_top = 164.0
+offset_right = 1018.0
+offset_bottom = 208.0
+color = Color(0.886, 0.741, 0.333, 1)
+
+[node name="PageStack1" type="Panel" parent="CanvasLayer/MenuLayout/BookRoot" unique_id=1231691612]
+modulate = Color(0.88, 0.85, 0.78, 1)
+layout_mode = 0
+offset_left = 155.0
+offset_top = 50.0
+offset_right = 1002.0
+offset_bottom = 611.0
+theme_override_styles/panel = ExtResource("4_ju5ps")
+
+[node name="PageStack2" type="Panel" parent="CanvasLayer/MenuLayout/BookRoot" unique_id=1165376890]
+modulate = Color(0.91, 0.88, 0.81, 1)
+layout_mode = 0
+offset_left = 159.0
+offset_top = 54.0
+offset_right = 998.0
+offset_bottom = 607.0
+theme_override_styles/panel = ExtResource("4_ju5ps")
+
+[node name="PageStack3" type="Panel" parent="CanvasLayer/MenuLayout/BookRoot" unique_id=214520044]
+modulate = Color(0.94, 0.91, 0.84, 1)
+layout_mode = 0
+offset_left = 163.0
+offset_top = 58.0
+offset_right = 994.0
+offset_bottom = 603.0
+theme_override_styles/panel = ExtResource("4_ju5ps")
+
+[node name="PageStack4" type="Panel" parent="CanvasLayer/MenuLayout/BookRoot" unique_id=1326596160]
+modulate = Color(0.97, 0.95, 0.9, 1)
+layout_mode = 0
+offset_left = 167.0
+offset_top = 62.0
+offset_right = 990.0
+offset_bottom = 599.0
+theme_override_styles/panel = ExtResource("4_ju5ps")
+
+[node name="StickyBack" type="ColorRect" parent="CanvasLayer/MenuLayout/BookRoot" unique_id=1754139515]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 32.0
+offset_right = 280.0
+offset_bottom = 80.0
+mouse_default_cursor_shape = 2
+color = Color(0.58, 0.7, 0.5, 1)
+
+[node name="BackLabel" type="Label" parent="CanvasLayer/MenuLayout/BookRoot/StickyBack" unique_id=2135982644]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 70.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.32, 0.2, 0.1, 1)
+theme_override_font_sizes/font_size = 16
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PageBackground" type="Panel" parent="CanvasLayer/MenuLayout/BookRoot" unique_id=1110712723]
+material = ExtResource("13_28prt")
+layout_mode = 0
+offset_left = 171.0
+offset_top = 66.0
+offset_right = 986.0
+offset_bottom = 595.0
+theme_override_styles/panel = ExtResource("4_ju5ps")
+script = ExtResource("15_w3tbs")
+
+[node name="ContentRoot" type="Control" parent="CanvasLayer/MenuLayout/BookRoot" unique_id=2025778048]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="PageDivider" type="Control" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=336212458]
+anchors_preset = 0
+offset_left = 574.0
+offset_top = 66.0
+offset_right = 576.0
+offset_bottom = 595.0
+script = ExtResource("5_e1euh")
+
+[node name="TitleLabel" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=244118810]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 96.0
+offset_right = 362.0
+offset_bottom = 121.0
+texture = ExtResource("6_w1vr6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DisplayHeader" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1696062223]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 162.0
+offset_right = 289.0
+offset_bottom = 176.0
+texture = ExtResource("7_tw3iw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="FullScreenWindowedLabel" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1049848659]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 199.0
+offset_right = 306.0
+offset_bottom = 237.0
+texture = ExtResource("8_xg44c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="FullScreenCheckboxBox" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1701845982]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 199.0
+offset_right = 342.0
+offset_bottom = 216.0
+mouse_filter = 0
+texture = ExtResource("9_8ee0a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="FullScreenCheckmark" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1198104679]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 202.0
+offset_right = 341.0
+offset_bottom = 214.0
+mouse_filter = 2
+texture = ExtResource("10_46r36")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="WindowedCheckboxBox" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1301249188]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 229.0
+offset_right = 342.0
+offset_bottom = 246.0
+mouse_filter = 0
+texture = ExtResource("9_8ee0a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="WindowedCheckmark" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=2068638090]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 232.0
+offset_right = 341.0
+offset_bottom = 244.0
+mouse_filter = 2
+texture = ExtResource("10_46r36")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextHeader" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=685239465]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 309.0
+offset_right = 267.0
+offset_bottom = 320.0
+texture = ExtResource("11_xcivj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextSpeedForwardSpeedLabel" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1354932104]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 347.0
+offset_right = 329.0
+offset_bottom = 388.0
+texture = ExtResource("12_bnt03")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextSpeedSlider" type="HSlider" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1842577436]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 346.0
+offset_right = 494.0
+offset_bottom = 363.0
+theme_override_icons/grabber = ExtResource("13_tor1p")
+theme_override_icons/grabber_highlight = ExtResource("13_tor1p")
+theme_override_styles/slider = ExtResource("14_hccrg")
+theme_override_styles/grabber_area = ExtResource("15_rd7ph")
+theme_override_styles/grabber_area_highlight = ExtResource("15_rd7ph")
+max_value = 1.0
+step = 0.01
+
+[node name="ForwardSpeedSlider" type="HSlider" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=287063856]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 372.0
+offset_right = 494.0
+offset_bottom = 389.0
+theme_override_icons/grabber = ExtResource("13_tor1p")
+theme_override_icons/grabber_highlight = ExtResource("13_tor1p")
+theme_override_styles/slider = ExtResource("14_hccrg")
+theme_override_styles/grabber_area = ExtResource("15_rd7ph")
+theme_override_styles/grabber_area_highlight = ExtResource("15_rd7ph")
+max_value = 1.0
+step = 0.01
+
+[node name="SlowLabel" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=104116950]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 400.0
+offset_right = 369.0
+offset_bottom = 405.0
+texture = ExtResource("16_s06ti")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DefaultLabel" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=626565606]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 400.0
+offset_right = 436.0
+offset_bottom = 405.0
+texture = ExtResource("17_f10da")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="FastLabel" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1238847203]
+layout_mode = 0
+offset_left = 477.0
+offset_top = 401.0
+offset_right = 490.0
+offset_bottom = 406.0
+texture = ExtResource("18_dvrf6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VolumeHeader" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=258217058]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 156.0
+offset_right = 682.0
+offset_bottom = 167.0
+texture = ExtResource("19_2v3bh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VolumeRowsLabel" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1121939951]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 190.0
+offset_right = 743.0
+offset_bottom = 255.0
+texture = ExtResource("20_5117f")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BackgroundMusicSlider" type="HSlider" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1266987244]
+layout_mode = 0
+offset_left = 766.0
+offset_top = 194.0
+offset_right = 902.0
+offset_bottom = 211.0
+theme_override_icons/grabber = ExtResource("21_arqlo")
+theme_override_icons/grabber_highlight = ExtResource("21_arqlo")
+theme_override_styles/slider = ExtResource("14_hccrg")
+theme_override_styles/grabber_area = ExtResource("15_rd7ph")
+theme_override_styles/grabber_area_highlight = ExtResource("15_rd7ph")
+max_value = 1.0
+step = 0.01
+
+[node name="SoundEffectsSlider" type="HSlider" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1380044101]
+layout_mode = 0
+offset_left = 766.0
+offset_top = 221.0
+offset_right = 902.0
+offset_bottom = 238.0
+theme_override_icons/grabber = ExtResource("21_arqlo")
+theme_override_icons/grabber_highlight = ExtResource("21_arqlo")
+theme_override_styles/slider = ExtResource("14_hccrg")
+theme_override_styles/grabber_area = ExtResource("15_rd7ph")
+theme_override_styles/grabber_area_highlight = ExtResource("15_rd7ph")
+max_value = 1.0
+step = 0.01
+
+[node name="UiSoundsSlider" type="HSlider" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=992505102]
+layout_mode = 0
+offset_left = 766.0
+offset_top = 248.0
+offset_right = 902.0
+offset_bottom = 265.0
+theme_override_icons/grabber = ExtResource("21_arqlo")
+theme_override_icons/grabber_highlight = ExtResource("21_arqlo")
+theme_override_styles/slider = ExtResource("14_hccrg")
+theme_override_styles/grabber_area = ExtResource("15_rd7ph")
+theme_override_styles/grabber_area_highlight = ExtResource("15_rd7ph")
+max_value = 1.0
+step = 0.01
+
+[node name="BackgroundMusicPercent" type="Label" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1353368515]
+layout_mode = 0
+offset_left = 908.0
+offset_top = 189.0
+offset_right = 948.0
+offset_bottom = 212.0
+theme_override_colors/font_color = Color(0.55, 0.5, 0.45, 1)
+theme_override_font_sizes/font_size = 12
+text = "100%"
+vertical_alignment = 1
+
+[node name="SoundEffectsPercent" type="Label" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1044813564]
+layout_mode = 0
+offset_left = 908.0
+offset_top = 216.0
+offset_right = 948.0
+offset_bottom = 239.0
+theme_override_colors/font_color = Color(0.55, 0.5, 0.45, 1)
+theme_override_font_sizes/font_size = 12
+text = "100%"
+vertical_alignment = 1
+
+[node name="UiSoundsPercent" type="Label" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=819052903]
+layout_mode = 0
+offset_left = 908.0
+offset_top = 243.0
+offset_right = 948.0
+offset_bottom = 266.0
+theme_override_colors/font_color = Color(0.55, 0.5, 0.45, 1)
+theme_override_font_sizes/font_size = 12
+text = "100%"
+vertical_alignment = 1
+
+[node name="VisualQualityHeader" type="Label" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1530243092]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 422.0
+offset_right = 340.0
+offset_bottom = 436.0
+theme_override_colors/font_color = Color(0.42, 0.32, 0.22, 1)
+theme_override_font_sizes/font_size = 12
+text = "Visual Quality"
+
+[node name="VisualQualitySlider" type="HSlider" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=12634545]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 452.0
+offset_right = 494.0
+offset_bottom = 469.0
+theme_override_icons/grabber = ExtResource("13_tor1p")
+theme_override_icons/grabber_highlight = ExtResource("13_tor1p")
+theme_override_styles/slider = ExtResource("14_hccrg")
+theme_override_styles/grabber_area = ExtResource("15_rd7ph")
+theme_override_styles/grabber_area_highlight = ExtResource("15_rd7ph")
+max_value = 2.0
+
+[node name="VisualQualityOffLabel" type="Label" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1021175692]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 478.0
+offset_right = 390.0
+offset_bottom = 493.0
+theme_override_colors/font_color = Color(0.55, 0.5, 0.45, 1)
+theme_override_font_sizes/font_size = 11
+text = "Off"
+
+[node name="VisualQualitySimpleLabel" type="Label" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1915956942]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 478.0
+offset_right = 458.0
+offset_bottom = 493.0
+theme_override_colors/font_color = Color(0.55, 0.5, 0.45, 1)
+theme_override_font_sizes/font_size = 11
+text = "Simple"
+
+[node name="VisualQualityFullLabel" type="Label" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot" unique_id=1691758753]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 478.0
+offset_right = 500.0
+offset_bottom = 493.0
+theme_override_colors/font_color = Color(0.55, 0.5, 0.45, 1)
+theme_override_font_sizes/font_size = 11
+text = "Full"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2091874217]

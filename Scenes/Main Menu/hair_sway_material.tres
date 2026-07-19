@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://Scenes/Main Menu/hair_sway.gdshader" id="1"]
+
+[resource]
+shader = ExtResource("1")
+shader_parameter/sway_amplitude = 0.01
+shader_parameter/sway_speed = 0.5
+shader_parameter/sway_frequency = 4.0
+shader_parameter/face_mask_start = 0.45
+shader_parameter/face_mask_end = 0.62

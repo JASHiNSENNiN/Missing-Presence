@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b7bvk6mihmh1u"]
+
+[ext_resource type="Shader" uid="uid://bifh634ui0oiv" path="res://Scenes/DialogicUI/persona_panel_mask.gdshader" id="1_eoaqu"]
+
+[resource]
+shader = ExtResource("1_eoaqu")
+shader_parameter/fill_color = Color(1, 0.957, 0.812, 1)
+shader_parameter/border_color = Color(0.322, 0.196, 0.098, 1)
+shader_parameter/border_width = 4.0
+shader_parameter/corner_radius = 22.0
+shader_parameter/chamfer_size = 34.0
+shader_parameter/rect_size = Vector2(560, 155)

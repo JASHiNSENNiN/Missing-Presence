@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bp7thxx68jfo4"]
+
+[ext_resource type="Script" uid="uid://bnd4s6ed3rkns" path="res://Scenes/DialogicUI/novel_navbar_layer.gd" id="1_deb14"]
+[ext_resource type="StyleBox" uid="uid://c603gq1nymi73" path="res://Scenes/DialogicUI/nav_pill_panel.tres" id="2_bxy3q"]
+[ext_resource type="FontVariation" uid="uid://cmn3yh1ocwugr" path="res://Scenes/DialogicUI/bold_font_variation.tres" id="3_cxa6y"]
+[ext_resource type="PackedScene" path="res://Scenes/Shared/confirm_popup.tscn" id="4_cxa6y"]
+[ext_resource type="Script" uid="uid://dr6qe1t5vj8f" path="res://Scenes/Shared/confirm_popup.gd" id="5_kiruu"]
+
+[node name="NovelNavBarLayer" type="Control" unique_id=279042786]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_deb14")
+
+[node name="NavPanel" type="PanelContainer" parent="." unique_id=418140883]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 40.0
+offset_top = 32.0
+offset_right = 386.0
+offset_bottom = 74.0
+theme_override_styles/panel = ExtResource("2_bxy3q")
+
+[node name="Nav" type="HBoxContainer" parent="NavPanel" unique_id=211292555]
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="NavPanel/Nav" unique_id=1868027812]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.32, 0.2, 0.1, 1)
+theme_override_colors/font_hover_color = Color(0.812, 0.392, 0.349, 1)
+theme_override_fonts/font = ExtResource("3_cxa6y")
+theme_override_font_sizes/font_size = 20
+text = "Main Menu"
+flat = true
+
+[node name="Sep1" type="Label" parent="NavPanel/Nav" unique_id=626611785]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.58, 0.54, 0.49, 1)
+theme_override_font_sizes/font_size = 20
+text = "|"
+
+[node name="SaveButton" type="Button" parent="NavPanel/Nav" unique_id=1199336199]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.32, 0.2, 0.1, 1)
+theme_override_colors/font_hover_color = Color(0.812, 0.392, 0.349, 1)
+theme_override_fonts/font = ExtResource("3_cxa6y")
+theme_override_font_sizes/font_size = 20
+text = "Save"
+flat = true
+
+[node name="Sep2" type="Label" parent="NavPanel/Nav" unique_id=2007003338]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.58, 0.54, 0.49, 1)
+theme_override_font_sizes/font_size = 20
+text = "|"
+
+[node name="LoadButton" type="Button" parent="NavPanel/Nav" unique_id=941585267]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.32, 0.2, 0.1, 1)
+theme_override_colors/font_hover_color = Color(0.812, 0.392, 0.349, 1)
+theme_override_fonts/font = ExtResource("3_cxa6y")
+theme_override_font_sizes/font_size = 20
+text = "Load"
+flat = true
+
+[node name="ExitConfirmDialog" type="CanvasLayer" parent="." unique_id=1136643361 instance=ExtResource("4_cxa6y")]
+layer = 10
+script = ExtResource("5_kiruu")

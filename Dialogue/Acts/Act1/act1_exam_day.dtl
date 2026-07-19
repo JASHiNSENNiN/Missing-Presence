@@ -1,0 +1,84 @@
+# ================================================================
+# ACT 1 - Scene 5: EXAM DAY  (script p.4-5)
+# PRESENCE:
+#   Breakfast (image3): three-shot Ricardo=leftmost, Maya=center,
+#     Jennifer=rightmost; all leave when Maya heads out.
+#   Journey (image2): Maya alone at center through commute/campus/exam.
+#   Ethan's texts are NARRATION (no nameplate for an off-screen character).
+# FLAG(art): needs kitchen/street/campus/exam-building art - placeholdered
+#   with image3 (interior) + image2 (exterior).
+# ================================================================
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+
+Exam day. The family eats breakfast together.
+
+join Ricardo (default) leftmost [animation="Instant In"]
+join Maya (default) center [animation="Instant In"]
+join Jennifer (default) rightmost [animation="Instant In"]
+Maya scrolls through her messages. A notification lights up the screen - a text from Ethan: "Good luck sa exam later."
+
+Maya smiles and starts typing.
+
+Jennifer: Maya.
+
+No response.
+
+Jennifer: Maya.
+
+Maya: Po?
+
+Jennifer: Phone na naman habang kumakain.
+
+Maya immediately looks guilty.
+
+Maya: Ay, sorry Ma![pause=0.3] I'll finish this na so I won't be late.
+
+Jennifer crosses her arms.
+
+Jennifer: You should focus more on what's in front of you.
+
+An awkward silence follows. Ricardo notices Maya tense up.
+
+Ricardo: Jen.[pause=0.4] Hayaan mo na. Exam day naman niya.
+
+Ricardo turns to Maya with a reassuring smile.
+
+Ricardo: Good luck later.
+
+Maya: Thanks, Pa.
+
+leave Ricardo [animation="Instant Out"]
+leave Jennifer [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+
+[background arg="res://Mocks/Novel UI/image 2.png" fade="0.6" transition="Swipe Diagonal Up Left"]
+
+Maya steps out of the house. She adjusts her backpack, takes a deep breath, and starts walking.
+
+Jeepneys rattle past. Students rush by. Cars pile up at the intersections.
+
+join Maya (default) center [animation="Instant In"]
+She reviews her flashcards the whole commute.
+
+Her phone buzzes - a text from Ethan: "You got this."
+
+Maya smiles.
+
+The campus comes into view. She checks the time, and stops.
+
+Maya: Ang aga ko.
+
+For once, nothing has gone wrong. No delays. No rushing. No panic. Just silence. And time.
+
+She heads for the examination building, and sits just outside the classroom to open her reviewer.
+
+Morning sunlight streams through the hallway windows.
+
+For the first time in days, she feels prepared. Not confident.[pause=0.4] But prepared.
+
+She takes a deep breath, and begins to review.
+
+leave Maya [animation="Instant Out"]
+
+jump act1_courtyard/

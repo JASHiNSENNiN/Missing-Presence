@@ -1,0 +1,91 @@
+# ================================================================
+# ACT 1 - Scene 3: INT. ILAGAN HOUSE - DINING AREA - EVENING (p.3-4)
+# Persona-style spotlight: Ricardo, Jennifer, Maya all joined at
+# "leftmost" for the whole scene; only the speaker shows. Instant In/Out.
+# FLAG(art): no dining-room bg - reusing "image 3.png" (bedroom interior).
+# ================================================================
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+
+Dinner. The family sits around the table.
+
+join Ricardo (default) leftmost [animation="Instant In"]
+join Jennifer (default) leftmost [animation="Instant In"]
+join Maya (default) leftmost [animation="Instant In"]
+Ricardo has just gotten home from work. Jennifer scrolls through her phone while she eats. Maya eats quietly.
+
+Ricardo: Alam mo, Maya.
+
+Maya looks up.
+
+Ricardo: Yung anak ng katrabaho ko, graduate na.
+
+Maya: Talaga po?
+
+Ricardo: Oo.
+
+Jennifer: May trabaho na rin yata agad.
+
+Ricardo: Mhm.
+
+Jennifer: Ikaw naman next.
+
+Maya forces a smile.
+
+Maya: Hopefully po.
+
+Ricardo: Before you know it.
+
+Jennifer: Marami na rin akong nakikitang opportunities abroad.[pause=0.3] Pinapadala ko sa'yo mamaya.
+
+Maya's smile weakens.
+
+Maya: Sige po.
+
+Ricardo: Basta focus lang.
+
+Maya: Yes po.
+
+Jennifer sets down her phone and studies her daughter.
+
+Jennifer: Kumusta nga pala grades mo?
+
+Maya freezes. Only slightly. But enough.
+
+...[pause=0.8]
+
+Jennifer: Okay naman?
+
+- Reassure them
+	set {Route.parent_pressure} += 1
+	Maya: Okay naman po.[pause=0.4] Kaya ko naman.
+	The words come out smooth. Practiced. Almost too easy.
+- Hint at the truth
+	set {Route.self_honesty} += 1
+	Maya: Uh...[pause=0.5] I still don't know for certain po.
+	Maya: Pero... I can definitely consider that naman din.
+	It's the closest she's come to saying it out loud.
+
+Jennifer nods. Not fully convinced.
+
+Jennifer: You better.
+
+Ricardo: Jen.
+
+Jennifer sighs.
+
+Jennifer: I'm just worried.
+
+Maya: I know.
+
+The conversation moves on. But Maya barely hears it - the three of them are still at the table, yet her mind is somewhere else.
+
+Everyone keeps asking about her future.
+
+The truth is...[pause=0.6] she doesn't even know if she's on the right path.
+
+leave Ricardo [animation="Instant Out"]
+leave Jennifer [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+
+jump act1_montage/

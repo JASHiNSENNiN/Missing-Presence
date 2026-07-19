@@ -1,0 +1,79 @@
+[gd_resource type="Resource" script_class="DialogicStyle" format=3 uid="uid://bw2y7pmpvi0b0"]
+
+[ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="1_style"]
+[ext_resource type="Script" uid="uid://bwg6yncmh2cml" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_layer"]
+[ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn" id="3_base"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="4_bg"]
+[ext_resource type="PackedScene" uid="uid://cr1it45u0uc5d" path="res://Scenes/DialogicUI/kraft_frame_layer.tscn" id="5_frame"]
+[ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="6_portraits"]
+[ext_resource type="PackedScene" uid="uid://bjrbk05k7jo4p" path="res://Scenes/DialogicUI/novel_textbox_layer.tscn" id="7_textbox"]
+[ext_resource type="PackedScene" uid="uid://bp7thxx68jfo4" path="res://Scenes/DialogicUI/novel_navbar_layer.tscn" id="8_navbar"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="9_input"]
+[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="10_choices"]
+
+[sub_resource type="Resource" id="Base"]
+script = ExtResource("2_layer")
+scene = ExtResource("3_base")
+overrides = {
+"global_font_color": "Color(0.631, 0.443, 0.29, 1)"
+}
+
+[sub_resource type="Resource" id="Layer_Background"]
+script = ExtResource("2_layer")
+scene = ExtResource("4_bg")
+
+[sub_resource type="Resource" id="Layer_Frame"]
+script = ExtResource("2_layer")
+scene = ExtResource("5_frame")
+
+[sub_resource type="Resource" id="Layer_Portraits"]
+script = ExtResource("2_layer")
+scene = ExtResource("6_portraits")
+
+[sub_resource type="Resource" id="Layer_Input"]
+script = ExtResource("2_layer")
+scene = ExtResource("9_input")
+
+[sub_resource type="Resource" id="Layer_Textbox"]
+script = ExtResource("2_layer")
+scene = ExtResource("7_textbox")
+
+[sub_resource type="Resource" id="Layer_NavBar"]
+script = ExtResource("2_layer")
+scene = ExtResource("8_navbar")
+
+[sub_resource type="Resource" id="Layer_Choices"]
+script = ExtResource("2_layer")
+scene = ExtResource("10_choices")
+overrides = {
+"boxes_min_size": "Vector2(520, 44)",
+"boxes_stylebox_focused": "res://Scenes/DialogicUI/choice_panel_hover.tres",
+"boxes_stylebox_hovered": "res://Scenes/DialogicUI/choice_panel_hover.tres",
+"boxes_stylebox_normal": "res://Scenes/DialogicUI/choice_panel_normal.tres",
+"boxes_stylebox_pressed": "res://Scenes/DialogicUI/choice_panel_hover.tres",
+"boxes_v_separation": "12",
+"choices_custom_button": "res://Scenes/DialogicUI/persona_choice_button.tscn",
+"font_size_custom": "19",
+"font_size_use_global": "false",
+"text_color_custom": "Color(0.32, 0.2, 0.1, 1)",
+"text_color_focused": "Color(0.55, 0.22, 0.16, 1)",
+"text_color_hovered": "Color(0.55, 0.22, 0.16, 1)",
+"text_color_pressed": "Color(0.55, 0.22, 0.16, 1)",
+"text_color_use_global": "false"
+}
+
+[resource]
+script = ExtResource("1_style")
+name = "Cozy Persona VN"
+layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16"])
+layer_info = {
+"": SubResource("Base"),
+"10": SubResource("Layer_Background"),
+"11": SubResource("Layer_Frame"),
+"12": SubResource("Layer_Portraits"),
+"13": SubResource("Layer_Input"),
+"14": SubResource("Layer_Textbox"),
+"15": SubResource("Layer_NavBar"),
+"16": SubResource("Layer_Choices")
+}
+metadata/_latest_layer = "16"

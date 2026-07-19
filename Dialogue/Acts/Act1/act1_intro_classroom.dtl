@@ -1,0 +1,148 @@
+# ================================================================
+# ACT 1 - Scene 1: INT. COLLEGE CLASSROOM - MORNING  (script p.1-2)
+# PERSONA-STYLE SPOTLIGHT (kraft_frame_layer.gd): only the SPEAKER is
+# shown; everyone joins at "leftmost" so the textbox fits to their right.
+# Characters stay joined the whole scene (present); spotlight swaps who
+# is visible. Instant In/Out. No off-screen dialogue.
+#   Present: Maya (enters) -> Ethan (already seated) -> Professor (enters).
+# ART: real classroom background + real portraits for Maya/Ethan.
+# FLAG(art): Professor still has no portrait (silhouette) - needs art.
+# ================================================================
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+[background arg="res://Art/Backgrounds/classroom.png" fade="0.8"]
+
+The first day of the new term.
+
+Students slowly fill the classroom. Some chat with friends, others scroll through their phones. The room buzzes with excitement and nervous energy.
+
+join Maya (default) left [animation="Instant In"]
+Maya Ilagan, twenty-one, a Computer Science student, steps in carrying her bag and a stack of notebooks.
+
+She scans the room.
+
+A familiar voice calls out.
+
+join Ethan (default) right [animation="Instant In"]
+Ethan waves at her from his seat.
+
+Ethan: Uy, Maya!
+
+Maya turns - and there he is. She smiles, relieved.
+
+Maya: Ethan!
+
+She walks over and sits beside him.
+
+Ethan: Long time no see ah.
+
+Maya: Parang one sem lang naman.
+
+Ethan: One sem is too long.
+
+Maya: [pause=0.2]Drama mo talaga.
+
+Ethan: Musta naman?
+
+Maya sighs.
+
+Maya: Okay lang siguro?[pause=0.3] Medyo kinakabahan lang sa subjects this term kasi graduating na tayo.
+
+Ethan: Normal lang 'yan.
+
+Maya: Ikaw?
+
+Ethan: Mmm, same old same old.[pause=0.3] Busy.[pause=0.2] Surviving.
+
+Maya: Surviving daw.[pause=0.3] Ikaw nga lagi mataas grades.
+
+Ethan: Grades don't make everything easy.
+
+Maya: Wow.
+
+The classroom begins to settle down. A professor steps in and sets his things at the front.
+
+join Professor (default) right [animation="Instant In"]
+Everyone quickly returns to their seats.
+
+Professor: Good morning, class.
+
+"Good morning, sir," the class answers in unison.
+
+Professor: Since this is our first meeting, let's get to know each other first.
+
+The professor writes on the board.
+
+"What are your future dreams and goals?"
+
+Professor: When I call your name, introduce yourself and tell us what you hope to achieve in the future.
+
+Students begin introducing themselves. One after another.
+
+Some confidently talk about their careers. Others discuss plans abroad.
+
+Maya listens quietly. Each answer makes her uncertainty sink a little deeper.
+
+Eventually...
+
+Professor: Ethan Yap?
+
+Ethan stands.
+
+Ethan: Good morning, everyone, nice to meet you all![pause=0.3] I'm Ethan Yap.
+
+He speaks naturally, confidently.
+
+Ethan: After graduation, I want to work in software development and gain experience first.[pause=0.3] Hopefully someday makapag-start din ako ng sarili kong tech company.
+
+Several students nod.
+
+Professor: Ambitious, but very good.[pause=0.3] May you go far.
+
+Ethan sits back down.
+
+Professor: Next up is Maya Ilagan.
+
+Maya freezes. Only slightly. But enough.
+
+A few seconds pass. The entire room waits.
+
+...[pause=1.2]
+
+Slowly, she stands.
+
+Maya: Uh...[pause=0.6]
+
+She grips her notebook tighter.
+
+Maya: I'm Maya Ilagan.
+
+The silence feels heavier.
+
+Professor: And your future plans?
+
+Maya searches for an answer. Nothing comes.
+
+- Tell the truth
+	set {Route.self_honesty} += 1
+	Maya: Honestly po...[pause=0.6]
+	She swallows.
+	Maya: I haven't really thought about it yet.
+	A few students exchange glances.
+- Say what they expect
+	set {Route.parent_pressure} += 1
+	Maya: Software development po...[pause=0.4] like most people, siguro.
+	The answer feels borrowed. Not hers.
+
+The professor simply nods.
+
+Professor: That's fine.[pause=0.3] Take your seat, Ms. Ilagan.
+
+A moment of relief - yet somehow more uncertain than before.
+
+She avoids eye contact for the rest of class.
+
+leave Maya [animation="Instant Out"]
+leave Ethan [animation="Instant Out"]
+leave Professor [animation="Instant Out"]
+
+jump act1_hallway/

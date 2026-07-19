@@ -1,0 +1,25 @@
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.0"]
+
+join Maya (default) leftmost [animation="Bounce In"]
+
+Maya: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+Maya (excited): Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat!
+
+Maya: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.[pause=0.3] Excepteur sint occaecat cupidatat non proident.
+
+[background arg="res://Mocks/Novel UI/image 2.png" fade="0.6"]
+
+Maya (happy): Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+- Eaque ipsa quae ab illo inventore
+    Maya: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.
+- Neque porro quisquam est
+    Maya (sad): Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.
+
+Maya (default): At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
+
+leave Maya [animation="Bounce Out"]
+
+[end_timeline]

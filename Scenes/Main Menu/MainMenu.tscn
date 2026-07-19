@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://bdxljv5ny1u2r"]
+
+[ext_resource type="Script" uid="uid://dplkvd0ub7jum" path="res://Scenes/Main Menu/main_menu.gd" id="1_k18g8"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/cloud_drift_material.tres" id="2_3vmye"]
+[ext_resource type="Texture2D" uid="uid://c243wnyyjkbs" path="res://Mocks/main menu/Background/Layer 1.png" id="2_bgejd"]
+[ext_resource type="Script" uid="uid://byv37rso2gnv1" path="res://Scenes/Shared/menu_background.gd" id="2_c8suk"]
+[ext_resource type="Texture2D" uid="uid://bse5tqky6ki" path="res://Mocks/main menu/Mask group.png" id="2_rgre6"]
+[ext_resource type="Texture2D" uid="uid://dovogbtkwg7ws" path="res://Mocks/main menu/highlight.png" id="3_7x5ku"]
+[ext_resource type="Texture2D" uid="uid://nxefcxsx1sk" path="res://Mocks/main menu/Background/Layer 2.png" id="3_sqkwg"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/grass_sway_hill_material.tres" id="4_h4f0h"]
+[ext_resource type="Texture2D" uid="uid://dinatny02o0nh" path="res://Mocks/main menu/title logo.png" id="4_k18g8"]
+[ext_resource type="Texture2D" uid="uid://wk81rx8sa2ki" path="res://Mocks/main menu/Background/Layer 3.png" id="4_msisl"]
+[ext_resource type="Texture2D" uid="uid://dh1oaitep7t0j" path="res://Mocks/main menu/Background/Layer 4.png" id="5_mip2j"]
+[ext_resource type="Texture2D" uid="uid://u8lv5cw5lrv2" path="res://Mocks/main menu/Background/Layer 5.png" id="6_3vmye"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/hair_sway_material.tres" id="6_h4f0h"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/grass_sway_mid_material.tres" id="7_c8suk"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/grass_sway_front_material.tres" id="9_mc5rm"]
+[ext_resource type="Material" uid="uid://blwxljm8gux5m" path="res://Scenes/Shared/paper_grain_material.tres" id="13_m25xl"]
+[ext_resource type="Script" uid="uid://cmtljkubyskp8" path="res://Scenes/Shared/quality_gated_material.gd" id="15_mrbuu"]
+[ext_resource type="PackedScene" uid="uid://33pwwhimraxl" path="res://Scenes/Main Menu/ContinueCascade.tscn" id="18_ri87q"]
+
+[node name="MainMenu" type="Node2D" unique_id=373517807]
+script = ExtResource("1_k18g8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1387117317]
+
+[node name="BackgroundLayers" type="Node2D" parent="CanvasLayer" unique_id=1967551499]
+script = ExtResource("2_c8suk")
+
+[node name="Sky" type="Sprite2D" parent="CanvasLayer/BackgroundLayers" unique_id=1719749015]
+material = ExtResource("2_3vmye")
+position = Vector2(1500, 843.5)
+texture = ExtResource("2_bgejd")
+
+[node name="Hill" type="Sprite2D" parent="CanvasLayer/BackgroundLayers" unique_id=1948977139]
+material = ExtResource("4_h4f0h")
+position = Vector2(1500, 986.5)
+texture = ExtResource("3_sqkwg")
+
+[node name="Character" type="Sprite2D" parent="CanvasLayer/BackgroundLayers" unique_id=2115267695]
+z_index = 1
+material = ExtResource("6_h4f0h")
+position = Vector2(2028, 1021)
+texture = ExtResource("4_msisl")
+
+[node name="GrassMid" type="Sprite2D" parent="CanvasLayer/BackgroundLayers" unique_id=201585098]
+z_index = 2
+material = ExtResource("7_c8suk")
+position = Vector2(1519, 947.5006)
+scale = Vector2(1.142, 1.6787757)
+texture = ExtResource("5_mip2j")
+
+[node name="GrassFront" type="Sprite2D" parent="CanvasLayer/BackgroundLayers" unique_id=1382714668]
+z_index = 3
+material = ExtResource("9_mc5rm")
+position = Vector2(1489, 966.0007)
+scale = Vector2(1.1140001, 1.5794101)
+texture = ExtResource("6_3vmye")
+
+[node name="MenuLayout" type="Control" parent="CanvasLayer" unique_id=1569200199]
+z_index = 10
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -740.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PaperPanel" type="TextureRect" parent="CanvasLayer/MenuLayout" unique_id=633882043]
+material = ExtResource("13_m25xl")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 71.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_rgre6")
+expand_mode = 1
+script = ExtResource("15_mrbuu")
+
+[node name="TitleLogo" type="TextureRect" parent="CanvasLayer/MenuLayout" unique_id=582414983]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = 0.09
+anchor_right = 0.94
+anchor_bottom = 0.24
+offset_left = 17.405758
+offset_top = -5.3200035
+offset_right = 17.405762
+offset_bottom = -5.3200073
+mouse_filter = 2
+texture = ExtResource("4_k18g8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HighlightIcon" type="TextureRect" parent="CanvasLayer/MenuLayout" unique_id=779278729]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11
+anchor_top = 0.4
+anchor_right = 0.36
+anchor_bottom = 0.47
+offset_left = -11.235775
+offset_top = -27.200012
+offset_right = -11.235779
+offset_bottom = -27.200012
+mouse_filter = 2
+texture = ExtResource("3_7x5ku")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ContentVBox" type="VBoxContainer" parent="CanvasLayer/MenuLayout" unique_id=1852597316]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.39
+anchor_right = 0.85
+anchor_bottom = 0.93
+offset_left = 12.613434
+offset_top = -20.719986
+offset_right = 12.613434
+offset_bottom = -20.71997
+theme_override_constants/separation = 40
+
+[node name="StartLabel" type="Label" parent="CanvasLayer/MenuLayout/ContentVBox" unique_id=1383788249]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.631, 0.443, 0.29, 1)
+theme_override_font_sizes/font_size = 32
+text = "start"
+
+[node name="LoadLabel" type="Label" parent="CanvasLayer/MenuLayout/ContentVBox" unique_id=762691797]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.631, 0.443, 0.29, 1)
+theme_override_font_sizes/font_size = 32
+text = "load"
+
+[node name="OptionsLabel" type="Label" parent="CanvasLayer/MenuLayout/ContentVBox" unique_id=1714304906]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.631, 0.443, 0.29, 1)
+theme_override_font_sizes/font_size = 32
+text = "options"
+
+[node name="ExitLabel" type="Label" parent="CanvasLayer/MenuLayout/ContentVBox" unique_id=523840090]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.631, 0.443, 0.29, 1)
+theme_override_font_sizes/font_size = 32
+text = "exit"
+
+[node name="ConfirmFlash" type="ColorRect" parent="CanvasLayer" unique_id=871907029]
+z_index = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ContinueCascade" parent="CanvasLayer" unique_id=1387591574 instance=ExtResource("18_ri87q")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2091874217]

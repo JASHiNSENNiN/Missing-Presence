@@ -1,0 +1,26 @@
+# ================================================================
+# ACT 1 - Scene 4: MONTAGE - PASSAGE OF TIME  (script p.4)
+# No portraits (montage). Ethan's message is NARRATION, not dialogue,
+# so no nameplate shows for a character who isn't on-screen.
+# Bedroom/desk bg (image 3) fits "studies late at night" - no flag.
+# ================================================================
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.8"]
+
+School projects pile up.
+
+Maya studies late into the night.
+
+Calendar pages turn.[pause=0.3] Deadlines approach.
+
+She stares at unfinished notes.
+
+Her phone lights up - a message from Ethan: "Kaya mo 'yan. Kita tayo bukas."
+
+A small smile. Then back to work.
+
+Maya keeps smiling whenever her parents ask if she's okay.
+
+Even when she isn't.
+
+jump act1_exam_day/

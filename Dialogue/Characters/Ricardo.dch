@@ -1,0 +1,29 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.827, 0.788, 0.745, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "default",
+&"description": "Maya's father. Placeholder shadow silhouette - no final art yet.",
+&"display_name": "RICARDO",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 48),
+&"portraits": {
+"default": {
+"export_overrides": {
+"image": "res://Art/Characters/ricardo.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+}
+},
+&"scale": 0.84
+}

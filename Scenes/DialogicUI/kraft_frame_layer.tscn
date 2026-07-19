@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cr1it45u0uc5d"]
+
+[ext_resource type="Script" uid="uid://dem7c7ua0vnyh" path="res://Scenes/DialogicUI/kraft_frame_layer.gd" id="1_04udr"]
+[ext_resource type="Material" uid="uid://btk0x3i3nvl8y" path="res://Scenes/DialogicUI/kraft_frame_material.tres" id="2_s13k1"]
+
+[node name="KraftFrameLayer" type="Control" unique_id=1658316204]
+layout_direction = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_04udr")
+
+[node name="Frame" type="ColorRect" parent="." unique_id=447961235]
+unique_name_in_owner = true
+material = ExtResource("2_s13k1")
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2

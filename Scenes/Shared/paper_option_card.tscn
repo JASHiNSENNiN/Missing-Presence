@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bmtut7exeqbev"]
+
+[ext_resource type="Script" uid="uid://db15p10vw6g5f" path="res://Scenes/Shared/paper_option_card.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bse5tqky6ki" path="res://Mocks/main menu/Mask group.png" id="2_paper_tex"]
+[ext_resource type="Material" uid="uid://blwxljm8gux5m" path="res://Scenes/Shared/paper_grain_material.tres" id="3_grain"]
+[ext_resource type="Script" uid="uid://cmtljkubyskp8" path="res://Scenes/Shared/quality_gated_material.gd" id="4_quality"]
+
+[node name="PaperOptionCard" type="Control" unique_id=2119832923]
+custom_minimum_size = Vector2(220, 72)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 220.0
+offset_bottom = 72.0
+script = ExtResource("1_script")
+
+[node name="CardBackground" type="TextureRect" parent="." unique_id=1427494759]
+material = ExtResource("3_grain")
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 72.0
+texture = ExtResource("2_paper_tex")
+expand_mode = 1
+script = ExtResource("4_quality")
+
+[node name="ContentMargin" type="MarginContainer" parent="." unique_id=1727838478]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 72.0
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 14
+
+[node name="Label" type="Label" parent="ContentMargin" unique_id=1185238217]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.32, 0.2, 0.1, 1)
+theme_override_font_sizes/font_size = 28
+text = "Option"
+vertical_alignment = 1

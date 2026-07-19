@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://blwxljm8gux5m"]
+
+[ext_resource type="Shader" path="res://Scenes/Shared/paper_grain.gdshader" id="1_fdd61"]
+
+[resource]
+shader = ExtResource("1_fdd61")
+shader_parameter/grain_strength = 0.05
+shader_parameter/grain_scale = 220.0
+shader_parameter/flicker_speed = 0.5

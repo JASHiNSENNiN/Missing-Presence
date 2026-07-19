@@ -1,0 +1,29 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1.0, 0.871, 0.447, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "default",
+&"description": "Maya's mother. Placeholder shadow silhouette - no final art yet.",
+&"display_name": "JENNIFER",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 80),
+&"portraits": {
+"default": {
+"export_overrides": {
+"image": "res://Art/Characters/jennifer.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+}
+},
+&"scale": 0.88
+}

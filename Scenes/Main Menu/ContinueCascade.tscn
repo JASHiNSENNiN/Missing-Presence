@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://33pwwhimraxl"]
+
+[ext_resource type="Script" uid="uid://cj6uyjuua4ahg" path="res://Scenes/Main Menu/continue_cascade.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://bmtut7exeqbev" path="res://Scenes/Shared/paper_option_card.tscn" id="2_card"]
+
+[node name="ContinueCascade" type="Control" unique_id=1728473196]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="ContinueCard" parent="." unique_id=1589398021 instance=ExtResource("2_card")]
+custom_minimum_size = Vector2(200, 90)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 90.0
+rotation = -0.06981317
+
+[node name="StartOverCard" parent="." unique_id=326189913 instance=ExtResource("2_card")]
+custom_minimum_size = Vector2(200, 90)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 90.0
+rotation = 0.05235988
+
+[node name="CancelCard" parent="." unique_id=1800262947 instance=ExtResource("2_card")]
+custom_minimum_size = Vector2(200, 90)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 90.0
+rotation = -0.034906585
