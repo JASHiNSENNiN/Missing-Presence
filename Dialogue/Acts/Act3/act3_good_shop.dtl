@@ -1,0 +1,160 @@
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+[background arg="res://Art/Backgrounds/campus_courtyard.png" fade="0.8"]
+
+Act 3. Distrust.
+
+The afternoon sun shines over a modest neighborhood auto repair shop. Tools clank, engines rev, mechanics laugh over the noise of passing vehicles.
+
+Ricardo stands beside Ethan, both in work gloves. Ethan's shirt already carries a few grease stains - he's been at it a while.
+
+join Ricardo (neutral) leftmost [animation="Instant In"]
+join Ethan (grease_neutral) leftmost [animation="Instant In"]
+Ricardo: Okay, anak. Before you tighten that bolt, make sure aligned muna 'yung bracket.
+
+Ethan: Ito po ba?
+
+Ricardo: A little more to the left.
+
+Ethan carefully adjusts the part.
+
+Ricardo: Ayan. Ngayon higpitan mo na.
+
+update Ethan (grease_frown)
+Ethan: Okay...[pause=0.3] Parang okay na, Tito.
+
+Ricardo inspects the repair for a few seconds, then gives an approving nod.
+
+update Ricardo (glad)
+Ricardo: Not bad.[pause=0.3] Actually... tama lahat.
+
+update Ethan (grease_glad)
+Ethan: Akala ko mali na naman.
+
+Ricardo: Kung mali 'yan, pinapaulit kita.
+
+Ethan: Fair enough.
+
+Ricardo pats Ethan's shoulder.
+
+Ricardo: You're learning fast. Hindi ka takot magtanong, at marunong kang makinig.[pause=0.3] Malaking bagay 'yan.
+
+update Ethan (grease_neutral)
+Ethan: Salamat po. Honestly, marami pa akong kailangang matutunan.
+
+Ricardo: Lahat naman nagsisimula sa wala. Ang importante, willing kang matuto.
+
+leave Ricardo [animation="Instant Out"]
+leave Ethan [animation="Instant Out"]
+[background arg="res://Art/Backgrounds/classroom.png" fade="0.7"]
+
+A lecture is ongoing. The professor discusses a complex programming concept while students copy notes. Maya sits quietly near the back.
+
+Her phone vibrates. She glances beneath the desk - a message from Ethan: "Survived another day sa shop." Attached: a selfie of Ethan covered in grease.
+
+join Maya (phone_smile) center [animation="Instant In"]
+Maya smiles, and types back.
+
+Maya: Mukha kang tambay sa talyer.
+
+Almost instantly - "Excuse me. Professional grease 'to."
+
+update Maya (smile)
+Maya lets out a quiet laugh. The student beside her glances over. She clears her throat.
+
+Maya: Nasa shop ka pa ba?
+
+"Yep. Dadaan ka?"
+
+Maya glances at the clock. Only a few minutes left.
+
+Maya: After class.
+
+"Sige. Bilhan mo na rin ako ng pagkain."
+
+update Maya (neutral)
+Maya: Libre mangarap.
+
+She locks her phone just as the professor turns around, and resumes her notes.
+
+leave Maya [animation="Instant Out"]
+[background arg="res://Art/Backgrounds/campus_courtyard.png" fade="0.7"]
+
+The school day has ended. Maya walks toward the repair shop, backpack over one shoulder. She pauses outside, then steps in. Motor oil and rubber fill the air.
+
+She spots Ethan and Ricardo working together under the same sedan.
+
+join Ricardo (neutral) leftmost [animation="Instant In"]
+join Ethan (grease_neutral) leftmost [animation="Instant In"]
+join Maya (soft) leftmost [animation="Instant In"]
+Ricardo: Supportahan mo muna dito. Oo... ganyan.
+
+Ethan: Ready na po.
+
+Ricardo: Sige. Subukan natin.
+
+Together, they secure the part. A satisfying click echoes from the engine. Both men pause.
+
+update Ethan (grease_frown)
+Ethan: ...Ayun ba 'yon?
+
+Ricardo checks the alignment, then breaks into a grin.
+
+update Ricardo (glad)
+Ricardo: Ayun nga!
+
+update Ethan (grease_glad)
+Ethan: Yes! Akala ko uulitin na naman natin.
+
+Ricardo: Hindi na. Mukhang mabilis ka talagang matuto.
+
+Ethan laughs - then notices Maya standing nearby.
+
+Ethan: Uy! Maya!
+
+Maya: Hi.
+
+update Ricardo (glad)
+Ricardo: Anak! Kailan ka pa dumating?
+
+update Maya (smile)
+Maya: Ngayon lang po. Maaga natapos class namin. Thought I'd stop by.
+
+Ricardo: Buti naman. Lumapit ka.
+
+Ricardo gestures proudly toward Ethan.
+
+Ricardo: Alam mo, ang bilis nitong matuto. No'ng first week niya, puro tanong. Ngayon, minsan nauunahan pa niya ako.
+
+update Ethan (grease_neutral)
+Ethan: Tito...[pause=0.3] Huwag naman po.
+
+Ricardo: Ano? Totoo naman.
+
+Ricardo: Masipag. Responsible. Hindi reklamo nang reklamo. At kapag may hindi alam, nagtatanong agad.[pause=0.3] Mahirap makahanap ng ganyang tao.
+
+update Maya (soft)
+Maya glances at Ethan. Then at her father. She forces a small smile.
+
+Maya: Congrats. Mukhang bagay sa'yo.
+
+Ethan: One month pa lang ako rito.
+
+update Maya (smile)
+Maya: Still... you're doing great.
+
+She gently pats Ethan on the shoulder.
+
+update Ethan (grease_glad)
+Ethan: Salamat.
+
+update Maya (frown)
+Something flickers across Maya's face. A smile - but not one that reaches her eyes.
+
+[signal arg="emphasis:Maya"]
+She watches Ethan and Ricardo fall back into working side by side, so naturally. Her smile slowly fades.
+
+leave Ricardo [animation="Instant Out"]
+leave Ethan [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+
+jump act3_good_dinner/

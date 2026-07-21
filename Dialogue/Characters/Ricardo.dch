@@ -10,20 +10,48 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "default",
-&"description": "Maya's father. Placeholder shadow silhouette - no final art yet.",
+&"default_portrait": "neutral",
+&"description": "",
 &"display_name": "RICARDO",
 &"mirror": false,
 &"nicknames": [""],
-&"offset": Vector2(0, 48),
+&"offset": Vector2(0, 75),
 &"portraits": {
-"default": {
+"neutral": {
 "export_overrides": {
-"image": "res://Art/Characters/ricardo.png"
+"image": "res://Art/Characters/ricardo/neutral_close.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"neutral_open": {
+"export_overrides": {
+"image": "res://Art/Characters/ricardo/neutral_open.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"glad": {
+"export_overrides": {
+"image": "res://Art/Characters/ricardo/glad_close.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"glad_open": {
+"export_overrides": {
+"image": "res://Art/Characters/ricardo/glad_open.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"frown": {
+"export_overrides": {
+"image": "res://Art/Characters/ricardo/frown_close.png"
 },
 "offset": Vector2(0, 0),
 "scene": ""
 }
 },
-&"scale": 0.84
+&"scale": 0.9
 }

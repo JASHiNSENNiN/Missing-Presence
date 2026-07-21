@@ -150,6 +150,7 @@ func _on_exit_cancelled() -> void:
 
 
 func _exit_to_main_menu() -> void:
+	get_tree().paused = false
 	await _game_flow().finish_pending_text_reveal()
 	await Dialogic.end_timeline(true)
 	Dialogic.clear()

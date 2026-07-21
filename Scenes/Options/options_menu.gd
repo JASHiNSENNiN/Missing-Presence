@@ -37,6 +37,8 @@ extends Node2D
 var _scene_transition: Node:
 	get: return get_node("/root/SceneTransition")
 
+var _leaving: bool = false
+
 const BACK_SCENE_PATH := "res://Scenes/Main Menu/MainMenu.tscn"
 const DIALOGIC_TEST_SCENE_PATH := "res://Scenes/DialogicTest/DialogicTest.tscn"
 
@@ -173,6 +175,10 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _go_back() -> void:
+	if _leaving:
+		return
+	_leaving = true
+	get_tree().paused = false
 	if game_flow.get("return_to_game"):
 		game_flow.set("return_to_game", false)
 		if Dialogic.Styles.has_active_layout_node():

@@ -34,6 +34,7 @@ var _ui_bus: StringName = &"UI"
 var _amb_bus: StringName = &"SFX"
 
 var _amb_players: Dictionary = {}
+var _amb_tweens: Dictionary = {}
 var _amb_active: bool = false
 
 
@@ -132,11 +133,13 @@ func play_ambience() -> void:
 	for amb in _amb_players:
 		var player: AudioStreamPlayer = _amb_players[amb]
 		var target: float = -14.0 if amb == "grass" else -20.0
-		player.volume_db = -80.0
+		_kill_ambience_tween(amb)
 		if not player.playing:
+			player.volume_db = -80.0
 			player.play()
 		var tween := create_tween()
 		tween.tween_property(player, "volume_db", target, AMBIENCE_FADE)
+		_amb_tweens[amb] = tween
 
 
 ## Fade the ambience bed out and stop it.
@@ -146,9 +149,18 @@ func stop_ambience() -> void:
 	_amb_active = false
 	for amb in _amb_players:
 		var player: AudioStreamPlayer = _amb_players[amb]
+		_kill_ambience_tween(amb)
 		var tween := create_tween()
 		tween.tween_property(player, "volume_db", -80.0, AMBIENCE_FADE)
 		tween.tween_callback(player.stop)
+		_amb_tweens[amb] = tween
+
+
+func _kill_ambience_tween(amb: String) -> void:
+	var tween: Tween = _amb_tweens.get(amb)
+	if is_instance_valid(tween):
+		tween.kill()
+	_amb_tweens.erase(amb)
 
 
 ## Convenience: wire a Control so hovering it plays the soft hover tick.

@@ -15,48 +15,58 @@ The first day of the new term.
 
 Students slowly fill the classroom. Some chat with friends, others scroll through their phones. The room buzzes with excitement and nervous energy.
 
-join Maya (default) left [animation="Instant In"]
+join Maya (neutral) left [animation="Instant In"]
 Maya Ilagan, twenty-one, a Computer Science student, steps in carrying her bag and a stack of notebooks.
 
 She scans the room.
 
 A familiar voice calls out.
 
-join Ethan (default) right [animation="Instant In"]
+join Ethan (neutral) right [animation="Instant In"]
 Ethan waves at her from his seat.
 
+update Ethan (glad)
 Ethan: Uy, Maya!
 
 Maya turns - and there he is. She smiles, relieved.
 
+update Maya (glad)
 Maya: Ethan!
 
 She walks over and sits beside him.
 
 Ethan: Long time no see ah.
 
+update Maya (smile)
 Maya: Parang one sem lang naman.
 
 Ethan: One sem is too long.
 
 Maya: [pause=0.2]Drama mo talaga.
 
+update Ethan (neutral)
 Ethan: Musta naman?
 
 Maya sighs.
 
+update Maya (soft)
 Maya: Okay lang siguro?[pause=0.3] Medyo kinakabahan lang sa subjects this term kasi graduating na tayo.
 
+update Ethan (glad)
 Ethan: Normal lang 'yan.
 
+update Maya (neutral)
 Maya: Ikaw?
 
+update Ethan (neutral)
 Ethan: Mmm, same old same old.[pause=0.3] Busy.[pause=0.2] Surviving.
 
+update Maya (smile)
 Maya: Surviving daw.[pause=0.3] Ikaw nga lagi mataas grades.
 
 Ethan: Grades don't make everything easy.
 
+update Maya (annoyed)
 Maya: Wow.
 
 The classroom begins to settle down. A professor steps in and sets his things at the front.
@@ -88,6 +98,7 @@ Professor: Ethan Yap?
 
 Ethan stands.
 
+update Ethan (glad)
 Ethan: Good morning, everyone, nice to meet you all![pause=0.3] I'm Ethan Yap.
 
 He speaks naturally, confidently.
@@ -102,7 +113,10 @@ Ethan sits back down.
 
 Professor: Next up is Maya Ilagan.
 
+update Maya (teary)
+[signal arg="emphasis"]
 Maya freezes. Only slightly. But enough.
+[signal arg="emotion:nervous"]
 
 A few seconds pass. The entire room waits.
 
@@ -122,16 +136,14 @@ Professor: And your future plans?
 
 Maya searches for an answer. Nothing comes.
 
-- Tell the truth
-	set {Route.self_honesty} += 1
-	Maya: Honestly po...[pause=0.6]
-	She swallows.
-	Maya: I haven't really thought about it yet.
-	A few students exchange glances.
-- Say what they expect
-	set {Route.parent_pressure} += 1
-	Maya: Software development po...[pause=0.4] like most people, siguro.
-	The answer feels borrowed. Not hers.
+update Maya (soft)
+Maya: Honestly po...[pause=0.6]
+
+She swallows.
+
+Maya: I haven't really thought about it yet.
+
+A few students exchange glances.
 
 The professor simply nods.
 
@@ -145,4 +157,4 @@ leave Maya [animation="Instant Out"]
 leave Ethan [animation="Instant Out"]
 leave Professor [animation="Instant Out"]
 
-jump act1_hallway/
+jump Act1/act1_hallway/

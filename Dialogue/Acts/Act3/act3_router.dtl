@@ -1,0 +1,8 @@
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+
+if {Route.self_honesty} + {Route.affinity_ethan} - {Route.parent_pressure} >= 2:
+	jump act3_good_shop/
+elif {Route.self_honesty} + {Route.affinity_ethan} - {Route.parent_pressure} <= -2:
+	jump act3_bad/
+else:
+	jump act3_neutral/

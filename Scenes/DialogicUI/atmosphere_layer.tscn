@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://Scenes/DialogicUI/atmosphere_layer.gd" id="1_script"]
+[ext_resource type="Shader" path="res://Scenes/DialogicUI/god_rays.gdshader" id="2_rays"]
+[ext_resource type="Shader" path="res://Scenes/DialogicUI/atmosphere_overlay.gdshader" id="3_overlay"]
+
+[sub_resource type="ShaderMaterial" id="MatRays"]
+shader = ExtResource("2_rays")
+shader_parameter/ray_origin = Vector2(0.72, -0.05)
+shader_parameter/ray_angle = 0.55
+shader_parameter/ray_count = 11.0
+shader_parameter/ray_softness = 0.55
+shader_parameter/ray_strength = 0.2
+shader_parameter/ray_length = 1.1
+shader_parameter/drift_speed = 0.06
+shader_parameter/ray_color = Color(1, 0.94, 0.78, 1)
+
+[sub_resource type="ShaderMaterial" id="MatOverlay"]
+shader = ExtResource("3_overlay")
+shader_parameter/vignette_strength = 0.34
+shader_parameter/vignette_softness = 0.55
+shader_parameter/vignette_color = Color(0.16, 0.1, 0.05, 1)
+shader_parameter/grain_strength = 0.035
+shader_parameter/grain_speed = 9.0
+
+[node name="AtmosphereLayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="GodRays" type="ColorRect" parent="."]
+visible = false
+material = SubResource("MatRays")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Dust" type="CPUParticles2D" parent="."]
+position = Vector2(576, -32)
+emitting = false
+amount = 26
+lifetime = 14.0
+preprocess = 6.0
+randomness = 0.6
+lifetime_randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(640, 52)
+direction = Vector2(0, 1)
+spread = 28.0
+gravity = Vector2(4, 7)
+initial_velocity_min = 2.0
+initial_velocity_max = 9.0
+angular_velocity_min = -12.0
+angular_velocity_max = 12.0
+scale_amount_min = 1.0
+scale_amount_max = 2.6
+color = Color(1, 0.97, 0.86, 0.5)
+
+[node name="Overlay" type="ColorRect" parent="."]
+material = SubResource("MatOverlay")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

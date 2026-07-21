@@ -1,0 +1,203 @@
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+
+The adults linger at the dining table. Maya and Ethan drift into the living room, both holding drinks. The atmosphere is quieter here. More relaxed.
+
+join Maya (soft) left [animation="Instant In"]
+join Ethan (glad) right [animation="Instant In"]
+Ethan: That could've gone worse.
+
+Maya: You mean dinner?
+
+Ethan: Yeah.
+
+update Maya (smile)
+Maya: True.
+
+Ethan: Nobody cried.
+
+Maya: That's a pretty low standard.
+
+update Ethan (glad)
+Ethan: Exactly.
+
+They laugh. A few moments later, Ricardo steps in, carrying a glass.
+
+join Ricardo (neutral) leftmost [animation="Instant In"]
+Ricardo: Mind if I join?
+
+update Ethan (glad)
+Ethan: Of course not, Tito.
+
+Ricardo settles beside Maya. The three sit in a comfortable silence. For a moment.
+
+Then Ethan speaks.
+
+update Ethan (neutral)
+Ethan: Actually...[pause=0.4] there's something I've been thinking about.
+
+update Maya (neutral)
+Maya looks over. Ricardo listens.
+
+Ethan: I've been looking for a part-time job.
+
+update Maya (wide)
+Maya: Really?
+
+Ethan: Yeah.
+
+Maya: Why?
+
+Ethan hesitates. His usual composure slips, slightly.
+
+update Ethan (frown)
+Ethan: I want to help Ma.
+
+update Ricardo (neutral)
+Ricardo's expression softens.
+
+update Ethan (frown)
+Ethan: Things haven't been easy lately.
+
+update Maya (soft)
+Maya: Because of...
+
+update Ethan (teary)
+[signal arg="emphasis"]
+Ethan: Yeah.[pause=0.4] The separation.
+
+A silence.
+
+Ethan: She's trying her best, but finding work again hasn't exactly been easy.
+
+Maya: I'm sorry.
+
+update Ethan (neutral)
+Ethan: It's okay. We're managing.
+
+Ricardo nods, thoughtful, taking everything in. Then -
+
+update Ricardo (neutral)
+Ricardo: Actually.
+
+update Ethan (neutral)
+Ethan looks up.
+
+Ricardo: There might be something.
+
+Ethan: Yes po, Tito?
+
+Ricardo: Ung auto repair shop ko.
+
+update Ethan (neutral)
+Ethan blinks.
+
+Ricardo: We're looking for extra help. Nothing too crazy.
+
+Ethan: Oh -
+
+update Ricardo (glad)
+Ricardo: I can teach you. Show you how everything works.
+
+update Ethan (frown)
+Ethan immediately shakes his head.
+
+Ethan: No, Tito, it's okay. I couldn't -
+
+Ricardo: Couldn't what?
+
+Ethan: I don't want to impose.
+
+Ricardo: You're not imposing.
+
+Ethan: Still...
+
+update Ricardo (neutral)
+Ricardo: Ethan.
+
+Ricardo leans forward.
+
+Ricardo: You've always been hardworking. Responsible. And willing to learn.[pause=0.3] That's more important than experience.
+
+update Ethan (frown)
+Ethan: I don't know anything about cars.
+
+update Ricardo (glad)
+Ricardo: Neither did I when I started.
+
+update Ethan (glad)
+Ethan laughs.
+
+Ricardo: I'll teach you everything. Step by step. Think of it as an apprenticeship.
+
+Ethan glances toward Maya.
+
+update Maya (smile)
+Maya nods, encouraging.
+
+Maya: You'd be good at it.
+
+update Ethan (neutral)
+Ethan: You haven't even seen me fix anything this big at all.
+
+update Maya (glad)
+Maya: Exactly. It'll be entertaining.
+
+update Ethan (glad)
+Ethan: Wow. Some friend you are.
+
+The three laugh. Ricardo smiles.
+
+Ricardo: See? Already part of the team.
+
+update Ethan (neutral)
+Ethan: I still don't know...
+
+update Ricardo (glad)
+Ricardo: Take the opportunity. Help your mom. Learn something new.[pause=0.4] And honestly...[pause=0.5] it would help us too.
+
+Ethan falls silent, thinking. Then - a small smile appears.
+
+update Ethan (glad)
+Ethan: Okay.
+
+Ricardo grins.
+
+Ethan: Thank you, Tito. I really appreciate it.
+
+Ricardo: Good.
+
+Ricardo pats Ethan firmly on the back.
+
+Ricardo: You'll do great.
+
+Ethan laughs.
+
+leave Ethan [animation="Instant Out"]
+leave Ricardo [animation="Instant Out"]
+Maya watches quietly from her seat, as Ricardo keeps praising Ethan's work ethic and determination.
+
+update Maya (soft)
+Something small and uncomfortable stirs inside her chest.
+[signal arg="emotion_persist:jealous:2"]
+
+- Let it show, and cross your arms
+	set {Route.parent_pressure} += 1
+	update Maya (frown)
+	Her arms fold before she can stop them. Just for a second - but the feeling is there, and she knows it.
+- Shrug it off
+	update Maya (neutral)
+	She lets out a slow breath and lets it pass. It isn't worth naming.
+- Push it down and be happy for him
+	set {Route.affinity_ethan} += 1
+	update Maya (smile)
+	She looks at him - really looks - and lets herself be glad. He deserves this. That part is easy to mean.
+
+update Maya (soft)
+She tries to smile. But only on the outside. She doesn't say a word.
+
+leave Maya [animation="Instant Out"]
+
+That is where Act 2 comes to a close - to be continued in Act 3.
+
+jump act3_router/

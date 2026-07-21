@@ -1,0 +1,166 @@
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+[background arg="res://Art/Backgrounds/campus_courtyard.png" fade="0.7"]
+
+Warm lights glow from inside the house. Several cars are parked outside.
+
+The Ilagans arrive carrying food containers and drinks. Jennifer adjusts her blouse, Ricardo carries a tray, and Maya follows behind them.
+
+join Jennifer (neutral) leftmost [animation="Instant In"]
+join Ricardo (neutral) leftmost [animation="Instant In"]
+join Maya (neutral) leftmost [animation="Instant In"]
+Jennifer: Make sure to greet everyone properly.
+
+update Maya (annoyed)
+Maya: Ma, ilang beses na tayong nagdi-dinner together.
+
+Jennifer: And?
+
+Maya: Nothing.
+
+update Ricardo (glad)
+Ricardo: Your mother just likes reminding people.
+
+update Jennifer (frown)
+Jennifer shoots him a look. They head inside.
+
+leave Jennifer [animation="Instant Out"]
+leave Ricardo [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+
+Dinner is already underway. The table is crowded with food, conversations overlapping, laughter filling the room now and then.
+
+Tita Marie sits near Jennifer, discussing work and family. Maya settles in beside Ethan.
+
+join Ethan (glad) leftmost [animation="Instant In"]
+join Maya (soft) leftmost [animation="Instant In"]
+join Jennifer (neutral) leftmost [animation="Instant In"]
+join Ricardo (neutral) leftmost [animation="Instant In"]
+join Marie (default) leftmost [animation="Instant In"]
+Ethan: Glad you came.
+
+update Maya (smile)
+Maya: As if I had a choice.
+
+Ethan: Fair.
+
+Maya: You?
+
+Ethan: Definitely had no choice.
+
+update Maya (glad)
+The two laugh. Across the table, Ricardo notices.
+
+update Ricardo (glad)
+Ricardo: You two never run out of things to talk about, no?
+
+update Ethan (glad)
+Ethan: We've had years of practice, Tito.
+
+Ricardo: Good answer.
+
+The conversation drifts. People begin finishing their meals. Then Tita Marie turns to Ethan with a smile.
+
+Marie: So, Ethan.[pause=0.3] How's school?
+
+update Ethan (neutral)
+Ethan: It's going okay, Ma.
+
+Marie: Just okay?
+
+update Ethan (glad)
+Ethan: Okay and stressful.
+
+Everyone chuckles.
+
+Ricardo: Computer?
+
+Ethan: Yes po, computer science!
+
+update Ricardo (glad)
+Ricardo: Makes sense, talino mo kasi.
+
+Ethan: Grades are doing alright though.
+
+update Jennifer (glad)
+Jennifer: That's good, kaya mo yan anak.
+
+update Ethan (neutral)
+Ethan: Hopefully I can keep them there.
+
+Ricardo: I'm sure you will.
+
+Ethan smiles politely. Then, suddenly, everyone looks toward Maya.
+
+update Maya (wide)
+[signal arg="emphasis"]
+Maya immediately notices, and freezes.
+
+update Jennifer (neutral)
+Jennifer: Ikaw naman, Maya.
+
+Maya: Huh?
+
+Jennifer: How are your classes?
+
+update Maya (soft)
+Maya: Oh.
+
+A brief silence. Maya glances down.
+[signal arg="emotion_persist:sad:2"]
+
+- Act unbothered and brush it off
+	set {Route.parent_pressure} += 1
+	update Maya (smile)
+	Maya: Ayos lang po.[pause=0.3] Kaya ko naman.
+	The answer comes out bright. Too bright. Rehearsed.
+- Answer briefly, then change the topic
+	update Maya (neutral)
+	Maya: Okay naman po.[pause=0.3] Anyway - Tita, ang sarap ng luto niyo.
+	She steers the attention elsewhere before anyone can press.
+- Admit that you're having difficulty
+	set {Route.self_honesty} += 1
+	update Maya (teary)
+	Maya: Honestly po, medjo nahihirapan ako...[pause=0.4] pero I'll be okay. I'll just keep doing my best.
+	Jennifer's expression changes, slightly.
+	update Maya (soft)
+	Maya: Pero I'll be okay po. I'll just keep doing my best.
+
+The table grows quiet.
+
+update Ricardo (neutral)
+Ricardo: That's all anyone can ask for.
+
+update Jennifer (neutral)
+Jennifer studies her daughter.
+
+Jennifer: Just make sure you're keeping up.
+
+update Maya (soft)
+Maya: I am.
+
+Marie: Engineering isn't easy.
+
+update Ethan (neutral)
+Ethan: Definitely not.
+
+Marie: The fact that you're still pushing through already says a lot.
+
+update Maya (smile)
+Maya gives a small smile.
+
+Maya: Thank you po.
+
+The conversation slowly shifts elsewhere. But Maya can't shake the feeling of being evaluated. Compared. Measured.
+[signal arg="emotion:jealous"]
+
+update Maya (soft)
+She keeps smiling anyway.
+
+leave Ethan [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+leave Jennifer [animation="Instant Out"]
+leave Ricardo [animation="Instant Out"]
+leave Marie [animation="Instant Out"]
+
+jump act2_sala/

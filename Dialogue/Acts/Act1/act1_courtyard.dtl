@@ -7,22 +7,25 @@
 #   Maya opens up more here; otherwise she stays guarded.
 # ================================================================
 [style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
-[background arg="res://Mocks/Novel UI/image 2.png" fade="0.7"]
+[background arg="res://Art/Backgrounds/campus_courtyard.png" fade="0.7"]
 
 The exam is over. Students spill out of the building.
 
-join Maya (default) left [animation="Instant In"]
+join Maya (neutral) left [animation="Instant In"]
 Maya walks out, looking mentally drained.
 
-join Ethan (default) right [animation="Instant In"]
+join Ethan (neutral) right [animation="Instant In"]
 Ethan spots her from a nearby bench and waves.
 
+update Ethan (glad)
 Ethan: Uy, survivor.
 
+update Maya (soft)
 Maya: Barely.
 
 She drops onto the bench beside him.
 
+update Ethan (neutral)
 Ethan: So? How'd it go?
 
 Maya sighs.
@@ -30,6 +33,8 @@ Maya sighs.
 Maya: Honestly?[pause=0.4] Ang hirap.
 
 if {Route.self_honesty} > 1:
+	update Maya (teary)
+	[signal arg="emphasis"]
 	Maya: And... hindi ko rin alam kung ito pa ba talaga ang gusto ko.
 	It's easier to say now. To him.
 else:
@@ -39,20 +44,25 @@ Ethan: That bad?
 
 Maya: I studied naman.[pause=0.3] Pero parang lahat ng pressure, sabay-sabay pumasok sa utak ko.
 
+update Ethan (glad)
 Ethan: Ah. The classic.
 
+update Maya (neutral)
 Maya: Classic?
 
 Ethan: Yep.[pause=0.2] "I reviewed everything, but my brain decided to clock out during the exam."
 
+update Maya (smile)
 Maya: Exactly.
 
 Ethan: Grabe.[pause=0.2] Unprofessional brain.
 
 Maya chuckles - then her smile fades.
 
+update Ethan (neutral)
 Ethan: Hey.
 
+update Maya (soft)
 Maya: Hmm?
 
 Ethan: You're putting too much pressure on yourself.
@@ -61,32 +71,41 @@ Maya: Easy for you to say.
 
 Ethan: Trust me, nobody has everything figured out.
 
+update Maya (neutral)
 Maya: Could've fooled me.
 
+update Ethan (glad)
 Ethan: Maya, one exam won't destroy your future.[pause=0.7] Probably.
 
+update Maya (smile)
 Maya: "Probably?"
 
 Ethan: I'm trying to comfort you.[pause=0.2] Don't focus on the details.
 
 Maya laughs despite herself.
 
+update Ethan (neutral)
 Ethan: Seriously.[pause=0.3] You did your best, right?
 
+update Maya (soft)
 Maya: Yeah.
 
+update Ethan (glad)
 Ethan: Then that's all you can do.
 
 A brief silence. A comfortable one.
 
+update Maya (smile)
 Maya: Thanks.
 
 Ethan: No problem.[pause=0.4] Now come on.
 
+update Maya (neutral)
 Maya: Where?
 
 Ethan: Food.
 
+update Maya (smile)
 Maya: I thought you were broke.
 
 Ethan: I am.[pause=0.3] But being stressed and hungry at the same time is a terrible combo.
@@ -100,4 +119,4 @@ The two walk off together.
 
 That is where Act 1 comes to a close - to be continued in Act 2.
 
-[end_timeline]
+jump act2_montage/

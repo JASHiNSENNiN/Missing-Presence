@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0bbm3aq0aojd"
+path="res://.godot/imported/BG_people talking.mp3-6eb00667458cbe28785b9424a4290102.mp3str"
+
+[deps]
+
+source_file="res://SFX/BG_people talking.mp3"
+dest_files=["res://.godot/imported/BG_people talking.mp3-6eb00667458cbe28785b9424a4290102.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -63,6 +63,7 @@ const CONFIRM_FLASH_OUT_DURATION := 0.2
 var _highlight_tween: Tween
 var _label_tweens: Dictionary = {}
 var _cascade_active: bool = false
+var _leaving: bool = false
 var _focus_base_scale: Vector2
 var _focus_base_position: Vector2
 
@@ -160,12 +161,18 @@ func _on_exit_label_gui_input(event: InputEvent) -> void:
 
 func _on_options_label_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if _leaving:
+			return
+		_leaving = true
 		_punch_label(options_label)
 		_scene_transition.change_scene(OPTIONS_SCENE_PATH)
 
 
 func _on_load_label_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if _leaving:
+			return
+		_leaving = true
 		_punch_label(load_label)
 		game_flow.set("return_to_game", false)
 		game_flow.set("save_load_mode", "load")
@@ -240,6 +247,9 @@ func _play_focus_and_slide_away() -> Vector2:
 
 
 func _on_cascade_continue_pressed() -> void:
+	if _leaving:
+		return
+	_leaving = true
 	_cascade_active = false
 	_play_confirm_flash()
 	game_flow.set("pending_load_slot", Dialogic.Save.get_latest_slot())
@@ -295,6 +305,9 @@ func _reverse_continue_cascade() -> void:
 
 
 func _start_new_game() -> void:
+	if _leaving:
+		return
+	_leaving = true
 	game_flow.set("pending_load_slot", "")
 	if Dialogic.current_timeline != null:
 		await game_flow.finish_pending_text_reveal()

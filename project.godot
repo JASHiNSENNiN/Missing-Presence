@@ -34,6 +34,7 @@ dock_revealed=true
 directories/dch_directory={
 "Ethan": "res://Dialogue/Characters/Ethan.dch",
 "Jennifer": "res://Dialogue/Characters/Jennifer.dch",
+"Marie": "res://Dialogue/Characters/Marie.dch",
 "Maya": "res://Dialogue/Characters/Maya.dch",
 "Professor": "res://Dialogue/Characters/Professor.dch",
 "Ricardo": "res://Dialogue/Characters/Ricardo.dch"
@@ -44,10 +45,22 @@ directories/dtl_directory={
 "Act1/act1_exam_day": "res://Dialogue/Acts/Act1/act1_exam_day.dtl",
 "Act1/act1_hallway": "res://Dialogue/Acts/Act1/act1_hallway.dtl",
 "Act1/act1_montage": "res://Dialogue/Acts/Act1/act1_montage.dtl",
-"act1_courtyard": "res://Dialogue/Acts/act1_courtyard.dtl",
-"act1_exam_day": "res://Dialogue/Acts/act1_exam_day.dtl",
 "act1_intro_classroom": "res://Dialogue/Acts/Act1/act1_intro_classroom.dtl",
-"act1_montage": "res://Dialogue/Acts/act1_montage.dtl",
+"act2_dinner": "res://Dialogue/Acts/Act2/act2_dinner.dtl",
+"act2_montage": "res://Dialogue/Acts/Act2/act2_montage.dtl",
+"act2_sala": "res://Dialogue/Acts/Act2/act2_sala.dtl",
+"act3_bad": "res://Dialogue/Acts/Act3/act3_bad.dtl",
+"act3_good_dinner": "res://Dialogue/Acts/Act3/act3_good_dinner.dtl",
+"act3_good_shop": "res://Dialogue/Acts/Act3/act3_good_shop.dtl",
+"act3_neutral": "res://Dialogue/Acts/Act3/act3_neutral.dtl",
+"act3_router": "res://Dialogue/Acts/Act3/act3_router.dtl",
+"act4_bad": "res://Dialogue/Acts/Act4/act4_bad.dtl",
+"act4_good": "res://Dialogue/Acts/Act4/act4_good.dtl",
+"act4_neutral": "res://Dialogue/Acts/Act4/act4_neutral.dtl",
+"act5_bad": "res://Dialogue/Acts/Act5/act5_bad.dtl",
+"act5_good": "res://Dialogue/Acts/Act5/act5_good.dtl",
+"act5_neutral": "res://Dialogue/Acts/Act5/act5_neutral.dtl",
+"act_ending": "res://Dialogue/Acts/act_ending.dtl",
 "cozy_persona_test": "res://Dialogue/cozy_persona_test.dtl",
 "test_timeline": "res://Dialogue/test_timeline.dtl"
 }
@@ -56,7 +69,7 @@ layout/style_directory={
 "Cozy Persona VN": "res://Dialogue/Styles/CozyPersonaVN.tres"
 }
 glossary/default_case_sensitive=true
-layout/style_list=PackedStringArray("res://Dialogue/Styles/CozyPersonaVN.tres")
+layout/style_list=["res://Dialogue/Styles/CozyPersonaVN.tres"]
 layout/default_style="res://Dialogue/Styles/CozyPersonaVN.tres"
 variables={
 "Route": {
@@ -99,10 +112,11 @@ audio/channel_defaults={
 }
 }
 text/input_action="dialogic_default_action"
-save/autosave="1"
+save/autosave=true
 save/autosave_mode="0"
 save/default_slot="autosave"
 layout/end_behaviour="1"
+history/simple_history_enabled=false
 
 [display]
 
@@ -111,7 +125,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/beckett/plugin.cfg", "res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/beckett/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/gut/plugin.cfg")
 
 [input]
 

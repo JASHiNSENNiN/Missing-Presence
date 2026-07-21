@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bikeoxsjss3v3"
+path="res://.godot/imported/door bell.mp3-b648e7a4dd216bb412b08a27d444acef.mp3str"
+
+[deps]
+
+source_file="res://SFX/door bell.mp3"
+dest_files=["res://.godot/imported/door bell.mp3-b648e7a4dd216bb412b08a27d444acef.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

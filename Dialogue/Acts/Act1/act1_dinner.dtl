@@ -9,21 +9,24 @@
 
 Dinner. The family sits around the table.
 
-join Ricardo (default) leftmost [animation="Instant In"]
-join Jennifer (default) leftmost [animation="Instant In"]
-join Maya (default) leftmost [animation="Instant In"]
+join Ricardo (neutral) leftmost [animation="Instant In"]
+join Jennifer (neutral) leftmost [animation="Instant In"]
+join Maya (neutral) leftmost [animation="Instant In"]
 Ricardo has just gotten home from work. Jennifer scrolls through her phone while she eats. Maya eats quietly.
 
+update Ricardo (neutral)
 Ricardo: Alam mo, Maya.
 
 Maya looks up.
 
 Ricardo: Yung anak ng katrabaho ko, graduate na.
 
+update Maya (neutral)
 Maya: Talaga po?
 
 Ricardo: Oo.
 
+update Jennifer (glad)
 Jennifer: May trabaho na rin yata agad.
 
 Ricardo: Mhm.
@@ -32,6 +35,7 @@ Jennifer: Ikaw naman next.
 
 Maya forces a smile.
 
+update Maya (smile)
 Maya: Hopefully po.
 
 Ricardo: Before you know it.
@@ -40,6 +44,7 @@ Jennifer: Marami na rin akong nakikitang opportunities abroad.[pause=0.3] Pinapa
 
 Maya's smile weakens.
 
+update Maya (soft)
 Maya: Sige po.
 
 Ricardo: Basta focus lang.
@@ -48,34 +53,50 @@ Maya: Yes po.
 
 Jennifer sets down her phone and studies her daughter.
 
+update Jennifer (neutral)
 Jennifer: Kumusta nga pala grades mo?
 
+update Maya (teary)
+[signal arg="emphasis"]
 Maya freezes. Only slightly. But enough.
 
 ...[pause=0.8]
 
 Jennifer: Okay naman?
+[signal arg="emotion_persist:nervous:2"]
 
-- Reassure them
+# CANONICAL ROUTE CHOICE (asset table): A=Bad, B=Neutral, C=Good.
+# Route score = self_honesty - parent_pressure (tallied at the ending).
+- Agree confidently
+	update Maya (smile)
 	set {Route.parent_pressure} += 1
-	Maya: Okay naman po.[pause=0.4] Kaya ko naman.
+	Maya: Okay naman po.[pause=0.4] Kaya ko 'to.
 	The words come out smooth. Practiced. Almost too easy.
-- Hint at the truth
+- Just nod
+	update Maya (neutral)
+	Maya: ...Okay naman po.
+	She nods, and lets the question pass without opening it any further.
+- Share the hesitation
+	update Maya (soft)
 	set {Route.self_honesty} += 1
-	Maya: Uh...[pause=0.5] I still don't know for certain po.
-	Maya: Pero... I can definitely consider that naman din.
+	Maya: Uh...[pause=0.5]
+	She forces herself to stay calm.
+	Maya: I still don't know yet for certain, but I can definitely consider that naman din po.
 	It's the closest she's come to saying it out loud.
 
 Jennifer nods. Not fully convinced.
 
+update Jennifer (frown)
 Jennifer: You better.
 
 Ricardo: Jen.
 
 Jennifer sighs.
 
+update Jennifer (worried)
 Jennifer: I'm just worried.
 
+update Maya (soft)
 Maya: I know.
 
 The conversation moves on. But Maya barely hears it - the three of them are still at the table, yet her mind is somewhere else.
@@ -88,4 +109,4 @@ leave Ricardo [animation="Instant Out"]
 leave Jennifer [animation="Instant Out"]
 leave Maya [animation="Instant Out"]
 
-jump act1_montage/
+jump Act1/act1_montage/

@@ -10,16 +10,107 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "default",
-&"description": "Placeholder shadow silhouette - no final art yet.",
+&"default_portrait": "neutral",
+&"description": "",
 &"display_name": "ETHAN",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 60),
 &"portraits": {
-"default": {
+"neutral": {
 "export_overrides": {
-"image": "res://Art/Characters/ethan.png"
+"image": "res://Art/Characters/ethan/neutral_close.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"neutral_open": {
+"export_overrides": {
+"image": "res://Art/Characters/ethan/neutral_open.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"glad": {
+"export_overrides": {
+"image": "res://Art/Characters/ethan/glad_close.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"glad_open": {
+"export_overrides": {
+"image": "res://Art/Characters/ethan/glad_open.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"frown": {
+"export_overrides": {
+"image": "res://Art/Characters/ethan/frown_close.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"frown_open": {
+"export_overrides": {
+"image": "res://Art/Characters/ethan/frown_open.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"teary": {
+"export_overrides": {
+"image": "res://Art/Characters/ethan/teary_close.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"teary_open": {
+"export_overrides": {
+"image": "res://Art/Characters/ethan/teary_open.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"grease_neutral": {
+"export_overrides": {
+"image": "res://Art/Characters/ethan/grease_neutral_close.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"grease_neutral_open": {
+"export_overrides": {
+"image": "res://Art/Characters/ethan/grease_neutral_open.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"grease_glad": {
+"export_overrides": {
+"image": "res://Art/Characters/ethan/grease_glad_close.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"grease_glad_open": {
+"export_overrides": {
+"image": "res://Art/Characters/ethan/grease_glad_open.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"grease_frown": {
+"export_overrides": {
+"image": "res://Art/Characters/ethan/grease_frown_close.png"
+},
+"offset": Vector2(0, 0),
+"scene": ""
+},
+"grease_frown_open": {
+"export_overrides": {
+"image": "res://Art/Characters/ethan/grease_frown_open.png"
 },
 "offset": Vector2(0, 0),
 "scene": ""

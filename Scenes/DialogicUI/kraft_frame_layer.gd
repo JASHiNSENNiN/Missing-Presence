@@ -15,7 +15,7 @@ const IRIS_DURATION := 0.6
 const IRIS_DELAY := 0.05
 
 const PARALLAX_STRENGTH := 13.0
-const PARALLAX_TWEEN_TIME := 0.5
+const PARALLAX_SMOOTHING := 6.0
 
 const TALK_REACTION_AMPLITUDE := 4.0
 const TALK_REACTION_DURATION := 0.22
@@ -44,7 +44,8 @@ var _material: ShaderMaterial
 var _played_intro := false
 var _background_holder: Control
 var _background_base_position := Vector2.ZERO
-var _parallax_tween: Tween
+var _parallax_target := Vector2.ZERO
+var _parallax_active := false
 
 var _textbox_anchor: Control
 var _textbox_sizer: Control
@@ -52,7 +53,15 @@ var _box_tween: Tween
 var _box_left_abs := 0.0
 var _target_left_abs := 0.0
 var _character_fade_tweens: Dictionary = {}
+var _entrance_bop_tweens: Dictionary = {}
+var _portrait_base_scales: Dictionary = {}
 var _nametag_stylebox: StyleBoxFlat
+
+const ENTRANCE_BOP_START_SCALE := 0.88
+const ENTRANCE_BOP_DURATION := 0.36
+const LINE_BOP_START_SCALE := 0.965
+const LINE_BOP_DURATION := 0.26
+
 
 
 func _apply_export_overrides() -> void:
@@ -102,25 +111,34 @@ func _input(event: InputEvent) -> void:
 
 
 func _update_parallax(mouse_position: Vector2) -> void:
-	if not is_instance_valid(_background_holder):
-		_background_holder = get_tree().get_first_node_in_group(&"dialogic_background_holders")
-		if not is_instance_valid(_background_holder):
-			return
-		_background_base_position = _background_holder.position
-
+	if not _ensure_background_holder():
+		return
 	var viewport_size := get_viewport().get_visible_rect().size
 	if viewport_size.x <= 0.0 or viewport_size.y <= 0.0:
 		return
-
 	var mouse_normalized := (mouse_position / viewport_size) * 2.0 - Vector2.ONE
 	mouse_normalized = mouse_normalized.clamp(Vector2(-1.0, -1.0), Vector2(1.0, 1.0))
-	var target := _background_base_position - mouse_normalized * PARALLAX_STRENGTH
+	_parallax_target = _background_base_position - mouse_normalized * PARALLAX_STRENGTH
+	_parallax_active = true
 
-	if is_instance_valid(_parallax_tween):
-		_parallax_tween.kill()
-	_parallax_tween = create_tween()
-	_parallax_tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-	_parallax_tween.tween_property(_background_holder, ^"position", target, PARALLAX_TWEEN_TIME)
+
+func _ensure_background_holder() -> bool:
+	if is_instance_valid(_background_holder) and _background_holder.is_inside_tree():
+		return true
+	_background_holder = get_tree().get_first_node_in_group(&"dialogic_background_holders")
+	if not is_instance_valid(_background_holder):
+		return false
+	_background_base_position = _background_holder.position
+	_parallax_target = _background_base_position
+	return true
+
+
+func _process(delta: float) -> void:
+	if Engine.is_editor_hint() or not _parallax_active:
+		return
+	if not _ensure_background_holder():
+		return
+	_background_holder.position = _background_holder.position.lerp(_parallax_target, minf(delta * PARALLAX_SMOOTHING, 1.0))
 
 
 
@@ -130,8 +148,57 @@ func _connect_talk_reactions() -> void:
 		return
 	if not Dialogic.Text.text_started.is_connected(_on_text_started):
 		Dialogic.Text.text_started.connect(_on_text_started)
+	if not Dialogic.signal_event.is_connected(_on_signal_event):
+		Dialogic.signal_event.connect(_on_signal_event)
+	if not Dialogic.Text.speaker_updated.is_connected(_on_speaker_updated):
+		Dialogic.Text.speaker_updated.connect(_on_speaker_updated)
+	if not Dialogic.timeline_started.is_connected(_on_timeline_started):
+		Dialogic.timeline_started.connect(_on_timeline_started)
+	_reapply_textbox_layout.call_deferred(true)
 	if Dialogic.has_subsystem("Portraits") and not Dialogic.Portraits.character_joined.is_connected(_on_character_joined):
 		Dialogic.Portraits.character_joined.connect(_on_character_joined)
+
+
+func _on_speaker_updated(character: DialogicCharacter) -> void:
+	_update_textbox_fill(character)
+	_update_nametag(character)
+
+
+func _on_timeline_started() -> void:
+	_reapply_textbox_layout.call_deferred(true)
+
+
+func _reapply_textbox_layout(instant: bool = false) -> void:
+	if not is_inside_tree() or Engine.is_editor_hint():
+		return
+	var speaker_id: String = str(Dialogic.current_state_info.get("speaker", ""))
+	var character: DialogicCharacter = null
+	if not speaker_id.is_empty():
+		character = DialogicResourceUtil.get_character_resource(speaker_id)
+	if instant:
+		_box_left_abs = _predicted_left_abs(character)
+	_update_textbox_fill(character)
+	_update_nametag(character)
+
+
+func _predicted_left_abs(speaking_character: DialogicCharacter) -> float:
+	var viewport_size := get_viewport().get_visible_rect().size
+	if viewport_size.x <= 0.0:
+		return _box_left_abs
+	var window_left_abs: float = (window_position.x / DESIGN_SIZE.x) * viewport_size.x
+	var window_right_abs: float = ((window_position.x + window_size.x) / DESIGN_SIZE.x) * viewport_size.x
+	var side_margin: float = RIGHT_MARGIN_FRACTION * viewport_size.x
+	if speaking_character == null:
+		return window_left_abs + side_margin
+	var bounds := _get_character_bounds(speaking_character)
+	if bounds.x < 0.0 and bounds.y < 0.0:
+		return window_left_abs + side_margin
+	var gap: float = CHARACTER_GAP_FRACTION * viewport_size.x
+	var min_width: float = MIN_BOX_WIDTH_FRACTION * viewport_size.x
+	var window_center := (window_left_abs + window_right_abs) * 0.5
+	if (bounds.x + bounds.y) * 0.5 <= window_center:
+		return minf(bounds.y + gap, window_right_abs - side_margin - min_width)
+	return window_left_abs + side_margin
 
 
 func _on_character_joined(info: Dictionary) -> void:
@@ -150,6 +217,9 @@ func _on_character_joined(info: Dictionary) -> void:
 func _on_text_started(info: Dictionary) -> void:
 	var character: DialogicCharacter = info.get("character")
 
+	var pre_node: Node2D = Dialogic.Portraits.get_character_node(character) if character != null else null
+	var was_visible := is_instance_valid(pre_node) and pre_node.modulate.a > 0.5
+
 	_update_textbox_fill(character)
 	_update_character_visibility(character)
 	_update_nametag(character)
@@ -162,6 +232,9 @@ func _on_text_started(info: Dictionary) -> void:
 	var character_node: Node2D = Dialogic.Portraits.get_character_node(character)
 	if not is_instance_valid(character_node):
 		return
+
+	if was_visible:
+		_play_bop(character_node, LINE_BOP_START_SCALE, LINE_BOP_DURATION)
 
 	var base_position: Vector2 = character_node.position
 	var tween := create_tween()
@@ -205,6 +278,7 @@ func _update_character_visibility(speaking_character: DialogicCharacter) -> void
 
 		var should_be_visible: bool = speaking_character != null and character == speaking_character
 		var target_alpha := 1.0 if should_be_visible else 0.0
+		var was_hidden := character_node.modulate.a < 0.5
 		if is_equal_approx(character_node.modulate.a, target_alpha):
 			continue
 
@@ -214,6 +288,57 @@ func _update_character_visibility(speaking_character: DialogicCharacter) -> void
 		var tween := create_tween()
 		tween.tween_property(character_node, ^"modulate:a", target_alpha, CHARACTER_FADE_DURATION)
 		_character_fade_tweens[character_node] = tween
+
+		if should_be_visible and was_hidden:
+			_play_bop(character_node, ENTRANCE_BOP_START_SCALE, ENTRANCE_BOP_DURATION)
+
+
+func _on_signal_event(argument: Variant) -> void:
+	if not (argument is String):
+		return
+	var arg := argument as String
+	if not arg.begins_with("emphasis"):
+		return
+	var target_id := ""
+	if arg.begins_with("emphasis:"):
+		target_id = arg.substr("emphasis:".length()).strip_edges()
+	else:
+		target_id = str(Dialogic.current_state_info.get("speaker", ""))
+	if target_id.is_empty():
+		return
+	var character := DialogicResourceUtil.get_character_resource(target_id)
+	if character == null:
+		return
+	var node: Node2D = Dialogic.Portraits.get_character_node(character)
+	if is_instance_valid(node):
+		_play_punch(node)
+
+
+func _play_punch(node: Node2D) -> void:
+	if not _portrait_base_scales.has(node):
+		_portrait_base_scales[node] = node.scale
+	var base_scale: Vector2 = _portrait_base_scales[node]
+	if _entrance_bop_tweens.has(node) and is_instance_valid(_entrance_bop_tweens[node]):
+		_entrance_bop_tweens[node].kill()
+	var tween := create_tween()
+	tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	tween.tween_property(node, ^"scale", base_scale * 1.06, 0.12)
+	tween.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tween.tween_property(node, ^"scale", base_scale, 0.45)
+	_entrance_bop_tweens[node] = tween
+
+
+func _play_bop(node: Node2D, start_scale: float, duration: float) -> void:
+	if not _portrait_base_scales.has(node):
+		_portrait_base_scales[node] = node.scale
+	var base_scale: Vector2 = _portrait_base_scales[node]
+	if _entrance_bop_tweens.has(node) and is_instance_valid(_entrance_bop_tweens[node]):
+		_entrance_bop_tweens[node].kill()
+	node.scale = base_scale * start_scale
+	var tween := create_tween()
+	tween.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tween.tween_property(node, ^"scale", base_scale, duration)
+	_entrance_bop_tweens[node] = tween
 
 
 

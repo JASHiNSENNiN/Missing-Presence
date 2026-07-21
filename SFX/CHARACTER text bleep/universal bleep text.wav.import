@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cg7upkbgim88u"
+path="res://.godot/imported/universal bleep text.wav-18271a55e6f56f73baa32626f3197748.sample"
+
+[deps]
+
+source_file="res://SFX/CHARACTER text bleep/universal bleep text.wav"
+dest_files=["res://.godot/imported/universal bleep text.wav-18271a55e6f56f73baa32626f3197748.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

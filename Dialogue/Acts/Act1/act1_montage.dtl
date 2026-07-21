@@ -5,7 +5,7 @@
 # Bedroom/desk bg (image 3) fits "studies late at night" - no flag.
 # ================================================================
 [style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
-[background arg="res://Mocks/Novel UI/image 3.png" fade="0.8"]
+[background arg="res://Art/Backgrounds/mayas_room.png" fade="0.8"]
 
 School projects pile up.
 
@@ -23,4 +23,4 @@ Maya keeps smiling whenever her parents ask if she's okay.
 
 Even when she isn't.
 
-jump act1_exam_day/
+jump Act1/act1_exam_day/

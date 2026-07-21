@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7dertyrs2s1a"
+path="res://.godot/imported/camera shutter.mp3-0b949680a9e0582d0045bb278bbbaced.mp3str"
+
+[deps]
+
+source_file="res://SFX/camera shutter.mp3"
+dest_files=["res://.godot/imported/camera shutter.mp3-0b949680a9e0582d0045bb278bbbaced.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

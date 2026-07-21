@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2u67n0t6vwnp"
+path="res://.godot/imported/phone notif.mp3-a76497ff217b73ea97d75129a6f71095.mp3str"
+
+[deps]
+
+source_file="res://SFX/phone notif.mp3"
+dest_files=["res://.godot/imported/phone notif.mp3-a76497ff217b73ea97d75129a6f71095.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -2,7 +2,7 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 &"_translation_id": "",
-&"color": Color(0.757, 0.792, 0.353, 1),
+&"color": Color(0.58, 0.7, 0.5, 1),
 &"custom_info": {
 "prefix": "",
 "sound_mood_default": "",
@@ -19,7 +19,7 @@
 &"portraits": {
 "default": {
 "export_overrides": {
-"image": "res://Art/Characters/maya.png"
+"image": "res://Mocks/Novel UI/portrait.png"
 },
 "offset": Vector2(0, 0),
 "scene": ""

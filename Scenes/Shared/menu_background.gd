@@ -72,6 +72,8 @@ func _input(event: InputEvent) -> void:
 
 func _update_parallax_target(mouse_position: Vector2) -> void:
 	var viewport_size := get_viewport_rect().size
+	if viewport_size.x <= 0.0 or viewport_size.y <= 0.0:
+		return
 	var normalized := (mouse_position / viewport_size) * 2.0 - Vector2.ONE
 	normalized = normalized.clamp(Vector2(-1.0, -1.0), Vector2(1.0, 1.0))
 

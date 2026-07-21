@@ -299,6 +299,8 @@ func _on_dialogic_action() -> void:
 
 ## Returns `true` if the given index is a text event before a question or the first choice event of a question.
 func is_question(index:int) -> bool:
+	if index < 0 or index >= len(dialogic.current_timeline_events):
+		return false
 	var event: DialogicEvent = dialogic.current_timeline_events[index]
 	if event is DialogicTextEvent:
 		if len(dialogic.current_timeline_events)-1 != index:

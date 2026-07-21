@@ -64,6 +64,7 @@ var _mode: String = "load"
 var _in_game_context: bool = false
 var _pending_overwrite_slot: String = ""
 var _pending_overwrite_index: int = -1
+var _leaving: bool = false
 
 
 func _ready() -> void:
@@ -90,6 +91,9 @@ func _go_back() -> void:
 	if _in_game_context:
 		_return_to_game()
 	else:
+		get_tree().paused = false
+		if Dialogic.Styles.has_active_layout_node():
+			Dialogic.Styles.get_layout_node().hide()
 		_scene_transition.change_scene(BACK_SCENE_PATH)
 
 
@@ -150,6 +154,8 @@ func _setup_slot_click() -> void:
 func _on_slot_gui_input(event: InputEvent, index: int) -> void:
 	if not (event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT):
 		return
+	if _leaving:
+		return
 
 	var slot_name := _slot_name(index)
 	var occupied := Dialogic.Save.has_slot(slot_name)
@@ -170,12 +176,11 @@ func _on_slot_gui_input(event: InputEvent, index: int) -> void:
 			return
 		if _ui_sound:
 			_ui_sound.confirm()
-		if _in_game_context:
-			Dialogic.Save.load(slot_name)
-			_return_to_game()
-		else:
-			game_flow.set("pending_load_slot", slot_name)
-			_scene_transition.change_scene(DIALOGIC_TEST_SCENE_PATH)
+		_leaving = true
+		game_flow.set("pending_load_slot", slot_name)
+		game_flow.set("return_to_game", false)
+		get_tree().paused = false
+		_scene_transition.change_scene(DIALOGIC_TEST_SCENE_PATH)
 
 
 func _on_overwrite_confirmed() -> void:
@@ -194,7 +199,11 @@ func _commit_save(slot_name: String, index: int) -> void:
 		title = Dialogic.current_timeline.resource_path.get_file().get_basename().capitalize()
 	var timestamp := Time.get_datetime_string_from_system(false, true)
 
-	Dialogic.Save.save(slot_name, false, Dialogic.Save.ThumbnailMode.STORE_ONLY, {"title": title, "timestamp": timestamp})
+	if not game_flow.can_save():
+		if _ui_sound:
+			_ui_sound.error()
+		return
+	game_flow.save_slot(slot_name, Dialogic.Save.ThumbnailMode.STORE_ONLY, {"title": title, "timestamp": timestamp})
 
 	_apply_slot_data(index, slot_name)
 	_show_saved_flourish(index)
@@ -205,7 +214,10 @@ func _show_saved_flourish(index: int) -> void:
 	hint_label.text = SAVED_FLOURISH_TEXT
 	hint_label.add_theme_color_override("font_color", SAVED_FLOURISH_COLOR)
 
-	get_tree().create_timer(SAVED_FLOURISH_DELAY).timeout.connect(_return_to_game)
+	if _leaving:
+		return
+	_leaving = true
+	get_tree().create_timer(SAVED_FLOURISH_DELAY).timeout.connect(_go_back)
 
 
 

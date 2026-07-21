@@ -1,0 +1,519 @@
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+# ACT 5 (Neutral)
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+The morning sun shines over the quiet neighborhood.
+A sedan is parked neatly outside the Ilagan house.
+The street is calm. A few neighbors sweep their front yards while children walk toward school.
+The front gate slowly opens.
+Ethan walks toward the house carrying a small paper bag from a local bakery.
+He pauses for a moment before ringing the doorbell.
+Ding Dong.
+A few seconds pass.
+The door opens.
+Ricardo stands at the doorway.
+His expression immediately softens.
+join Ricardo (neutral) leftmost [animation="Instant In"]
+update Ricardo (glad)
+Ricardo: ETHAN.
+update Ricardo (glad)
+Ricardo: Maaga ka ah.
+Chuckling.
+join Ethan (neutral) leftmost [animation="Instant In"]
+update Ethan (glad)
+Ethan: May dala po akong pandesal.
+update Ethan (glad)
+Ethan: Fresh pa.
+Ricardo smiles.
+update Ricardo (glad)
+Ricardo: Aba...
+update Ricardo (glad)
+Ricardo: Sakto.
+update Ricardo (glad)
+Ricardo: Kape na lang kulang.
+update Ethan (glad)
+Ethan: Pwede ring libre n'yo na lang po ako.
+Ricardo laughs.
+update Ricardo (glad)
+Ricardo: Sige na nga.
+update Ricardo (glad)
+Ricardo: Pasok ka.
+Ethan steps inside.
+leave Ricardo [animation="Instant Out"]
+leave Ethan [animation="Instant Out"]
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+The house feels unusually quiet.
+The television is off.
+No music plays.
+The silence feels heavier than usual.
+Ethan notices Jennifer arranging a few things on a nearby shelf.
+She turns toward him.
+Forces a small smile.
+join Jennifer (neutral) leftmost [animation="Instant In"]
+update Jennifer (glad)
+Jennifer: Good morning, ETHAN.
+join Ethan (neutral) leftmost [animation="Instant In"]
+update Ethan (glad)
+Ethan: Good morning po, Tita.
+Ethan hands her the paper bag.
+update Ethan (neutral)
+Ethan: May pandesal po.
+update Jennifer (neutral)
+Jennifer: Naku.
+update Jennifer (neutral)
+Jennifer: Hindi na sana nag-abala.
+update Ethan (neutral)
+Ethan: Okay lang po.
+update Ethan (neutral)
+Ethan: Napadaan lang.
+Jennifer smiles politely.
+But her eyes betray her exhaustion.
+She hasn't been sleeping well.
+Ethan notices.
+He doesn't mention it.
+Instead...
+update Ethan (neutral)
+Ethan: Nasaan po si MAYA?
+Jennifer pauses.
+She glances toward the hallway.
+update Jennifer (neutral)
+Jennifer: Nasa kwarto pa.
+update Jennifer (neutral)
+Jennifer: Tahimik lang.
+Ethan nods.
+The answer is enough.
+Ricardo walks toward the kitchen.
+join Ricardo (neutral) leftmost [animation="Instant In"]
+update Ricardo (neutral)
+Ricardo: Kape muna tayo.
+update Ricardo (neutral)
+Ricardo: Baka magising din 'yon maMAYA.
+leave Jennifer [animation="Instant Out"]
+leave Ethan [animation="Instant Out"]
+leave Ricardo [animation="Instant Out"]
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+The three sit around the dining table.
+Fresh coffee fills the room with its aroma.
+The paper bag of bread sits in the middle of the table.
+Nobody reaches for it.
+For a moment...
+No one speaks.
+Ethan looks between Jennifer and Ricardo.
+The silence says everything.
+join Ethan (neutral) leftmost [animation="Instant In"]
+update Ethan (neutral)
+Ethan: ...
+update Ethan (neutral)
+Ethan: Okay lang po ba kayo?
+Ricardo lets out a quiet sigh.
+join Ricardo (neutral) leftmost [animation="Instant In"]
+update Ricardo (neutral)
+Ricardo: Hindi rin namin alam.
+Jennifer lowers her gaze.
+Her fingers absentmindedly stir her coffee.
+Though she hasn't taken a sip.
+join Jennifer (neutral) leftmost [animation="Instant In"]
+update Jennifer (neutral)
+Jennifer: Tahimik lang siya simula no'ng isang gabi.
+update Jennifer (neutral)
+Jennifer: Hindi na rin kami halos nag-uusap.
+Ethan nods slowly.
+He had expected as much.
+update Ethan (neutral)
+Ethan: Mahirap po talaga...
+update Ethan (neutral)
+Ethan: Especially after everything.
+Jennifer closes her eyes for a brief moment.
+update Jennifer (neutral)
+Jennifer: Akala ko...
+update Jennifer (neutral)
+Jennifer: kilala ko ang anak ko.
+Pause.
+update Jennifer (neutral)
+Jennifer: Pero parang...
+update Jennifer (neutral)
+Jennifer: ang dami ko palang hindi alam.
+Ricardo quietly places a reassuring hand over hers.
+She doesn't pull away.
+leave Ethan [animation="Instant Out"]
+leave Ricardo [animation="Instant Out"]
+leave Jennifer [animation="Instant Out"]
+[background arg="res://Art/Backgrounds/mayas_room.png" fade="0.7"]
+The curtains remain closed.
+A thin stream of sunlight slips through the gap
+Maya sits on the edge of her bed.
+Still wearing an oversized hoodie.
+Her sketchbook rests beside her.
+She isn't drawing.
+She simply stares at it.
+Lost in thought.
+A knock interrupts the silence.
+Knock. Knock.
+Maya looks toward the door.
+She doesn't answer.
+After a moment...
+Another gentle knock.
+join Ethan (neutral) leftmost [animation="Instant In"]
+update Ethan (glad)
+Ethan: MAYA?
+update Ethan (glad)
+Ethan: Ako 'to.
+A pause.
+Maya quietly walks over.
+She opens the door just enough to peek outside.
+Ethan gives a small smile.
+update Ethan (glad)
+Ethan: Hi.
+Maya manages a weak smile.
+join Maya (neutral) leftmost [animation="Instant In"]
+update Maya (smile)
+Maya: Hi.
+update Maya (smile)
+Maya: Neither of them knows what to say.
+update Maya (smile)
+Maya: Another silence.
+update Maya (smile)
+Maya: Awkward.
+update Ethan (glad)
+Ethan: Pwede ba?
+Maya nods.
+She steps aside.
+Ethan enters.
+leave Ethan [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+[background arg="res://Art/Backgrounds/mayas_room.png" fade="0.7"]
+Ethan looks around the room.
+It feels different now.
+Not because anything has changed.
+[signal arg="emphasis"]
+But because the truth has finally been spoken aloud.
+His eyes briefly land on the sketchbook.
+He looks back at Maya.
+join Ethan (neutral) leftmost [animation="Instant In"]
+update Ethan (neutral)
+Ethan: How are you?
+Maya lets out a dry laugh.
+join Maya (neutral) leftmost [animation="Instant In"]
+update Maya (glad)
+Maya: Honestly?
+update Maya (teary)
+Maya: Hindi ko alam.
+Ethan nods.
+update Ethan (neutral)
+Ethan: Fair.
+Maya sits back on the bed.
+She keeps her eyes on the floor.
+update Maya (soft)
+Maya: Parang...
+update Maya (soft)
+Maya: ang bigat pa rin.
+update Ethan (neutral)
+Ethan: Expected naman.
+update Ethan (neutral)
+Ethan: Hindi naman overnight maaayos lahat.
+Maya smiles faintly.
+update Maya (smile)
+Maya: Ikaw talaga.
+update Maya (smile)
+Maya: Laging may sagot.
+update Ethan (glad)
+Ethan: Hindi ah.
+update Ethan (glad)
+Ethan: Kunwari lang.
+Both of them chuckle.
+The tension eases...
+Only slightly.
+Ethan notices the sketchbook again.
+update Ethan (neutral)
+Ethan: Alam mo...
+update Ethan (neutral)
+Ethan: No'ng sinabi mo lahat sa kanila...
+update Ethan (glad)
+Ethan: Nagulat ako.
+Maya looks at him.
+update Maya (soft)
+Maya: Sa drawing?
+update Ethan (neutral)
+Ethan: Hindi.
+update Ethan (neutral)
+Ethan: Na finally sinabi mo na.
+Pause.
+update Ethan (neutral)
+Ethan: Matagal mo nang kinikimkim 'yon.
+Maya nods.
+update Maya (soft)
+Maya: Natakot lang talaga ako.
+update Ethan (neutral)
+Ethan: I know.
+A brief silence settles between them.
+Ethan smiles reassuringly.
+update Ethan (glad)
+Ethan: Pero...
+For what it's worth...
+I'm proud of you.
+Maya looks at him.
+Confused.
+update Maya (glad)
+Maya: Proud?
+[signal arg="emphasis"]
+It takes guts to tell the truth.
+Kahit alam mong baka hindi nila matanggap.
+Maya's eyes begin to water.
+She quickly looks away.
+update Maya (soft)
+Maya: Sana gano'n lang kadali.
+Ethan nods.
+update Ethan (neutral)
+Ethan: Hindi naman.
+update Ethan (neutral)
+Ethan: Pero...
+At least...
+Hindi ka na nag-iisa.
+Maya slowly looks back at him.
+For the first time in a long while...
+She believes him.
+The room falls into a comfortable silence.
+Outside the bedroom...
+Jennifer quietly walks past the hallway.
+She notices the faint sound of Maya laughing.
+Just once.
+Small.
+But genuine.
+Jennifer pauses.
+A tiny smile forms on her face.
+She doesn't interrupt.
+She simply continues walking.
+Knowing...
+That maybe...
+This is the first step.
+leave Ethan [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+The dining table remains untouched.
+The cups of coffee have gone cold.
+Ricardo sits at the head of the table.
+Jennifer quietly folds a dish towel in her hands, more out of nervousness than necessity.
+Ethan sits across from them.
+No one says a word.
+Ricardo breaks the silence.
+join Ricardo (neutral) leftmost [animation="Instant In"]
+update Ricardo (neutral)
+Ricardo: Hindi puwedeng ganito na lang.
+Jennifer looks up.
+join Jennifer (neutral) leftmost [animation="Instant In"]
+update Jennifer (neutral)
+Jennifer: Alam ko.
+Pause.
+update Jennifer (teary)
+Jennifer: Pero hindi ko alam kung paano magsisimula.
+Ricardo nods.
+update Ricardo (neutral)
+Ricardo: Ako rin.
+Ethan looks toward the hallway.
+join Ethan (neutral) leftmost [animation="Instant In"]
+update Ethan (neutral)
+Ethan: Maybe...
+update Ethan (neutral)
+Ethan: Hindi niyo kailangang alam agad ang tamang sasabihin.
+update Ethan (neutral)
+Ethan: Baka...
+update Ethan (neutral)
+Ethan: kailangan lang muna niyang maramdaman na gusto niyo siyang pakinggan.
+Jennifer slowly lowers her eyes.
+She quietly nods.
+leave Ricardo [animation="Instant Out"]
+leave Jennifer [animation="Instant Out"]
+leave Ethan [animation="Instant Out"]
+[background arg="res://Art/Backgrounds/mayas_room.png" fade="0.7"]
+A soft knock is heard.
+join Ricardo (neutral) leftmost [animation="Instant In"]
+update Ricardo (neutral)
+Ricardo: Anak...
+update Ricardo (neutral)
+Ricardo: Pwede ba tayong mag-usap?
+Maya looks toward the door.
+She takes a deep breath.
+Her phone screen glowing in her hands she lets out a dull sigh.
+join Maya (neutral) leftmost [animation="Instant In"]
+update Maya (phone_frown)
+Maya: ...Sige po.
+Ricardo opens the door slowly.
+Jennifer stands beside him.
+Her posture is rigid, arms tightly crossed.
+She looks frustrated, her eyes scanning the room suspiciously .
+Ethan quietly stays behind in the hallway, looking down awkwardly.
+Ricardo gestures toward the living room.
+update Ricardo (neutral)
+Ricardo: Labas muna tayo sa sala .
+update Ricardo (neutral)
+Ricardo: Kailangan natin mag-usap ng matino .
+update Ricardo (neutral)
+Ricardo: Ayoko ng pabalang na sagot, Maya ha.
+Maya stares at her phone for a brief second before locking it.
+She quietly stands and walks past them.
+leave Ricardo [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+The three sit facing each other.
+Ricardo takes the single armchair,immediately rubbing his temples
+Maya and Jennifer sit on opposite ends of the sofa.
+Maya immediately places her phone face up on her lap.
+The distance between them feels like a literal wall. .
+Nobody speaks.
+Until...
+join Ricardo (neutral) leftmost [animation="Instant In"]
+update Ricardo (neutral)
+Ricardo: Anak...
+update Ricardo (neutral)
+Ricardo: Hindi pwedeng ganiyan ang ugali mo sa amin kagabi… Nagtatanong lang naman kami tungkol sa mga klase mo,diba?
+Maya looks away, her finger tapping the side of her phone.
+join Maya (neutral) leftmost [animation="Instant In"]
+update Maya (phone)
+Maya: Sumagot naman po ako, 'di ba?
+join Jennifer (neutral) leftmost [animation="Instant In"]
+update Jennifer (neutral)
+Jennifer: Sagot ba 'yung puro 'okay lang' habang nakatutok ka dyan sa selpone mo? Maya,'yung scholarship mo hindi yan basta basta lang!
+Maya sighs dramatically. She unlocks her phone right in front of them.
+update Maya (phone_frown)
+Maya: Ma, malaking part ng buhay ko 'tong art career ko. Hindi ko pwedeng itigil lang 'to para sa mga requirements na 'yan.
+Jennifer gets defensive, sitting up straight.
+update Jennifer (neutral)
+Jennifer: Career? Maya, drawing lang 'yan! Ano gagawin mo sa drawing kung hindi mo naman matatapos yung kurso mo? Tingnan mo nga si Ethan!
+Maya flinches at the name. She locks her eyes onto her screen.
+update Jennifer (glad)
+Jennifer: Si Ethan, sobrang responsable. Nakakatulong na nga kay Papa mo sa shop, maayos pa sa school, walang tinatago sa pamilya niya. Siya, may direksyon sa buhay. Ikaw, ano?
+Jennifer looks at Maya intensely
+Maya's fingers anxiously scroll through her device, ignoring her mother's gaze.
+update Maya (frown)
+Maya: Kung gustong-gusto niyo pala 'yung mga choices ni Ethan sa buhay, di sana siya na lang ang naging anak niyo.
+Ricardo sits up and points a finger towards Maya
+update Ricardo (neutral)
+Ricardo: Maya! Huwag mong bastusin ang nanay mo ng ganyan!
+update Maya (soft)
+Maya: Bakit, Pa? Totoo naman di ba? Tuwang-tuwa kayo kapag si Ethan ang kasama mo sa shop. Lagi mo siyang pinupuri habang ako, kahit anong pilit kong maging Dean's Lister, lagi nalang kulang sa inyo.
+The comparison stings, pushing Maya further into her shell.
+She stares at her screen, watching chat bubbles pop up from her thesis mates.
+update Maya (phone_frown)
+Maya: Palagi niyo na lang akong ikinukumpara sa iba. Pero nakikita niyo ba kung gaano ako nahihirapan sa course na to? I just feel like you guys don’t understand or see me at all eh. And yung nakikita niyo lang, ah yung mga bagsak kong requirements.
+Ricardo opens his mouth to speak, but his phone suddenly vibrates loudly on the table.
+An automated work alert flashes on his screen.
+Instinctively, Ricardo reaches out and checks the notification, drawing his attention away.
+Maya notices this and lets out a bitter, lifeless laugh.
+update Maya (glad)
+Maya: See? Kahit ngayon... mas importante pa rin 'yan sa inyo.
+Ricardo quickly puts his phone away, looking guilty but exhausted.
+update Ricardo (frown)
+Ricardo: Sinusubukan ko lang kumita sa buhay, Maya… Para rin sa iyo ang lahat ng pinaghirapan ko. Sayang lang ang ginagawa ko kung sinusuportahan ko ang pag-aaral mo tapos puro ka lang doodle araw-araw.
+Maya turns her back slightly, completely tuning out their words with her phone.
+update Maya (phone_frown)
+Maya: Gagawan ko naman ng paraan yung mga grades ko Pa. Please..wag niyo na lang muna akong kausapin tungkol dito.
+Jennifer snaps, losing her patience.
+Ricardo stares and tries to process what his daughter said.
+update Jennifer (neutral)
+Jennifer: Maya, tabi mo nga muna 'yung selpone mo kapag kinakausap kita!
+Maya grips her phone tighter as her ultimate shield.
+Her mind is a chaotic mess of assignment alerts, but she stays completely numb.
+update Maya (teary)
+Maya: Ayoko po. Di ko po kaya.
+The room falls into a freezing silence.
+update Maya (phone)
+Maya: No one rushes to bridge the gap. No one apologizes. They are physically together, but entirely separated by their screens and pride.
+Ricardo lets out a heavy, tired sigh.
+update Ricardo (neutral)
+Ricardo: Sige. Bahala ka sa buhay mo kung yan ang gusto mo edi sige. Basta bantayan mo 'yang mga grades mo, ha.
+Maya doesn't answer. She stands up and quietly walks back to her room.
+[signal arg="emotion:lost:2"]
+Jennifer and Ricardo are left sitting on the sofa in deep, unresolved disappointment.
+leave Ricardo [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+leave Jennifer [animation="Instant Out"]
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+Months later.
+The family sits around in the living room once again.
+The golden light of sunset shines through the windows, but the room feels cold.
+The atmosphere is quiet, but unlike before, it is not a peaceful silence. It is an awkward, fragile truce.
+Maya finally looks up from her phone.
+She notices her father situated beside her, typing away.
+Her mother sat nearby as well, watching something on her tablet.
+Despite their closeness, Maya still feels lonely.
+“Ganito nalang ba kami?”
+Maya sinks further into the couch.
+She succumbs to her train of thought, shifting to a more comfortable position.
+“Ganito nalang ba… ako?”
+Her eyes droop a little, and she tries not to nod off.
+“Maybe it’s alright…”
+“That I don’t know yet.”
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+A little while later.
+Maya feels something warm, and begins to stir.
+She must have fallen asleep, phone still in her hand, but with her arm now over a warm blanket.
+She blinks, adjusting to the dimming light.
+She notices Jennifer walking back toward the kitchen, her hands empty.
+Her mother was the one who put the blanket on her, but neither of them says a word about it.
+Ricardo is typing away on his phone, answering a shop customer.
+Jennifer is scrolling through her tablet, checking social media.
+Maya is quietly sitting on the other end of the couch, watching them. The distance between them feels physical, yet there's a small change.
+Jennifer stops scrolling for a moment. She glances at Maya.
+join Jennifer (neutral) leftmost [animation="Instant In"]
+update Jennifer (neutral)
+Jennifer: Maya... yung tungkol sa balak mong pag-shift.
+Maya pulls her eyes away from her phone, looking up.
+update Jennifer (neutral)
+Jennifer: May... may final na desisyon ka na ba kung anong lilipatan mo?
+Maya hesitates, her fingers lightly tapping the back of her phone case.
+Instead of getting defensive like before, she takes a quiet, calm breath.
+join Maya (neutral) leftmost [animation="Instant In"]
+update Maya (soft)
+Maya: Honestly, Ma... hindi ko pa po alam kung anong exact course.
+Pause.
+update Maya (soft)
+Maya: Pero inaayos ko pa po yung mga basic requirements habang nag-iisip. Pero... okay lang naman po siguro yon, di ba? Na hindi ko pa alam agad.
+Jennifer looks at her tablet, then back to Maya. She lets out a small, tired sigh.
+update Jennifer (neutral)
+Jennifer: Matatakot pa rin naman ako para sa future mo Maya. Hindi naman nawawala yon sa magulang.
+Pause.
+update Jennifer (neutral)
+Jennifer: Pero... sige. Kung kailangan mo ng oras para hanapin yung totoong gusto mo, hindi na muna kita mamadaliin.
+Maya blinks, slightly caught off guard. She feels a tiny weight leave her shoulders.
+update Maya (wide)
+Maya: Salamat po, Ma.
+Ricardo lowers his phone to his lap, looking over at both of them.
+join Ricardo (neutral) leftmost [animation="Instant In"]
+update Ricardo (glad)
+Ricardo: Basta huwag mo lang pababayaan yung natitirang subjects mo ngayon, ha. Ayusin mo pa rin habang naghahanap ka ng gagawin mo sa buhay mo sabihan mo lang kami kung may kailangan ka.
+update Maya (phone_frown)
+Maya: Opo, Pa. Gagawan ko po ng paraan.
+Maya nods silently
+leave Jennifer [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+leave Ricardo [animation="Instant Out"]
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+The family moves toward the dining table as evening begins to set in.
+Ricardo continues typing on his phone while walking, answering one last work thread.
+Jennifer walks beside him, scrolling through a notification on her device.
+They sit down, and the family shares the same space. Conversations remain brief and somewhat awkward, but the biting tension from before is gone.
+Without looking up from her screen
+join Jennifer (neutral) leftmost [animation="Instant In"]
+update Jennifer (neutral)
+Jennifer: Kumain na kayo. Lumalamig 'yung ulam.
+Answering a text
+join Ricardo (neutral) leftmost [animation="Instant In"]
+update Ricardo (neutral)
+Ricardo: Oo, sandali lang. May tinatapos lang sa chat.
+Maya watches them. She takes her own phone and places it face up on the table right next to her plate.
+Jennifer places her face up as well. Then Ricardo.
+Three screens glow quietly in the dimming room, occasionally lighting up with notifications.
+They are still heavily attached to their devices. They still look down more than they look up. But as Maya picks up her utensils, she notices small, subtle shifts. Jennifer's scrolling is less frantic. Ricardo is staying at the table instead of running off to the shop.
+Some things have remained the same, and the emotional distance hasn't magically disappeared. But the wounds are slowly starting to scar over.
+Maya looks out the window at the darkening sky, then down at her phone.
+She leaves the house tomorrow still feeling uncertain about her future requirements.
+But looking at the quiet table, she feels a strange, small spark of hope.
+She doesn't have the roadmap yet but she's willing to keep searching for her own answers.
+The three of them continue eating in their quiet, routine bubble, screens glowing softly against their faces. The old family photo lingers even more.
+The space is unchanged.
+No new art is up yet.
+But the air feels just a little lighter.
+Slowly fade to black.
+The End.
+leave Jennifer [animation="Instant Out"]
+leave Ricardo [animation="Instant Out"]
+jump act_ending/

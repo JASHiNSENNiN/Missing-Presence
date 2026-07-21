@@ -13,26 +13,46 @@
 
 Exam day. The family eats breakfast together.
 
-join Ricardo (default) leftmost [animation="Instant In"]
-join Maya (default) center [animation="Instant In"]
-join Jennifer (default) rightmost [animation="Instant In"]
+join Ricardo (neutral) leftmost [animation="Instant In"]
+join Maya (neutral) center [animation="Instant In"]
+join Jennifer (neutral) rightmost [animation="Instant In"]
 Maya scrolls through her messages. A notification lights up the screen - a text from Ethan: "Good luck sa exam later."
 
+update Maya (phone_smile)
 Maya smiles and starts typing.
 
+update Jennifer (neutral)
 Jennifer: Maya.
 
 No response.
 
 Jennifer: Maya.
 
+update Maya (wide)
 Maya: Po?
 
+update Jennifer (frown)
 Jennifer: Phone na naman habang kumakain.
 
+update Maya (teary)
 Maya immediately looks guilty.
 
-Maya: Ay, sorry Ma![pause=0.3] I'll finish this na so I won't be late.
+# CANONICAL ROUTE CHOICE (asset table): A=Bad, B=Neutral, C=Good.
+# Route score = self_honesty - parent_pressure (tallied at the ending).
+- Brush it off
+	update Maya (annoyed)
+	set {Route.parent_pressure} += 1
+	Maya: Relax lang po, Ma.[pause=0.3] Hindi naman ganoon kaseryoso.
+	Jennifer's frown deepens. The silence turns brittle.
+- Put it down and apologize
+	update Maya (soft)
+	Maya: Ay, sorry po.[pause=0.3] Aalis ko na 'to.
+	She sets the phone face-down without another word.
+- Explain, then put it away
+	update Maya (soft)
+	set {Route.self_honesty} += 1
+	Maya: Ay, sorry Ma![pause=0.3] I'll finish this na so I won't be late.
+	She locks the phone and slides it into her bag.
 
 Jennifer crosses her arms.
 
@@ -40,25 +60,28 @@ Jennifer: You should focus more on what's in front of you.
 
 An awkward silence follows. Ricardo notices Maya tense up.
 
+update Ricardo (neutral)
 Ricardo: Jen.[pause=0.4] Hayaan mo na. Exam day naman niya.
 
 Ricardo turns to Maya with a reassuring smile.
 
+update Ricardo (glad)
 Ricardo: Good luck later.
 
+update Maya (smile)
 Maya: Thanks, Pa.
 
 leave Ricardo [animation="Instant Out"]
 leave Jennifer [animation="Instant Out"]
 leave Maya [animation="Instant Out"]
 
-[background arg="res://Mocks/Novel UI/image 2.png" fade="0.6" transition="Swipe Diagonal Up Left"]
+[background arg="res://Art/Backgrounds/campus_courtyard.png" fade="0.6" transition="Swipe Diagonal Up Left"]
 
 Maya steps out of the house. She adjusts her backpack, takes a deep breath, and starts walking.
 
 Jeepneys rattle past. Students rush by. Cars pile up at the intersections.
 
-join Maya (default) center [animation="Instant In"]
+join Maya (neutral) center [animation="Instant In"]
 She reviews her flashcards the whole commute.
 
 Her phone buzzes - a text from Ethan: "You got this."
@@ -67,6 +90,7 @@ Maya smiles.
 
 The campus comes into view. She checks the time, and stops.
 
+update Maya (wide)
 Maya: Ang aga ko.
 
 For once, nothing has gone wrong. No delays. No rushing. No panic. Just silence. And time.
@@ -81,4 +105,4 @@ She takes a deep breath, and begins to review.
 
 leave Maya [animation="Instant Out"]
 
-jump act1_courtyard/
+jump Act1/act1_courtyard/
