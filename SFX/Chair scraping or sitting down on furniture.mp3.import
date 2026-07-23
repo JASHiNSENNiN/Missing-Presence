@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgcts2knwaiku"
+path="res://.godot/imported/Chair scraping or sitting down on furniture.mp3-637ab159181dc842572ab89a03e934ab.mp3str"
+
+[deps]
+
+source_file="res://SFX/Chair scraping or sitting down on furniture.mp3"
+dest_files=["res://.godot/imported/Chair scraping or sitting down on furniture.mp3-637ab159181dc842572ab89a03e934ab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

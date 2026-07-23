@@ -498,4 +498,145 @@ theme_override_colors/font_color = Color(0.55, 0.5, 0.45, 1)
 theme_override_font_sizes/font_size = 11
 text = "Full"
 
+[node name="MasterVolumeLabel" type="Label" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot"]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 292.0
+offset_right = 743.0
+offset_bottom = 306.0
+theme_override_colors/font_color = Color(0.42, 0.32, 0.22, 1)
+theme_override_font_sizes/font_size = 12
+text = "Master Volume"
+
+[node name="MasterVolumeSlider" type="HSlider" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot"]
+layout_mode = 0
+offset_left = 766.0
+offset_top = 293.0
+offset_right = 902.0
+offset_bottom = 310.0
+theme_override_icons/grabber = ExtResource("21_arqlo")
+theme_override_icons/grabber_highlight = ExtResource("21_arqlo")
+theme_override_styles/slider = ExtResource("14_hccrg")
+theme_override_styles/grabber_area = ExtResource("15_rd7ph")
+theme_override_styles/grabber_area_highlight = ExtResource("15_rd7ph")
+max_value = 1.0
+step = 0.01
+
+[node name="MasterVolumePercent" type="Label" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot"]
+layout_mode = 0
+offset_left = 908.0
+offset_top = 288.0
+offset_right = 948.0
+offset_bottom = 311.0
+theme_override_colors/font_color = Color(0.55, 0.5, 0.45, 1)
+theme_override_font_sizes/font_size = 12
+text = "100%"
+vertical_alignment = 1
+
+[node name="GameplayHeader" type="Label" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot"]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 332.0
+offset_right = 743.0
+offset_bottom = 346.0
+theme_override_colors/font_color = Color(0.42, 0.32, 0.22, 1)
+theme_override_font_sizes/font_size = 12
+text = "Gameplay"
+
+[node name="AutoAdvanceLabel" type="Label" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot"]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 362.0
+offset_right = 780.0
+offset_bottom = 379.0
+theme_override_colors/font_color = Color(0.55, 0.5, 0.45, 1)
+theme_override_font_sizes/font_size = 12
+text = "Auto-Advance"
+
+[node name="AutoAdvanceCheckboxBox" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot"]
+layout_mode = 0
+offset_left = 895.0
+offset_top = 362.0
+offset_right = 912.0
+offset_bottom = 379.0
+mouse_filter = 0
+texture = ExtResource("9_8ee0a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AutoAdvanceCheckmark" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot"]
+layout_mode = 0
+offset_left = 897.0
+offset_top = 365.0
+offset_right = 911.0
+offset_bottom = 377.0
+mouse_filter = 2
+texture = ExtResource("10_46r36")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SkipReadLabel" type="Label" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot"]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 392.0
+offset_right = 780.0
+offset_bottom = 409.0
+theme_override_colors/font_color = Color(0.55, 0.5, 0.45, 1)
+theme_override_font_sizes/font_size = 12
+text = "Skip Read Text"
+
+[node name="SkipReadCheckboxBox" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot"]
+layout_mode = 0
+offset_left = 895.0
+offset_top = 392.0
+offset_right = 912.0
+offset_bottom = 409.0
+mouse_filter = 0
+texture = ExtResource("9_8ee0a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SkipReadCheckmark" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot"]
+layout_mode = 0
+offset_left = 897.0
+offset_top = 395.0
+offset_right = 911.0
+offset_bottom = 407.0
+mouse_filter = 2
+texture = ExtResource("10_46r36")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NotificationsLabel" type="Label" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot"]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 422.0
+offset_right = 800.0
+offset_bottom = 439.0
+theme_override_colors/font_color = Color(0.55, 0.5, 0.45, 1)
+theme_override_font_sizes/font_size = 12
+text = "Phone Notifications"
+
+[node name="NotificationsCheckboxBox" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot"]
+layout_mode = 0
+offset_left = 895.0
+offset_top = 422.0
+offset_right = 912.0
+offset_bottom = 439.0
+mouse_filter = 0
+texture = ExtResource("9_8ee0a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NotificationsCheckmark" type="TextureRect" parent="CanvasLayer/MenuLayout/BookRoot/ContentRoot"]
+layout_mode = 0
+offset_left = 897.0
+offset_top = 425.0
+offset_right = 911.0
+offset_bottom = 437.0
+mouse_filter = 2
+texture = ExtResource("10_46r36")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2091874217]

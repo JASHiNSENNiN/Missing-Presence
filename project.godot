@@ -23,6 +23,7 @@ Dialogic="*uid://ds2q0uclmolvu"
 GameFlow="*res://Autoload/GameFlow.gd"
 SceneTransition="*res://Scenes/Shared/paper_blinds_transition.tscn"
 UISound="*res://Autoload/UISound.gd"
+SceneSFX="*res://Autoload/SceneSFX.gd"
 
 [beckett]
 
@@ -40,26 +41,14 @@ directories/dch_directory={
 "Ricardo": "res://Dialogue/Characters/Ricardo.dch"
 }
 directories/dtl_directory={
-"Act1/act1_courtyard": "res://Dialogue/Acts/Act1/act1_courtyard.dtl",
-"Act1/act1_dinner": "res://Dialogue/Acts/Act1/act1_dinner.dtl",
-"Act1/act1_exam_day": "res://Dialogue/Acts/Act1/act1_exam_day.dtl",
-"Act1/act1_hallway": "res://Dialogue/Acts/Act1/act1_hallway.dtl",
-"Act1/act1_montage": "res://Dialogue/Acts/Act1/act1_montage.dtl",
-"act1_intro_classroom": "res://Dialogue/Acts/Act1/act1_intro_classroom.dtl",
-"act2_dinner": "res://Dialogue/Acts/Act2/act2_dinner.dtl",
-"act2_montage": "res://Dialogue/Acts/Act2/act2_montage.dtl",
-"act2_sala": "res://Dialogue/Acts/Act2/act2_sala.dtl",
-"act3_bad": "res://Dialogue/Acts/Act3/act3_bad.dtl",
-"act3_good_dinner": "res://Dialogue/Acts/Act3/act3_good_dinner.dtl",
-"act3_good_shop": "res://Dialogue/Acts/Act3/act3_good_shop.dtl",
-"act3_neutral": "res://Dialogue/Acts/Act3/act3_neutral.dtl",
-"act3_router": "res://Dialogue/Acts/Act3/act3_router.dtl",
-"act4_bad": "res://Dialogue/Acts/Act4/act4_bad.dtl",
-"act4_good": "res://Dialogue/Acts/Act4/act4_good.dtl",
-"act4_neutral": "res://Dialogue/Acts/Act4/act4_neutral.dtl",
-"act5_bad": "res://Dialogue/Acts/Act5/act5_bad.dtl",
-"act5_good": "res://Dialogue/Acts/Act5/act5_good.dtl",
-"act5_neutral": "res://Dialogue/Acts/Act5/act5_neutral.dtl",
+"act1": "res://Dialogue/Acts/act1.dtl",
+"act2": "res://Dialogue/Acts/act2.dtl",
+"act3": "res://Dialogue/Acts/act3.dtl",
+"act4": "res://Dialogue/Acts/act4.dtl",
+"act5_bad": "res://Dialogue/Acts/act5_bad.dtl",
+"act5_good": "res://Dialogue/Acts/act5_good.dtl",
+"act5_neutral": "res://Dialogue/Acts/act5_neutral.dtl",
+"act5_router": "res://Dialogue/Acts/act5_router.dtl",
 "act_ending": "res://Dialogue/Acts/act_ending.dtl",
 "cozy_persona_test": "res://Dialogue/cozy_persona_test.dtl",
 "test_timeline": "res://Dialogue/test_timeline.dtl"
@@ -73,9 +62,8 @@ layout/style_list=["res://Dialogue/Styles/CozyPersonaVN.tres"]
 layout/default_style="res://Dialogue/Styles/CozyPersonaVN.tres"
 variables={
 "Route": {
-"affinity_ethan": 0.0,
-"parent_pressure": 0.0,
-"self_honesty": 0.0
+"bad": 0.0,
+"good": 0.0
 }
 }
 extensions_folder="res://addons/dialogic_additions"
@@ -126,6 +114,10 @@ window/stretch/aspect="expand"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/beckett/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/gut/plugin.cfg")
+
+[gui]
+
+theme/custom="res://theme.tres"
 
 [input]
 

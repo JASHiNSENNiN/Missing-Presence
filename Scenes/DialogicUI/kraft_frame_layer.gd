@@ -17,6 +17,9 @@ const IRIS_DELAY := 0.05
 const PARALLAX_STRENGTH := 13.0
 const PARALLAX_SMOOTHING := 6.0
 
+const BG_PUSHIN_START := 1.06
+const BG_PUSHIN_TIME := 1.5
+
 const TALK_REACTION_AMPLITUDE := 4.0
 const TALK_REACTION_DURATION := 0.22
 
@@ -46,15 +49,19 @@ var _background_holder: Control
 var _background_base_position := Vector2.ZERO
 var _parallax_target := Vector2.ZERO
 var _parallax_active := false
+var _bg_pushin_tween: Tween
 
 var _textbox_anchor: Control
 var _textbox_sizer: Control
 var _box_tween: Tween
 var _box_left_abs := 0.0
 var _target_left_abs := 0.0
+var _box_right_abs := 0.0
+var _target_right_abs := 0.0
 var _character_fade_tweens: Dictionary = {}
 var _entrance_bop_tweens: Dictionary = {}
 var _portrait_base_scales: Dictionary = {}
+var _impact_shake_tweens: Dictionary = {}
 var _nametag_stylebox: StyleBoxFlat
 
 const ENTRANCE_BOP_START_SCALE := 0.88
@@ -157,6 +164,21 @@ func _connect_talk_reactions() -> void:
 	_reapply_textbox_layout.call_deferred(true)
 	if Dialogic.has_subsystem("Portraits") and not Dialogic.Portraits.character_joined.is_connected(_on_character_joined):
 		Dialogic.Portraits.character_joined.connect(_on_character_joined)
+	if Dialogic.has_subsystem("Backgrounds") and not Dialogic.Backgrounds.background_changed.is_connected(_on_background_changed):
+		Dialogic.Backgrounds.background_changed.connect(_on_background_changed)
+
+
+func _on_background_changed(_info: Dictionary) -> void:
+	if Engine.is_editor_hint() or not _ensure_background_holder():
+		return
+	var holder := _background_holder
+	holder.pivot_offset = holder.size * 0.5
+	if is_instance_valid(_bg_pushin_tween):
+		_bg_pushin_tween.kill()
+	holder.scale = Vector2(BG_PUSHIN_START, BG_PUSHIN_START)
+	_bg_pushin_tween = create_tween()
+	_bg_pushin_tween.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	_bg_pushin_tween.tween_property(holder, ^"scale", Vector2.ONE, BG_PUSHIN_TIME)
 
 
 func _on_speaker_updated(character: DialogicCharacter) -> void:
@@ -177,6 +199,7 @@ func _reapply_textbox_layout(instant: bool = false) -> void:
 		character = DialogicResourceUtil.get_character_resource(speaker_id)
 	if instant:
 		_box_left_abs = _predicted_left_abs(character)
+		_box_right_abs = _predicted_right_abs(character)
 	_update_textbox_fill(character)
 	_update_nametag(character)
 
@@ -199,6 +222,26 @@ func _predicted_left_abs(speaking_character: DialogicCharacter) -> float:
 	if (bounds.x + bounds.y) * 0.5 <= window_center:
 		return minf(bounds.y + gap, window_right_abs - side_margin - min_width)
 	return window_left_abs + side_margin
+
+
+func _predicted_right_abs(speaking_character: DialogicCharacter) -> float:
+	var viewport_size := get_viewport().get_visible_rect().size
+	if viewport_size.x <= 0.0:
+		return _box_right_abs
+	var window_left_abs: float = (window_position.x / DESIGN_SIZE.x) * viewport_size.x
+	var window_right_abs: float = ((window_position.x + window_size.x) / DESIGN_SIZE.x) * viewport_size.x
+	var side_margin: float = RIGHT_MARGIN_FRACTION * viewport_size.x
+	if speaking_character == null:
+		return window_right_abs - side_margin
+	var bounds := _get_character_bounds(speaking_character)
+	if bounds.x < 0.0 and bounds.y < 0.0:
+		return window_right_abs - side_margin
+	var gap: float = CHARACTER_GAP_FRACTION * viewport_size.x
+	var min_width: float = MIN_BOX_WIDTH_FRACTION * viewport_size.x
+	var window_center := (window_left_abs + window_right_abs) * 0.5
+	if (bounds.x + bounds.y) * 0.5 <= window_center:
+		return window_right_abs - side_margin
+	return maxf(bounds.x - gap, window_left_abs + side_margin + min_width)
 
 
 func _on_character_joined(info: Dictionary) -> void:
@@ -322,10 +365,32 @@ func _play_punch(node: Node2D) -> void:
 		_entrance_bop_tweens[node].kill()
 	var tween := create_tween()
 	tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-	tween.tween_property(node, ^"scale", base_scale * 1.06, 0.12)
+	tween.tween_property(node, ^"scale", base_scale * 1.08, 0.1)
 	tween.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-	tween.tween_property(node, ^"scale", base_scale, 0.45)
+	tween.tween_property(node, ^"scale", base_scale, 0.5)
 	_entrance_bop_tweens[node] = tween
+	_play_impact_shake(node)
+
+
+const IMPACT_SHAKE_STEPS := 5
+const IMPACT_SHAKE_AMOUNT := 7.0
+const IMPACT_SHAKE_STEP_TIME := 0.045
+
+
+func _play_impact_shake(node: Node2D) -> void:
+	var base_pos: Vector2 = node.position
+	if _impact_shake_tweens.has(node) and is_instance_valid(_impact_shake_tweens[node]):
+		_impact_shake_tweens[node].kill()
+		node.position = base_pos
+	var shake := create_tween()
+	for i in IMPACT_SHAKE_STEPS:
+		var falloff: float = 1.0 - float(i) / float(IMPACT_SHAKE_STEPS)
+		var dir: float = 1.0 if i % 2 == 0 else -1.0
+		var offset := Vector2(dir * IMPACT_SHAKE_AMOUNT * falloff, IMPACT_SHAKE_AMOUNT * 0.4 * falloff)
+		shake.tween_property(node, ^"position", base_pos + offset, IMPACT_SHAKE_STEP_TIME) \
+			.set_trans(Tween.TRANS_SINE)
+	shake.tween_property(node, ^"position", base_pos, IMPACT_SHAKE_STEP_TIME)
+	_impact_shake_tweens[node] = shake
 
 
 func _play_bop(node: Node2D, start_scale: float, duration: float) -> void:
@@ -388,19 +453,26 @@ func _update_textbox_fill(speaking_character: DialogicCharacter) -> void:
 
 	if is_instance_valid(_box_tween):
 		_box_tween.kill()
+	_target_right_abs = box_right_abs
+	# First show (right edge uninitialised): snap it so the box doesn't grow from
+	# zero width. Otherwise interpolate BOTH edges together — binding the right
+	# edge as a fixed value made it teleport while only the left slid.
+	var from_left: float = _box_left_abs
+	var from_right: float = _box_right_abs if _box_right_abs > 0.0 else box_right_abs
 	_box_tween = create_tween()
 	_box_tween.set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT)
-	_box_tween.tween_method(_apply_box_left.bind(box_right_abs, viewport_size), _box_left_abs, _target_left_abs, BOX_MODE_DURATION)
+	_box_tween.tween_method(_apply_box.bind(from_left, from_right, viewport_size), 0.0, 1.0, BOX_MODE_DURATION)
 
 
-func _apply_box_left(left_abs: float, right_abs: float, viewport_size: Vector2) -> void:
-	_box_left_abs = left_abs
-	var width: float = right_abs - left_abs
+func _apply_box(t: float, from_left: float, from_right: float, viewport_size: Vector2) -> void:
+	_box_left_abs = lerpf(from_left, _target_left_abs, t)
+	_box_right_abs = lerpf(from_right, _target_right_abs, t)
+	var width: float = _box_right_abs - _box_left_abs
 	var height: float = BOX_HEIGHT_FRACTION * viewport_size.y
 	var margin_bottom: float = BOX_MARGIN_BOTTOM_FRACTION * viewport_size.y
 
 	_textbox_sizer.size = Vector2(width, height)
-	_textbox_sizer.position = Vector2(left_abs - viewport_size.x, -height - margin_bottom)
+	_textbox_sizer.position = Vector2(_box_left_abs - viewport_size.x, -height - margin_bottom)
 
 
 func _get_character_bounds(character: DialogicCharacter) -> Vector2:

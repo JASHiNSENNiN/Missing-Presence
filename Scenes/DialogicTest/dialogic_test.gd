@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var game_flow: Node = get_node("/root/GameFlow")
 
-const DEFAULT_TIMELINE := "res://Dialogue/Acts/Act1/act1_intro_classroom.dtl"
+const DEFAULT_TIMELINE := "res://Dialogue/Acts/act1.dtl"
 
 
 func _ready() -> void:
@@ -37,15 +37,9 @@ func _clear_stale_timeline() -> void:
 
 
 func _load_slot_with_layout(slot_name: String) -> bool:
-	var scene: Node
-	if not Dialogic.Styles.has_active_layout_node():
-		scene = Dialogic.Styles.load_style()
-	else:
-		scene = Dialogic.Styles.get_layout_node()
-
-	if scene and not scene.is_node_ready():
-		await scene.ready
-
+	# Let Dialogic.Save.load build exactly ONE layout via its own Styles subsystem.
+	# Pre-creating a layout here caused a cold-boot double-layout race where the
+	# restored timeline never settled and Continue fell back to a fresh Act 1.
 	var ok: bool = await game_flow.load_slot_and_wait(slot_name)
 	if not ok:
 		return false

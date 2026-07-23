@@ -83,6 +83,10 @@ func _build() -> void:
 	_banner.texture = _texture
 
 
+func get_home() -> Vector2:
+	return _home
+
+
 func set_home(pos: Vector2) -> void:
 	_home = pos
 	if not _dragging and not _settling:

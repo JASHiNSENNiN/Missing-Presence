@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://coutropresence1"]
+
+[ext_resource type="Script" path="res://Scenes/Outro/outro.gd" id="1_outro"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/cloud_drift_material.tres" id="2_cloud"]
+[ext_resource type="Texture2D" uid="uid://c243wnyyjkbs" path="res://Mocks/main menu/Background/Layer 1.png" id="2_l1"]
+[ext_resource type="Script" uid="uid://byv37rso2gnv1" path="res://Scenes/Shared/menu_background.gd" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://nxefcxsx1sk" path="res://Mocks/main menu/Background/Layer 2.png" id="3_l2"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/grass_sway_hill_material.tres" id="4_hill"]
+[ext_resource type="Texture2D" uid="uid://wk81rx8sa2ki" path="res://Mocks/main menu/Background/Layer 3.png" id="4_l3"]
+[ext_resource type="Texture2D" uid="uid://dh1oaitep7t0j" path="res://Mocks/main menu/Background/Layer 4.png" id="5_l4"]
+[ext_resource type="Texture2D" uid="uid://u8lv5cw5lrv2" path="res://Mocks/main menu/Background/Layer 5.png" id="6_l5"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/hair_sway_material.tres" id="6_hair"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/grass_sway_mid_material.tres" id="7_mid"]
+[ext_resource type="Material" path="res://Scenes/Main Menu/grass_sway_front_material.tres" id="9_front"]
+
+[node name="Outro" type="Node2D"]
+script = ExtResource("1_outro")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackgroundLayers" type="Node2D" parent="CanvasLayer"]
+script = ExtResource("2_bg")
+
+[node name="Sky" type="Sprite2D" parent="CanvasLayer/BackgroundLayers"]
+material = ExtResource("2_cloud")
+position = Vector2(1500, 843.5)
+texture = ExtResource("2_l1")
+
+[node name="Hill" type="Sprite2D" parent="CanvasLayer/BackgroundLayers"]
+material = ExtResource("4_hill")
+position = Vector2(1500, 986.5)
+texture = ExtResource("3_l2")
+
+[node name="Character" type="Sprite2D" parent="CanvasLayer/BackgroundLayers"]
+z_index = 1
+material = ExtResource("6_hair")
+position = Vector2(2028, 1021)
+texture = ExtResource("4_l3")
+
+[node name="GrassMid" type="Sprite2D" parent="CanvasLayer/BackgroundLayers"]
+z_index = 2
+material = ExtResource("7_mid")
+position = Vector2(1519, 947.5006)
+scale = Vector2(1.142, 1.6787757)
+texture = ExtResource("5_l4")
+
+[node name="GrassFront" type="Sprite2D" parent="CanvasLayer/BackgroundLayers"]
+z_index = 3
+material = ExtResource("9_front")
+position = Vector2(1489, 966.0007)
+scale = Vector2(1.1140001, 1.5794101)
+texture = ExtResource("6_l5")
+
+[node name="Content" type="Control" parent="CanvasLayer"]
+z_index = 10
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ConfirmFlash" type="ColorRect" parent="CanvasLayer"]
+z_index = 20
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]

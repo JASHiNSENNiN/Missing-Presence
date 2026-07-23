@@ -198,8 +198,8 @@ func _punch_label(label: Label) -> void:
 func _on_start_pressed() -> void:
 	if _cascade_active:
 		return
-	var latest_slot: String = Dialogic.Save.get_latest_slot()
-	if not latest_slot.is_empty() and Dialogic.Save.has_slot(latest_slot):
+	var continue_slot: String = game_flow.resolve_continue_slot()
+	if not continue_slot.is_empty():
 		_play_continue_cascade()
 	else:
 		_start_new_game()
@@ -252,7 +252,7 @@ func _on_cascade_continue_pressed() -> void:
 	_leaving = true
 	_cascade_active = false
 	_play_confirm_flash()
-	game_flow.set("pending_load_slot", Dialogic.Save.get_latest_slot())
+	game_flow.set("pending_load_slot", game_flow.resolve_continue_slot())
 	_scene_transition.change_scene(DIALOGIC_TEST_SCENE_PATH)
 
 

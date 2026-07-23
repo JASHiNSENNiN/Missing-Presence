@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cpn34ygk36gne"
+path="res://.godot/imported/Backpack zipper or rustling.mp3-99567daa6afeaca202c5b414be55429e.mp3str"
+
+[deps]
+
+source_file="res://SFX/Backpack zipper or rustling.mp3"
+dest_files=["res://.godot/imported/Backpack zipper or rustling.mp3-99567daa6afeaca202c5b414be55429e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

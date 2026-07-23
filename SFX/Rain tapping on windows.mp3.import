@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6756wikrymnq"
+path="res://.godot/imported/Rain tapping on windows.mp3-6dfeb29054eb596029f44662c4a92f20.mp3str"
+
+[deps]
+
+source_file="res://SFX/Rain tapping on windows.mp3"
+dest_files=["res://.godot/imported/Rain tapping on windows.mp3-6dfeb29054eb596029f44662c4a92f20.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

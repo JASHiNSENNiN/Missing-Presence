@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c1cj55f532ey0"
+path="res://.godot/imported/TV playing softly in background.mp3-b213668ef5c61bcbce94259099fb0a32.mp3str"
+
+[deps]
+
+source_file="res://SFX/TV playing softly in background.mp3"
+dest_files=["res://.godot/imported/TV playing softly in background.mp3-b213668ef5c61bcbce94259099fb0a32.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -27,6 +27,8 @@ const DEFAULT_LANGUAGE := "en"
 
 const DEFAULT_BACKGROUND_QUALITY := 2
 
+const DEFAULT_NOTIFICATIONS := true
+
 var master_volume: float = DEFAULT_MASTER_VOLUME
 var music_volume: float = DEFAULT_MUSIC_VOLUME
 var sfx_volume: float = DEFAULT_SFX_VOLUME
@@ -43,6 +45,7 @@ var skip_unread: bool = DEFAULT_SKIP_UNREAD
 
 var language: String = DEFAULT_LANGUAGE
 var background_quality: int = DEFAULT_BACKGROUND_QUALITY
+var notifications_enabled: bool = DEFAULT_NOTIFICATIONS
 
 var _config := ConfigFile.new()
 
@@ -80,26 +83,55 @@ func _variant_to_bool(value: Variant) -> bool:
 	return false
 
 
+const VALID_LOCALES := ["en", "fil", "tl"]
+const MAX_WINDOW := Vector2i(7680, 4320)
+const MIN_WINDOW := Vector2i(640, 360)
+
+
+func _cfg_float(section: String, key: String, default: float, lo: float, hi: float) -> float:
+	var v: Variant = _config.get_value(section, key, default)
+	if not (v is float or v is int):
+		return default
+	return clampf(float(v), lo, hi)
+
+
+func _cfg_int(section: String, key: String, default: int, lo: int, hi: int) -> int:
+	var v: Variant = _config.get_value(section, key, default)
+	if not (v is float or v is int):
+		return default
+	return clampi(int(v), lo, hi)
+
+
+func _cfg_bool(section: String, key: String, default: bool) -> bool:
+	return _variant_to_bool(_config.get_value(section, key, default))
+
+
 func load_settings() -> void:
+	# A corrupt/tampered settings.cfg must never crash boot: bad types fall back
+	# to defaults and every numeric value is range-clamped.
 	if _config.load(SETTINGS_PATH) != OK:
 		return
 
-	master_volume = _config.get_value("audio", "master_volume", DEFAULT_MASTER_VOLUME)
-	music_volume = _config.get_value("audio", "music_volume", DEFAULT_MUSIC_VOLUME)
-	sfx_volume = _config.get_value("audio", "sfx_volume", DEFAULT_SFX_VOLUME)
-	voice_volume = _config.get_value("audio", "voice_volume", DEFAULT_VOICE_VOLUME)
-	ui_volume = _config.get_value("audio", "ui_volume", DEFAULT_UI_VOLUME)
+	master_volume = _cfg_float("audio", "master_volume", DEFAULT_MASTER_VOLUME, 0.0, 1.0)
+	music_volume = _cfg_float("audio", "music_volume", DEFAULT_MUSIC_VOLUME, 0.0, 1.0)
+	sfx_volume = _cfg_float("audio", "sfx_volume", DEFAULT_SFX_VOLUME, 0.0, 1.0)
+	voice_volume = _cfg_float("audio", "voice_volume", DEFAULT_VOICE_VOLUME, 0.0, 1.0)
+	ui_volume = _cfg_float("audio", "ui_volume", DEFAULT_UI_VOLUME, 0.0, 1.0)
 
-	fullscreen = _config.get_value("display", "fullscreen", DEFAULT_FULLSCREEN)
-	window_size = _config.get_value("display", "window_size", DEFAULT_WINDOW_SIZE)
+	fullscreen = _cfg_bool("display", "fullscreen", DEFAULT_FULLSCREEN)
+	var ws: Variant = _config.get_value("display", "window_size", DEFAULT_WINDOW_SIZE)
+	window_size = ws if ws is Vector2i else DEFAULT_WINDOW_SIZE
+	window_size = window_size.clamp(MIN_WINDOW, MAX_WINDOW)
 
-	text_speed = _config.get_value("text", "text_speed", DEFAULT_TEXT_SPEED)
-	auto_advance = _config.get_value("text", "auto_advance", DEFAULT_AUTO_ADVANCE)
-	auto_advance_speed = _config.get_value("text", "auto_advance_speed", DEFAULT_AUTO_ADVANCE_SPEED)
-	skip_unread = _config.get_value("text", "skip_unread", DEFAULT_SKIP_UNREAD)
+	text_speed = _cfg_float("text", "text_speed", DEFAULT_TEXT_SPEED, 0.0, 1.0)
+	auto_advance = _cfg_bool("text", "auto_advance", DEFAULT_AUTO_ADVANCE)
+	auto_advance_speed = _cfg_float("text", "auto_advance_speed", DEFAULT_AUTO_ADVANCE_SPEED, 0.0, 1.0)
+	skip_unread = _cfg_bool("text", "skip_unread", DEFAULT_SKIP_UNREAD)
 
-	language = _config.get_value("language", "locale", DEFAULT_LANGUAGE)
-	background_quality = _config.get_value("visual", "background_quality", DEFAULT_BACKGROUND_QUALITY)
+	var loc: Variant = _config.get_value("language", "locale", DEFAULT_LANGUAGE)
+	language = loc if (loc is String and loc in VALID_LOCALES) else DEFAULT_LANGUAGE
+	background_quality = _cfg_int("visual", "background_quality", DEFAULT_BACKGROUND_QUALITY, 0, 3)
+	notifications_enabled = _cfg_bool("gameplay", "notifications", DEFAULT_NOTIFICATIONS)
 
 
 func save_settings() -> void:
@@ -119,6 +151,7 @@ func save_settings() -> void:
 
 	_config.set_value("language", "locale", language)
 	_config.set_value("visual", "background_quality", background_quality)
+	_config.set_value("gameplay", "notifications", notifications_enabled)
 
 	_config.save(SETTINGS_PATH)
 
@@ -201,6 +234,11 @@ func set_language(locale: String) -> void:
 func set_background_quality(value: int) -> void:
 	background_quality = value
 	background_quality_changed.emit(value)
+	save_settings()
+
+
+func set_notifications_enabled(enabled: bool) -> void:
+	notifications_enabled = enabled
 	save_settings()
 
 

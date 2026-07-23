@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxiquxcdqd715"
+path="res://.godot/imported/Group laughter.mp3-9d4257230ccd469d8b335e29e5b69600.mp3str"
+
+[deps]
+
+source_file="res://SFX/Group laughter.mp3"
+dest_files=["res://.godot/imported/Group laughter.mp3-9d4257230ccd469d8b335e29e5b69600.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

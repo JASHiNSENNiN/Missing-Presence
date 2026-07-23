@@ -27,9 +27,27 @@ var _persist_remaining: int = 0
 
 var _blur_tween: Tween
 var _advance_blocked: bool = false
+var _hidden_choice_buttons: Array = []
 var _shake_time: float = 0.0
 var _shake_intensity: float = 0.0
 var _uisound: Node
+var _scenesfx: Node
+
+const TUTORIAL_MARKER := "user://emotion_tutorial_seen.dat"
+var _hint: Control
+var _hint_tween: Tween
+var _tutorial_active: bool = false
+
+
+func _tutorial_seen() -> bool:
+	return FileAccess.file_exists(TUTORIAL_MARKER)
+
+
+func _mark_tutorial_seen() -> void:
+	var f := FileAccess.open(TUTORIAL_MARKER, FileAccess.WRITE)
+	if f != null:
+		f.store_8(1)
+		f.close()
 
 
 func _ready() -> void:
@@ -41,6 +59,7 @@ func _ready() -> void:
 		return
 	set_process(true)
 	_uisound = get_node_or_null("/root/UISound")
+	_scenesfx = get_node_or_null("/root/SceneSFX")
 	if _backbuffer != null:
 		_backbuffer.copy_mode = BackBufferCopy.COPY_MODE_DISABLED
 	if _blur_rect != null:
@@ -65,6 +84,8 @@ func _on_signal_event(argument: Variant) -> void:
 	if arg == "emotion_clear":
 		_clear_all()
 		return
+	if not _notifications_enabled():
+		return
 	if arg.begins_with("emotion_persist:"):
 		var body := arg.substr("emotion_persist:".length())
 		var parts := body.split(":")
@@ -80,6 +101,13 @@ func _on_signal_event(argument: Variant) -> void:
 		for _i in maxi(count, 1):
 			_spawn_queue.append(emotion)
 		return
+
+
+func _notifications_enabled() -> bool:
+	var settings := get_node_or_null("/root/Settings")
+	if settings == null:
+		return true
+	return bool(settings.get("notifications_enabled"))
 
 
 func _start_persist(emotion: String, count: int) -> void:
@@ -102,6 +130,10 @@ func _process(delta: float) -> void:
 	_apply_shake(delta)
 	_apply_wobble()
 	_apply_warning_pulse(delta)
+	# A choice can be presented a frame after the block engages; keep it hidden
+	# until the notifications are cleared.
+	if _advance_blocked:
+		_set_choices_hidden(true)
 
 
 func _spawn_card(emotion: String) -> void:
@@ -126,9 +158,69 @@ func _spawn_card(emotion: String) -> void:
 
 	_shake_intensity = arrival_shake
 	_shake_time = 0.28
-	if _uisound != null:
+	# The actual phone-notification sound when a card arrives; a chat-flood burst
+	# once the pile-up hits the warning count, so it *sounds* overwhelming too.
+	if _scenesfx != null:
+		if _cards.size() >= warning_card_count:
+			_scenesfx.play_sfx("chat_flood")
+		else:
+			_scenesfx.play_sfx("phone_notif")
+	elif _uisound != null:
 		_uisound.play("error")
+	if not _tutorial_seen() and not _tutorial_active and _cards.size() == 1:
+		_show_tutorial_hint(card)
 	_update_blur()
+
+
+func _show_tutorial_hint(card: Control) -> void:
+	_tutorial_active = true
+	_hint = VBoxContainer.new()
+	_hint.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_hint.alignment = BoxContainer.ALIGNMENT_CENTER
+	var arrows := Label.new()
+	arrows.text = "←  swipe  →"
+	arrows.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	arrows.add_theme_font_size_override(&"font_size", 30)
+	arrows.add_theme_color_override(&"font_color", Color(1, 1, 1, 0.95))
+	arrows.add_theme_color_override(&"font_outline_color", Color(0.16, 0.10, 0.05, 0.9))
+	arrows.add_theme_constant_override(&"outline_size", 6)
+	var tip := Label.new()
+	tip.text = "Swipe the notification off-screen to dismiss it"
+	tip.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	tip.add_theme_font_size_override(&"font_size", 17)
+	tip.add_theme_color_override(&"font_color", Color(1, 1, 1, 0.9))
+	tip.add_theme_color_override(&"font_outline_color", Color(0.16, 0.10, 0.05, 0.9))
+	tip.add_theme_constant_override(&"outline_size", 5)
+	_hint.add_child(arrows)
+	_hint.add_child(tip)
+	_cards_root.add_child(_hint)
+	var view := get_viewport().get_visible_rect().size
+	_hint.size = Vector2(view.x * 0.6, 80.0)
+	_hint.position = Vector2((view.x - _hint.size.x) * 0.5, card.get_home().y + card.size.y + 26.0)
+	_hint.modulate.a = 0.0
+	if is_instance_valid(_hint_tween):
+		_hint_tween.kill()
+	_hint_tween = create_tween().set_loops()
+	_hint_tween.tween_property(_hint, ^"modulate:a", 1.0, 0.5)
+	_hint_tween.tween_property(_hint, ^"position:y", _hint.position.y + 10.0, 0.7).set_trans(Tween.TRANS_SINE)
+	_hint_tween.parallel().tween_property(_hint, ^"modulate:a", 0.6, 0.7)
+	_hint_tween.tween_property(_hint, ^"position:y", _hint.position.y, 0.7).set_trans(Tween.TRANS_SINE)
+	_hint_tween.parallel().tween_property(_hint, ^"modulate:a", 1.0, 0.7)
+
+
+func _clear_tutorial_hint() -> void:
+	if not _tutorial_active:
+		return
+	_tutorial_active = false
+	_mark_tutorial_seen()
+	if is_instance_valid(_hint_tween):
+		_hint_tween.kill()
+	if is_instance_valid(_hint):
+		var h := _hint
+		_hint = null
+		var fade := create_tween()
+		fade.tween_property(h, ^"modulate:a", 0.0, 0.25)
+		fade.tween_callback(h.queue_free)
 
 
 func _relayout() -> void:
@@ -146,7 +238,11 @@ func _on_card_dismissed(card: Control) -> void:
 	_cards.erase(card)
 	if is_instance_valid(card):
 		card.queue_free()
-	if _uisound != null:
+	_clear_tutorial_hint()
+	# Swiping a notification away = the phone-lock sound.
+	if _scenesfx != null:
+		_scenesfx.play_sfx("phone_lock")
+	elif _uisound != null:
 		_uisound.play("page_turn")
 	if _persist_remaining > 0:
 		_persist_remaining -= 1
@@ -171,6 +267,7 @@ func _clear_all() -> void:
 		if is_instance_valid(card):
 			card.queue_free()
 	_cards.clear()
+	_clear_tutorial_hint()
 	_update_blur()
 
 
@@ -182,7 +279,9 @@ func _update_blur() -> void:
 	if _blur_rect == null:
 		return
 	var count := _cards.size()
-	var active := count > 0 or not _spawn_queue.is_empty()
+	# `_persist_remaining` keeps the block engaged through the brief refill gap between
+	# persist cards, so a pending choice never flickers visible for a frame mid-sequence.
+	var active := count > 0 or not _spawn_queue.is_empty() or _persist_remaining > 0
 	var target: float = 0.0
 	if active:
 		target = minf(float(maxi(count, 1)) * blur_per_card, max_blur_amount)
@@ -214,6 +313,27 @@ func _set_advance_blocked(should_block: bool) -> void:
 		return
 	_advance_blocked = should_block
 	Dialogic.paused = should_block
+	# Notifications-first, then choice: while cards are up, keep any pending choice
+	# buttons hidden so the decision only appears once the player clears them.
+	_set_choices_hidden(should_block)
+
+
+func _set_choices_hidden(hidden: bool) -> void:
+	# Dialogic keeps a fixed POOL of choice buttons; only the valid few are made
+	# visible per question, the rest stay hidden. So we must only hide the buttons
+	# that are actually showing and restore exactly those — never blanket-show the
+	# whole group, or the empty pooled buttons appear as a wall of blank options.
+	if hidden:
+		for button in get_tree().get_nodes_in_group(&"dialogic_choice_button"):
+			if button is CanvasItem and (button as CanvasItem).visible:
+				(button as CanvasItem).visible = false
+				if button not in _hidden_choice_buttons:
+					_hidden_choice_buttons.append(button)
+	else:
+		for button in _hidden_choice_buttons:
+			if is_instance_valid(button) and button is CanvasItem:
+				(button as CanvasItem).visible = true
+		_hidden_choice_buttons.clear()
 
 
 func _apply_shake(delta: float) -> void:

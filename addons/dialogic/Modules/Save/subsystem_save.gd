@@ -514,6 +514,10 @@ func _on_start_or_end_autosave() -> void:
 ## Perform an autosave.
 ## This method will be called automatically if the auto-save mode is enabled.
 func perform_autosave() -> Error:
+	# Never autosave a null-timeline state — it produces a stub save that, when
+	# loaded via Continue on next boot, restores no timeline and hard-fails.
+	if dialogic.current_timeline == null:
+		return OK
 	return save("", true)
 
 #endregion

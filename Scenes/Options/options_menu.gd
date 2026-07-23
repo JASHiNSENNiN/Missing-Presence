@@ -32,6 +32,16 @@ extends Node2D
 
 @onready var visual_quality_slider: HSlider = $CanvasLayer/MenuLayout/BookRoot/ContentRoot/VisualQualitySlider
 
+@onready var master_volume_slider: HSlider = $CanvasLayer/MenuLayout/BookRoot/ContentRoot/MasterVolumeSlider
+@onready var master_volume_percent: Label = $CanvasLayer/MenuLayout/BookRoot/ContentRoot/MasterVolumePercent
+
+@onready var auto_advance_checkbox_box: TextureRect = $CanvasLayer/MenuLayout/BookRoot/ContentRoot/AutoAdvanceCheckboxBox
+@onready var auto_advance_checkmark: TextureRect = $CanvasLayer/MenuLayout/BookRoot/ContentRoot/AutoAdvanceCheckmark
+@onready var skip_read_checkbox_box: TextureRect = $CanvasLayer/MenuLayout/BookRoot/ContentRoot/SkipReadCheckboxBox
+@onready var skip_read_checkmark: TextureRect = $CanvasLayer/MenuLayout/BookRoot/ContentRoot/SkipReadCheckmark
+@onready var notifications_checkbox_box: TextureRect = $CanvasLayer/MenuLayout/BookRoot/ContentRoot/NotificationsCheckboxBox
+@onready var notifications_checkmark: TextureRect = $CanvasLayer/MenuLayout/BookRoot/ContentRoot/NotificationsCheckmark
+
 @onready var back_button: ColorRect = $CanvasLayer/MenuLayout/BookRoot/StickyBack
 
 var _scene_transition: Node:
@@ -81,12 +91,18 @@ func _load_current_values() -> void:
 	text_speed_slider.value = settings.get("text_speed")
 	forward_speed_slider.value = settings.get("auto_advance_speed")
 
+	master_volume_slider.value = settings.get("master_volume")
 	background_music_slider.value = settings.get("music_volume")
 	sound_effects_slider.value = settings.get("sfx_volume")
 	ui_sounds_slider.value = settings.get("ui_volume")
 
 	visual_quality_slider.value = settings.get("background_quality")
 
+	_update_toggle(auto_advance_checkmark, settings.get("auto_advance"))
+	_update_toggle(skip_read_checkmark, settings.get("skip_unread"))
+	_update_toggle(notifications_checkmark, settings.get("notifications_enabled"))
+
+	_update_percent_label(master_volume_percent, master_volume_slider.value)
 	_update_percent_label(background_music_percent, background_music_slider.value)
 	_update_percent_label(sound_effects_percent, sound_effects_slider.value)
 	_update_percent_label(ui_sounds_percent, ui_sounds_slider.value)
@@ -104,11 +120,16 @@ func _connect_signals() -> void:
 	forward_speed_slider.value_changed.connect(Callable(settings, "set_auto_advance_speed"))
 	forward_speed_slider.value_changed.connect(_apply_forward_speed_to_dialogic)
 
+	master_volume_slider.value_changed.connect(_on_master_volume_changed)
 	background_music_slider.value_changed.connect(_on_background_music_changed)
 	sound_effects_slider.value_changed.connect(_on_sound_effects_changed)
 	ui_sounds_slider.value_changed.connect(_on_ui_sounds_changed)
 
 	visual_quality_slider.value_changed.connect(_on_visual_quality_changed)
+
+	auto_advance_checkbox_box.gui_input.connect(_on_auto_advance_gui_input)
+	skip_read_checkbox_box.gui_input.connect(_on_skip_read_gui_input)
+	notifications_checkbox_box.gui_input.connect(_on_notifications_gui_input)
 
 
 func _on_full_screen_gui_input(event: InputEvent) -> void:
@@ -132,9 +153,45 @@ func _update_fullscreen_checkmarks(is_fullscreen: bool) -> void:
 	windowed_checkmark.visible = not is_fullscreen
 
 
+func _on_master_volume_changed(value: float) -> void:
+	settings.call("set_master_volume", value)
+	_update_percent_label(master_volume_percent, value)
+
+
 func _on_background_music_changed(value: float) -> void:
 	settings.call("set_music_volume", value)
 	_update_percent_label(background_music_percent, value)
+
+
+func _update_toggle(checkmark: TextureRect, is_on: bool) -> void:
+	checkmark.visible = is_on
+
+
+func _on_auto_advance_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if _ui_sound:
+			_ui_sound.select()
+		var new_value: bool = not settings.get("auto_advance")
+		settings.call("set_auto_advance", new_value)
+		_update_toggle(auto_advance_checkmark, new_value)
+
+
+func _on_skip_read_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if _ui_sound:
+			_ui_sound.select()
+		var new_value: bool = not settings.get("skip_unread")
+		settings.call("set_skip_unread", new_value)
+		_update_toggle(skip_read_checkmark, new_value)
+
+
+func _on_notifications_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if _ui_sound:
+			_ui_sound.select()
+		var new_value: bool = not settings.get("notifications_enabled")
+		settings.call("set_notifications_enabled", new_value)
+		_update_toggle(notifications_checkmark, new_value)
 
 
 func _on_sound_effects_changed(value: float) -> void:
@@ -239,7 +296,7 @@ func _show_content() -> void:
 
 
 func _setup_checkbox_hover() -> void:
-	for box in [full_screen_checkbox_box, windowed_checkbox_box]:
+	for box in [full_screen_checkbox_box, windowed_checkbox_box, auto_advance_checkbox_box, skip_read_checkbox_box, notifications_checkbox_box]:
 		box.pivot_offset = box.size / 2.0
 		box.mouse_entered.connect(_on_tilt_hovered.bind(box, CHECKBOX_HOVER_TILT_DEGREES))
 		box.mouse_exited.connect(_on_tilt_hovered.bind(box, 0.0))
@@ -262,7 +319,7 @@ func _tilt_control(control: Control, degrees: float) -> void:
 
 
 func _setup_slider_hover() -> void:
-	for slider in [text_speed_slider, forward_speed_slider, background_music_slider, sound_effects_slider, ui_sounds_slider, visual_quality_slider]:
+	for slider in [text_speed_slider, forward_speed_slider, master_volume_slider, background_music_slider, sound_effects_slider, ui_sounds_slider, visual_quality_slider]:
 		slider.pivot_offset = slider.size / 2.0
 		slider.mouse_entered.connect(_on_slider_hovered.bind(slider))
 		slider.mouse_exited.connect(_on_slider_unhovered.bind(slider))

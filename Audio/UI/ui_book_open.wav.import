@@ -1,24 +1,8 @@
 [remap]
 
-importer="wav"
-type="AudioStreamWAV"
+importer="keep"
 uid="uid://cp7g6ub436mk1"
-path="res://.godot/imported/ui_book_open.wav-e7e0df2b7dc908e5f55dd3b3688a02e8.sample"
 
 [deps]
 
 source_file="res://Audio/UI/ui_book_open.wav"
-dest_files=["res://.godot/imported/ui_book_open.wav-e7e0df2b7dc908e5f55dd3b3688a02e8.sample"]
-
-[params]
-
-force/8_bit=false
-force/mono=false
-force/max_rate=false
-force/max_rate_hz=44100
-edit/trim=false
-edit/normalize=false
-edit/loop_mode=0
-edit/loop_begin=0
-edit/loop_end=-1
-compress/mode=2

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bt4gu4t5kuy5a"
+path="res://.godot/imported/Ceiling fan hum.mp3-01475ddefbe0778cebfb6a4619862f36.mp3str"
+
+[deps]
+
+source_file="res://SFX/Ceiling fan hum.mp3"
+dest_files=["res://.godot/imported/Ceiling fan hum.mp3-01475ddefbe0778cebfb6a4619862f36.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

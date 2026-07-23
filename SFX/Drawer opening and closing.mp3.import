@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://m0h8byt3khv3"
+path="res://.godot/imported/Drawer opening and closing.mp3-0f51e1645db22c547abe4a345d2a0cc4.mp3str"
+
+[deps]
+
+source_file="res://SFX/Drawer opening and closing.mp3"
+dest_files=["res://.godot/imported/Drawer opening and closing.mp3-0f51e1645db22c547abe4a345d2a0cc4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

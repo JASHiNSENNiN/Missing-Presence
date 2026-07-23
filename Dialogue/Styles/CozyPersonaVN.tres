@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="10_choices"]
 [ext_resource type="PackedScene" path="res://Scenes/DialogicUI/atmosphere_layer.tscn" id="11_atmos"]
 [ext_resource type="PackedScene" path="res://Scenes/DialogicUI/emotion_notif_layer.tscn" id="12_notif"]
+[ext_resource type="PackedScene" path="res://Scenes/DialogicUI/character_intro_layer.tscn" id="13_intro"]
 
 [sub_resource type="Resource" id="Base"]
 script = ExtResource("2_layer")
@@ -72,10 +73,14 @@ scene = ExtResource("11_atmos")
 script = ExtResource("2_layer")
 scene = ExtResource("12_notif")
 
+[sub_resource type="Resource" id="Layer_CharacterIntro"]
+script = ExtResource("2_layer")
+scene = ExtResource("13_intro")
+
 [resource]
 script = ExtResource("1_style")
 name = "Cozy Persona VN"
-layer_list = Array[String](["10", "11", "12", "17", "13", "14", "15", "16", "18"])
+layer_list = Array[String](["10", "11", "12", "17", "13", "14", "15", "16", "19", "18"])
 layer_info = {
 "": SubResource("Base"),
 "10": SubResource("Layer_Background"),
@@ -86,6 +91,7 @@ layer_info = {
 "15": SubResource("Layer_NavBar"),
 "16": SubResource("Layer_Choices"),
 "17": SubResource("Layer_Atmosphere"),
-"18": SubResource("Layer_EmotionNotif")
+"18": SubResource("Layer_EmotionNotif"),
+"19": SubResource("Layer_CharacterIntro")
 }
-metadata/_latest_layer = "18"
+metadata/_latest_layer = "19"

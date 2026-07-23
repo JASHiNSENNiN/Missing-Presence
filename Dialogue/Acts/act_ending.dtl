@@ -1,15 +1,8 @@
 [style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
-[background arg="res://Art/Backgrounds/mayas_room.png" fade="1.0"]
 
-...
-
-if {Route.self_honesty} + {Route.affinity_ethan} - {Route.parent_pressure} >= 2:
-	Maya kept choosing honesty - with her parents, with Ethan, with herself. It didn't make the pressure vanish. But it left a door open. (GOOD ROUTE)
-elif {Route.self_honesty} + {Route.affinity_ethan} - {Route.parent_pressure} <= -2:
-	Maya kept the mask on, every time. The distance she felt became the distance that was real. (BAD ROUTE)
+if {Route.good} - {Route.bad} >= 2:
+	[signal arg="ending:good"]
+elif {Route.good} - {Route.bad} <= -2:
+	[signal arg="ending:bad"]
 else:
-	Maya lived somewhere in between - honest some days, guarded others. The quiet stayed quiet. (NEUTRAL ROUTE)
-
-Acts 4 and 5 continue from here.
-
-[end_timeline]
+	[signal arg="ending:neutral"]

@@ -1,0 +1,540 @@
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+The SCHOOL BELL rings.
+[signal arg="sfx:school_bell"]
+[background arg="res://Art/Backgrounds/mayas_room.png" fade="0.7"]
+A calendar hangs above Maya's desk.
+SCRATCH.
+One day is crossed out.
+SCRATCH.
+Another day disappears.
+Assignments and lecture notes begin piling up on her desk.
+SCRATCH.
+Another day.
+Coffee cups now sit beside unfinished reviewers and textbooks.
+Maya types on her laptop while scribbling notes at the same time.
+Maya studies alone, surrounded by books and printed notes.
+She checks the time, sighs, and continues working.
+SCRATCH.
+Another day is crossed out.
+The calendar slowly fills with marked dates as the workload continues to grow.
+Maya stares at her long to-do list before taking a deep breath and getting back to work.
+Maya studies alone.
+Her eyes move across pages of notes.
+Her phone, resting beside her reviewer, suddenly vibrates.
+Every few moments, she instinctively glances at the screen.
+She returns to reading.
+A few lines later, she checks it again.
+Still nothing.
+Suddenly...
+A text notification appears.
+A message from Ethan.
+Maya glances at it.
+join Ethan (neutral) right [animation="Instant In"]
+Ethan: "Still alive?"
+Maya smiles.
+join Maya (neutral) left [animation="Instant In"]
+Maya: "Barely."
+if {Route.good} - {Route.bad} >= 2:
+	Ethan: "Still alive?"
+	update Maya (smile)
+	Maya smiles.
+	Maya: "Barely."
+	Ethan: "Kamusta exam?"
+	Maya: "Okay naman. Kinabahan ako, pero at least nakapag-review ako bago nagsimula."
+	Ethan: "See? Sabi ko sa'yo kaya mo yan."
+	update Maya (glad)
+	Maya chuckles.
+	Maya: "Huwag ka muna masyadong confident."
+elif {Route.good} - {Route.bad} <= -2:
+	Ethan: Still alive?
+	update Maya (smile)
+	Maya smiles faintly.
+	Maya: Barely.
+	Ethan: May balita ba tungkol sa make-up exam?
+	update Maya (soft)
+	Maya sighs.
+	Maya: Wala pa. Sana bigyan pa 'ko ng chance.
+	Ethan: Ba't ka ba kasi na-late nang sobra?
+	Maya hesitates.
+	Maya: Napahaba kasi 'yung usapan namin nila Mama at Papa bago ako umalis.
+	A brief silence.
+	Ethan: ... Sana maging okay din 'yan.
+	Maya gives a small nod.
+	But she doesn't say anything else.
+else:
+	Ethan: Still alive?
+	update Maya (smile)
+	Maya smiles.
+	Maya: Barely.
+	Ethan: Kumusta exam?
+	Maya: Medyo okay lang. Sayang nga eh...
+	Ethan: Bakit?
+	Maya: Na-late kasi ako nang kaunti. Hindi ko na-review lahat ng gusto ko.
+	Ethan: Sayang. Baka nakuha mo pa sana 'yung ibang points.
+	Maya simply nods.
+	She forces a small smile.
+	[signal arg="emotion:sad"]
+leave Ethan [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+[background arg="res://Art/Backgrounds/classroom.png" fade="0.7"]
+The professor discusses a complicated lesson.
+Students take notes.
+Maya stares at the projector.
+Trying her best to keep up.
+[background arg="res://Art/Backgrounds/mayas_room.png" fade="0.7"]
+12:43 A. M.
+Maya rubs her eyes.
+Her laptop screen glows in the darkness.
+An unfinished project remains open.
+She sighs heavily.
+[background arg="res://Art/Backgrounds/campus_hallway.png" fade="0.7"]
+Students rush between classes.
+Maya and Ethan walk together.
+Talking.
+Laughing.
+For a brief moment, Maya forgets about deadlines.
+[signal arg="emotion:nervous"]
+[background arg="res://Art/Backgrounds/mayas_room.png" fade="0.7"]
+The calendar again.
+More days crossed out.
+The end of the term slowly creeps closer.
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+Warm lights glow from inside the house.
+The CRUZ'S arrive carrying food containers and drinks.
+Jennifer adjusts her blouse.
+Ricardo carries a tray.
+Maya follows behind them.
+join Jennifer (neutral) right [animation="Instant In"]
+Jennifer: Make sure to greet everyone properly.
+join Maya (neutral) left [animation="Instant In"]
+Maya: Ma, ilang beses na tayong nagdi-dinner together.
+Jennifer: And?
+Maya: Nothing. Sanay na sila saten, they're literally family, Ma.
+join Ricardo (neutral) right [animation="Instant In"]
+Ricardo: Your mother just likes reminding people to look their best, anak.
+Jennifer shoots him a look of agreement.
+They wait for them to enter their house.
+Dinner is already underway.
+The table is crowded with food.
+Conversations overlap.
+Laughter occasionally fills the room.
+TITA Marie sits near Jennifer while discussing work and family matters.
+Ay, before we eat, of course kailangan mag picture-picture muna para sa FB, everyone smile ha.
+Everyone turns to Jennifer and poses for a quick photo.
+Maya sits beside Ethan.
+join Ethan (neutral) right [animation="Instant In"]
+Ethan: Glad you decided to take a break from studying and joined tonight.
+Maya: As if I had a choice.
+Ethan: That's fair, but we all need a break sometimes. You've been working hard.
+Maya: How about you? Not busy lately?
+Ethan: Oh, I am but I definitely had no choice, Ma told me tita was making a lot of food tonight so I HAD to come with.
+The two laugh.
+Across the table, Ricardo notices.
+Ricardo: You two never run out of things to talk about, no?
+Ethan: We've had years of practice, Tito.
+All of them share a laugh.
+The conversation continues.
+People begin finishing their meals.
+Then...
+TITA Marie smiles toward Ethan.
+join Marie (neutral) right [animation="Instant In"]
+Marie: So, Ethan.
+How's school?
+Ethan: It's going okay naman, Ma.
+Marie: Just okay?
+Ethan: Okay and stressful.
+Everyone chuckles.
+Ricardo: Ano course mo ulit? Tungkol sa computer diba?
+Ethan: Yes po tito, computer science to be exact!
+Ricardo: Makes sense, talino mo kasi.
+Ethan: Grades are doing alright, praise God.
+Everyone laughs.
+Jennifer: That's good, alam namin na kaya mo yan, hijo.
+Ethan: Hopefully I can keep them there.
+Ricardo: Ay sus, Ikaw pa, I'm sure you will.
+update Ethan (glad)
+Ethan smiles politely.
+Jennifer's phone lights up beside her plate, a relative's post about their child's graduation. She glances at it, expression tightening, before pocketing it.
+[signal arg="sfx:phone_notif"]
+[signal arg="emotion:nervous"]
+Then suddenly...
+Everyone looks toward Maya.
+Maya immediately notices and freezes.
+Jennifer: Ikaw naman, Maya.
+Maya: Huh?
+Jennifer: How are your classes?
+Maya: Oh.
+A brief silence.
+Maya glances down.
+Then answers with..
+- Look up from the table and tell the truth.
+	set {Route.good} += 1
+	Maya: Honestly medjo nahihirapan, pero I'll be okay. I'll just keep doing my best po.
+	Jennifer's expression changes slightly.
+	Maya: Pero I'll be okay po.
+	I'll just keep doing my best.
+	The table grows quiet.
+	Ricardo: That's all anyone can ask for. I'm sure kaya mo pa yan anak
+	Jennifer studies Maya.
+	Jennifer: Just make sure you're keeping up.
+	Maya: I am.
+	Marie: Sabagay, mahirap talaga sa Computer Science.
+	Ethan: Definitely is.
+	Marie: The fact that you're still pushing through already says a lot.
+	update Maya (smile)
+	Maya gives a small smile.
+	Maya: Thank you po.
+	The conversation slowly shifts elsewhere.
+	But Maya can't shake the feeling of being evaluated.
+	The lack of encouragement being given to her by her parents lasts an impression on her.
+	Compared.
+	[signal arg="emotion:jealous"]
+	Measured.
+	She keeps smiling anyway.
+	The adults remain at the dining table.
+	Meanwhile...
+	Maya and Ethan move into the living room.
+	Both holding drinks.
+	The atmosphere is quieter here.
+	More relaxed.
+	update Maya (soft)
+	Maya gives a sigh of relief.
+	She sits down and instinctively pulls out her phone while relaxing.
+	Ethan: That could've gone worse.
+	Maya: Oh uhh, You mean dinner?
+	She lowers her phone down a bit
+	Ethan: Oh yeah.
+	Maya: True, felt their interrogation up my neck.
+	Ethan: Hey, at least nobody cried.
+	Maya: Bruh, that's a pretty low standard.
+	Ethan: Exactly.
+	They laugh.
+- Give them the short version. Your phone is waiting.
+	Half truth
+	Maya: Okay naman po. Sakto-sakto lang. Pero wait, kain na muna tayo!
+	Jennifer's expression changes slightly.
+	Maya: Gutom na po kasi ako.
+	The table agrees and begins to eat.
+	Ricardo: Tama ka nga, tara kain na tayo.
+	Jennifer studies Maya.
+	Jennifer: Just make sure you're keeping up.
+	Maya: I am.
+	Marie: Engineering isn't easy.
+	Ethan: Definitelty isn't.
+	Ethan gives a long glance towards Maya.
+	Marie: The fact that you're still pushing through already says a lot.
+	update Maya (smile)
+	Maya gives a small smile.
+	Maya: Thank you po tita.
+	The conversation slowly shifts elsewhere.
+	But Maya can't shake the feeling of being evaluated.
+	The lack of encouragement being given to her by her parents lasts an impression on her.
+	Compared.
+	[signal arg="emotion:jealous"]
+	Measured.
+	She keeps smiling anyway and finishes her food.
+	The adults remain at the dining table.
+	Meanwhile...
+	Maya and Ethan move into the living room.
+	Both holding drinks.
+	The atmosphere is quieter here.
+	More relaxed.
+	update Maya (soft)
+	Maya gives a sigh of relief.
+	She sits down and instinctively pulls out her phone while relaxing.
+	Ethan: That could've gone worse.
+	Maya: You mean dinner?
+	Ethan: Yeah.
+	Maya: True.
+	Maya continues scrolling through her phone.
+	Ethan hesitates but decides to ask.
+	Ethan: You seemed kind of out of it kanina.
+	Something on your mind?
+- Show confidence now, disappear into your phone after.
+	set {Route.bad} += 1
+	Lie
+	Aba syempre...
+	Sabay kami ni Ethan magga-graduate.
+	Everyone around the table laughs.
+	Pressure naman.
+	Ayan ang gusto kong marinig.
+	Maganda 'yan.
+	'Yan ang anak ko.
+	His phone buzzes on the table.
+	[signal arg="emotion:nervous"]
+	He glances at the screen.
+	A customer asking about a repair.
+	CUSTOMER
+	"Boss Ric, magkano po aabutin pagawa ng aircon ng sedan?"
+	"Check natin bukas sa shop, sir. Dalhin niyo lang po."
+	He quickly replies before setting it back down.
+	Exactly.
+	Kaya alam kong kaya mo rin.
+	Her own phone lights up.
+	[signal arg="sfx:phone_notif"]
+	A notification from social media.
+	Someone reacts to one of her family posts.
+	She instinctively checks it.
+	Smiles to herself.
+	Then locks her phone.
+	[signal arg="sfx:phone_lock"]
+	Maya notices. For a moment, the hypocrisy sits on the tip of her tongue.
+	Her parents doing exactly what she just got half-scolded for, but she swallows it, and smiles along instead.
+	update Maya (glad)
+	Maya laughs along.
+	She nods confidently.
+	As if everything is going according to plan.
+	Kakayanin po.
+	No worries.
+	update Jennifer (glad)
+	Jennifer smiles, satisfied.
+	Good.
+	Stay focused lang.
+	Graduation na ang susunod nating ipagdiwang.
+	Maya nods.
+	Opo.
+	The conversation naturally moves on.
+	Marie begins talking about graduation preparations.
+	Ricardo excitedly asks Ethan about his plans after college.
+	Jennifer joins the conversation.
+	Already imagining Maya reaching the same milestone.
+	Maya quietly listens.
+	She smiles.
+	She laughs when everyone else laughs.
+	She agrees whenever someone mentions her future.
+	No one notices... As the conversation shifts away from her...
+	She quietly reaches for her phone beneath the table.
+	She unlocks it.
+	And begins scrolling.
+	Not because anything on the screen is important.
+	But because it's easier than sitting with the thoughts in her head.
+	No one notices.
+	To everyone else...
+	Maya seems perfectly fine.
+	That the confidence in her voice was only a performance.
+	By pretending everything is under control...
+	She unknowingly gives everyone another reason to believe she doesn't need help.
+	The pressure remains.
+	Only now...
+	She has buried it even deeper.
+	The adults remain at the dining table.
+	The sound of their conversation continues faintly in the background.
+	Maya and Ethan settle into the living room.
+	Each holding a drink.
+	The atmosphere is quieter.
+	More relaxed.
+	update Maya (soft)
+	Maya gives a sigh of relief.
+	She sits down and instinctively pulls out her phone while relaxing.
+	Grabe.
+	Oscar-worthy performance ah.
+	update Maya (glad)
+	Maya lets out a small laugh.
+	Ha? Pinagsasabi mo dyan?
+	Kanina.
+	Parang wala kang problema.
+	Maya shrugs.
+	Mas madali na nga yun eh.
+	Ethan studies her for a moment.
+	He senses something is off.
+	But Maya quickly forces another smile.
+	Sus, ano ka ba, okay lang ako. I promise.
+	She continues scrolling through her phone.
+	Ethan slowly nods.
+	Not fully convinced.
+	But he lets it go.
+	For now.
+	A quiet silence settles between them. Ethan
+	...
+	Maya.
+	Maya doesn't look up from her phone.
+	Hmm?
+	Ethan swirls the ice in his glass.
+	He speaks casually.
+	But there's genuine concern in his voice.
+	You seemed out of it kanina.
+	Pause.
+if {Route.good} - {Route.bad} <= -1:
+	Maya hesitates for the briefest moment.
+	She looks toward the dining room.
+	The adults are still chatting.
+	Laughing.
+	Talking about graduation.
+	About the future.
+	She forces a small smile before looking back at Ethan.
+	[signal arg="emotion:sad"]
+	Maya: Nothing much naman, Ethan. Baka pagod lang ako.
+	Ethan: Sure ka?
+	Maya: Oo, sure na sure ako. Oa ka na naman.
+	Ethan lets out a small smile.
+	Not fully convinced.
+	But he knows Maya well enough to recognize when she doesn't want to talk.
+	He could push.
+	He could keep asking.
+	Instead...
+	Ethan: Okay.
+	Just... You know, I'm here if you need me.
+	Maya nods.
+	Maya: I know, I know. Thanks.
+	She goes back to look at her phone.
+	A quiet silence settles between them.
+	Neither of them speaks.
+	The television plays softly in the background.
+	The muffled laughter of their parents drifts in from the dining room.
+	Maya stares absentmindedly at the melting ice in her drink.
+	Ethan glances at her every now and then.
+	He can tell something is wrong.
+	He just doesn't know what.
+	After a while...
+	update Maya (smile)
+	Maya forces another smile.
+	One that comes easier now.
+	Almost practiced.
+	Ethan notices it.
+	But chooses not to question it.
+	The conversation never continues.
+	And the feelings Maya wanted to hide...
+	Remain exactly where they've always been.
+	Unspoken.
+elif {Route.good} - {Route.bad} == 0:
+	Maya hesitates but gives in.
+	update Maya (soft)
+	Maya sighs and waves a dismissive hand.
+	Maya: Honestly, nahihirapan ako in class these days, but I'll figure it out naman. Baka pagod lang 'toh.
+	Ethan: Shucks.. I'm sorry to hear that. I can help you out and-
+	Ethan was cut short by Maya's hand.
+	Maya: No need. Sabi ko naman na kaya ko toh.
+	Maya cuts him straight away and gets back on her phone.
+	Ethan slowly nods and respects what Maya says.
+	Neither of them speaks.
+	The television plays softly in the background.
+	The muffled laughter of their parents drifts in from the dining room.
+	Maya stares absentmindedly at the melting ice in her drink.
+	Ethan glances at her every now and then.
+	He can tell something is wrong.
+	He just doesn't know what.
+	After a while...
+	update Maya (smile)
+	Maya forces another smile.
+	One that comes easier now.
+	Almost practiced.
+	Ethan notices it.
+	But chooses not to question it.
+	The conversation never continues.
+	And the feelings Maya wanted to hide...
+	Remain exactly where they've always been.
+	Unspoken.
+	A few moments later...
+	Ricardo enters carrying a glass.
+	Ricardo: Mga hijo,hija. Mind if I join?
+	Ethan: Of course not, Tito.
+	Ricardo sits beside Maya.
+	The three enjoy a comfortable silence.
+	For a moment.
+	Then Ethan speaks.
+	Ethan: Actually...
+	There's something I've been thinking about and I need your thoughts.
+	Maya looks over.
+	Ricardo listens.
+	Ethan: I've been looking for a part-time job lately to help around.
+	Maya: Oh wow, really?
+	Ethan: Yeah, kinda need too.
+	Maya: Why?
+	Ethan hesitates.
+	His usual composure slips slightly.
+	Ethan: As you know, things are rough for us and... I want to help Ma.
+	Ricardo's expression softens.
+	Ethan: Things haven't been easy on her and I wanna help,even just a little.
+	Maya: Because of...
+	Ethan: Yeah. The separation.
+	Silence.
+	Ethan: She's trying her best and alam ko yun, but finding work again hasn't exactly been easy.
+	Maya: I'm sorry to hear that Ethan...
+	Maya gives a sympathetic smile.
+	Ethan: It's okay. We're managing naman.
+	Ricardo nods thoughtfully, taking everything in.
+	Then...
+	Ricardo: Actually.
+	Ethan turns to Ricardo.
+	Ricardo: There might be something.
+	Ethan: Yes po, Tito?
+	Ricardo: Ung auto repair shop ko.
+	Ethan blinks.
+	Ricardo: We're actually looking for extra help. Nothing too crazy naman pero to help get things done quicker.
+	Ethan: Oh—
+	Ricardo: I can teach you.
+	Show you how everything works.
+	Ethan immediately shakes his head.
+	Ethan: No, Tito, it's okay.
+	I couldn't—
+	Ricardo: Couldn't what? The job is perfect for you.
+	Ethan: I don't want to impose.
+	Ricardo: You're not imposing, gusto kitang matulungan.
+	Ethan: Still...
+	Ricardo: Ethan, makinig ka sakin ha.
+	Ricardo leans forward.
+	Ricardo: You've always been hardworking.
+	Responsible.
+	And willing to learn.
+	That's more important than experience.
+	Ethan remains unsure.
+	Ethan: I don't know that much about cars.
+	Ricardo: Neither did I when I started but I worked hard in learning how.
+	Ethan laughs.
+	Ricardo: Don't worry, I'll teach you everything. You need to know. Step by step.
+	Think of it as an apprenticeship.
+	Ethan glances toward Maya.
+	Maya nods encouragingly.
+	Maya: You'd be good at it.
+	Ethan: You haven't even seen me fix anything this big at all.
+	Maya: Exactly.
+	It'll be entertaining.
+	Ethan: Wow ha, Some friend you are.
+	The three laugh.
+	update Ricardo (glad)
+	Ricardo smiles.
+	Ricardo: See?
+	Already part of the team.
+	Ethan: I still don't know...
+	Ricardo: Take the opportunity, anak. It'll help your mom and you get to learn something new.
+	And honestly...
+	beat
+	It would help us too.
+	Ethan finally falls silent, thinking.
+	Then—
+	A small smile appears.
+	Ethan: Okay, yeah,
+	Ricardo grins.
+	Ethan: Thank you, Tito.
+	I really appreciate it.
+	Ricardo: Good, you'll do great, I know it.
+	Ricardo pats Ethan firmly on the back.
+	Ethan laughs.
+	Maya watches quietly from her seat.
+	[signal arg="emotion:jealous"]
+	As Ricardo continues praising Ethan's work ethic and determination.
+- Keep the phone pocketed. Stay in the moment, even if it stings.
+	set {Route.good} += 1
+	But only on the outside.
+	Something small and uncomfortable stirs inside her chest.
+	[signal arg="emotion:jealous"]
+	She doesn't say a word.
+- Shrugs and go back to the phone.
+	She decides to go back to her phone.
+	But it still bugs her off, though.
+	Something small and uncomfortable stirs inside her chest.
+	She chooses to ignore it.
+	"It is what it is. Ethan needs the job anyway, Dad is giving it to him. It has nothing to do with me anyway..."
+- Look away. The phone is easier than this feeling.
+	set {Route.bad} += 1
+	She just looks away and uses her phone
+	She can't help but feel jealousy spread through her.
+	She tries to ignore it, but ends up muttering to herself—
+	"This is so unfair, how Ethan just..."
+leave Jennifer [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+leave Ricardo [animation="Instant Out"]
+leave Ethan [animation="Instant Out"]
+leave Marie [animation="Instant Out"]
+
+jump act3/

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://q51fw4pn2q30"
+path="res://.godot/imported/Alarm clock ringing.mp3-f3efe68479bd9baba995a75d62a7e3aa.mp3str"
+
+[deps]
+
+source_file="res://SFX/Alarm clock ringing.mp3"
+dest_files=["res://.godot/imported/Alarm clock ringing.mp3-f3efe68479bd9baba995a75d62a7e3aa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

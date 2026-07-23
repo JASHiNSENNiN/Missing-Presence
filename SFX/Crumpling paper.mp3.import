@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ccg1dhf8chn5w"
+path="res://.godot/imported/Crumpling paper.mp3-c009b00d3c420b844f7d161f863833f3.mp3str"
+
+[deps]
+
+source_file="res://SFX/Crumpling paper.mp3"
+dest_files=["res://.godot/imported/Crumpling paper.mp3-c009b00d3c420b844f7d161f863833f3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

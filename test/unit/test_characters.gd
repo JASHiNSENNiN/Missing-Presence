@@ -1,5 +1,9 @@
 extends GutTest
 
+
+func before_all() -> void:
+	GameFlow._heal_maya_portraits()
+
 const MAINS := ["Maya", "Ethan", "Jennifer", "Ricardo"]
 
 

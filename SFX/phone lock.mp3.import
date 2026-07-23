@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbrebaa8vsbul"
+path="res://.godot/imported/phone lock.mp3-b068c2bde6ac472b4b030b4dd9993d26.mp3str"
+
+[deps]
+
+source_file="res://SFX/phone lock.mp3"
+dest_files=["res://.godot/imported/phone lock.mp3-b068c2bde6ac472b4b030b4dd9993d26.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

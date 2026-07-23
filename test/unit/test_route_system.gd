@@ -8,9 +8,8 @@ func before_all() -> void:
 
 
 func _set_route(honesty: int, affinity: int, pressure: int) -> void:
-	Dialogic.VAR.Route.self_honesty = honesty
-	Dialogic.VAR.Route.affinity_ethan = affinity
-	Dialogic.VAR.Route.parent_pressure = pressure
+	Dialogic.VAR.Route.good = honesty + affinity
+	Dialogic.VAR.Route.bad = pressure
 
 
 func test_gameflow_exists() -> void:
@@ -53,6 +52,6 @@ func test_neutral_route() -> void:
 
 func test_dialogic_condition_matches_gameflow() -> void:
 	_set_route(2, 0, 0)
-	var good := Dialogic.Expressions.execute_condition("{Route.self_honesty} + {Route.affinity_ethan} - {Route.parent_pressure} >= 2")
+	var good := Dialogic.Expressions.execute_condition("{Route.good} - {Route.bad} >= 2")
 	assert_true(good, "Dialogic router condition agrees with GameFlow good threshold")
 	assert_eq(gf.route_tier(), "good", "GameFlow agrees")

@@ -20,3 +20,7 @@ CLAUDE.md
 
 # Beckett Addon
 addons/beckett/
+
+# Asset delivery archives (extracted assets are tracked, not the zips)
+*.zip
+*.rar

@@ -1,0 +1,424 @@
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+[background arg="res://Art/Backgrounds/campus_courtyard.png" fade="0.7"]
+The afternoon sun shines over a modest neighborhood auto repair shop. The sound of passing vehicles mixes with the clanking of tools, revving engines, and the occasional laughter of mechanics at work.
+A sedan sits in one of the service bays with its hood propped open. Several mechanics work around the shop while customers wait nearby.
+Ricardo stands beside Ethan, both wearing work gloves. Ethan's shirt already has a few grease stains, showing he's been working for quite some time.
+Ricardo points toward a section of the engine.
+join Ricardo (neutral) right [animation="Instant In"]
+Ricardo: Okay, anak. Before you tighten that bolt, make sure aligned muna 'yung bracket.
+Ito po ba?
+Ricardo: A little more to the left.
+Ethan carefully adjusts the part.
+Ricardo: Ayan. Ngayon higpitan mo na.
+Ethan uses the wrench, tightening the bolt with care.
+join Ethan (neutral) right [animation="Instant In"]
+Ethan: Okay...
+He steps back.
+Parang okay na, Tito.
+Ricardo inspects the repair for a few seconds before giving an approving nod.
+Ricardo: Not bad.
+Chuckles.
+Actually... tama lahat.
+update Ethan (frown)
+Ethan lets out a relieved sigh.
+Ethan: Akala ko mali na naman.
+Kung mali 'yan, pinapaulit kita.
+Ethan: Fair enough.
+Ricardo pats Ethan's shoulder.
+Ricardo: You're learning fast.
+Hindi ka takot magtanong, at marunong kang makinig.
+Malaking bagay 'yan.
+Ngayon kasi...
+Kapag may hindi alam, ang dali lang i-Google.
+Pero iba pa rin 'pag may nagtuturo sa'yo.
+Totoo po.
+Tsaka minsan...
+Mas maraming lumalabas na sagot kaysa sa tanong.
+Kaya maganda rin na nagtatanong ka.
+Hindi lahat ng nasa internet, tama.
+update Ethan (glad)
+Ethan smiles appreciatively.
+leave Ricardo [animation="Instant Out"]
+leave Ethan [animation="Instant Out"]
+[background arg="res://Art/Backgrounds/classroom.png" fade="0.7"]
+A lecture is ongoing. The professor discusses a complex programming concept while students copy notes from the projector.
+Maya sits quietly near the back of the room.
+Her notebook is filled with formulas and scribbled reminders.
+[signal arg="emotion:nervous"]
+Her phone suddenly vibrates inside her bag.
+Maya pauses.
+She hesitates for a moment...
+Then quietly slips her phone out beneath the desk.
+Making sure the professor isn't looking.
+She unlocks the screen.
+She discreetly glances beneath the desk.
+A message from Ethan appears.
+join Ethan (neutral) right [animation="Instant In"]
+Ethan: "Survived another day sa shop."
+Attached is a selfie of Ethan covered in grease.
+Maya smiles.
+She quickly types back.
+join Maya (neutral) left [animation="Instant In"]
+Maya: "Mukha kang tambay sa talyer."
+Almost instantly—
+Ethan: "Excuse me. Professional grease 'to."
+update Maya (glad)
+Maya lets out a quiet laugh.
+The student beside her glances over.
+She clears her throat and continues typing.
+Maya: "Nasa shop ka pa ba?"
+Ethan: "Yep." "Dadaan ka?"
+Maya looks at the classroom clock.
+Only a few minutes left.
+She replies.
+Maya: "After class."
+Ethan: "Sige. Bilhan mo na rin ako ng pagkain."
+Maya: "Libre mangarap."
+Ethan: "Worth a try."
+Maya locks her phone just as the professor turns around.
+[signal arg="sfx:phone_lock"]
+She quickly resumes taking notes.
+leave Ethan [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+[background arg="res://Art/Backgrounds/campus_courtyard.png" fade="0.7"]
+The school day has ended.
+Maya walks toward the auto repair shop with her backpack slung over one shoulder.
+She pauses outside for a moment before stepping in.
+The familiar scent of motor oil and rubber fills the air.
+She immediately spots Ethan and Ricardo working together underneath the hood of the same sedan.
+Ricardo demonstrates another repair while Ethan follows closely.
+join Ricardo (neutral) right [animation="Instant In"]
+Ricardo: Supportahan mo muna dito.
+Oo... ganyan.
+Ethan steadies the component.
+join Ethan (neutral) right [animation="Instant In"]
+Ethan: Ready na po.
+Ricardo: Sige.
+Subukan natin.
+Together, they secure the part.
+A satisfying CLICK echoes from the engine.
+Both men pause.
+Ethan: ...
+Ayun ba 'yon?
+update Ricardo (glad)
+Ricardo checks the alignment before breaking into a grin.
+Ricardo: Ayun nga!
+Ethan pumps his fist.
+Ethan: Yes!
+Akala ko uulitin na naman natin.
+Ricardo: Hindi na.
+Mukhang mabilis ka talagang matuto.
+update Ethan (glad)
+Ethan laughs.
+Only then does he notice Maya standing nearby.
+Ethan: Uy!
+join Maya (neutral) left [animation="Instant In"]
+Maya: !
+Maya raises a hand.
+Maya: Hi.
+Ricardo turns.
+Ricardo: Anak!
+Kailan ka pa dumating?
+Maya: Ngayon lang po.
+Maaga natapos class namin.
+Thought I'd stop by.
+Ricardo: Buti naman.
+Lumapit ka.
+Maya walks closer.
+Ricardo gestures proudly toward Ethan.
+Ricardo: Alam mo, ang bilis nitong matuto.
+No'ng first week niya, puro tanong.
+Ngayon, minsan nauunahan pa niya ako.
+Ethan: Tito...
+Huwag naman po.
+Ricardo: Ano?
+Totoo naman.
+Ethan scratches the back of his neck, embarrassed.
+Ricardo: Masipag.
+Responsible.
+Hindi reklamo nang reklamo.
+At kapag may hindi alam, nagtatanong agad.
+Mahirap makahanap ng ganyang tao.
+Maya glances at Ethan.
+Then at her father.
+She forces a small smile.
+[signal arg="emotion:sad"]
+Maya: Congrats.
+Mukhang bagay sa'yo.
+Ethan: One month pa lang ako rito.
+Maya: Still...
+You're doing great.
+She gently pats Ethan on the shoulder.
+Ethan smiles.
+Ethan: Salamat.
+Something flickers across Maya's face.
+A smile.
+But not quite one that reaches her eyes.
+She watches as Ethan and Ricardo naturally return to working side by side.
+Her smile slowly fades.
+A brief silence.
+Then...
+Bibili muna ako ng merienda.
+May gusto ba kayo?
+Ricardo looks up.
+Kahit ano lang, anak.
+Ako rin.
+Salamat.
+Maya nods.
+Sige.
+Aalis na 'ko sandali.
+She adjusts the strap of her backpack.
+Then quietly walks away.
+As soon as she's out of sight...
+The smile on her face disappears.
+She lowers her gaze.
+Taking a slow breath before continuing down the street.
+The repair is finally finished.
+Ricardo wipes the grease off his hands with a rag while Ethan stretches his sore arms.
+Ethan: Grabe...
+Akala ko matatapos na likod ko.
+Masasanay ka rin.
+Just then...
+Maya returns carrying a small paper bag and three bottled drinks.
+Delivery po.
+Ethan chuckles.
+Ayos.
+Saktong-sakto.
+Maya hands them each a drink and a snack.
+Salamat, anak.
+update Maya (smile)
+Maya smiles.
+The three gather near a workbench, quietly eating merienda together as the late afternoon breeze passes through the shop.
+update Ethan (frown)
+Ethan snaps his fingers.
+[signal arg="emotion:angry"]
+Ethan: Ay, oo nga!
+Maya looks up from her phone.
+Maya: Ano?
+Ethan: Mom asked me to send updates sa trabaho.
+Sabi niya gusto niyang makita kung ano'ng ginagawa ko rito.
+Ricardo nods.
+Ricardo: Magandang idea 'yan.
+May remembrance ka rin.
+Ethan turns toward Maya.
+Ethan: May...
+Pwede bang ikaw na lang kumuha ng picture?
+Maya raises an eyebrow.
+Maya: Ako pa talaga?
+Ethan: Ikaw lang naman photographer dito.
+Maya: Since when?
+Ethan: Since ngayon.
+Maya rolls her eyes with a small smile.
+Maya: Sige na nga.
+She takes out her phone.
+Ricardo stands beside Ethan.
+Ricardo: Ganito ba?
+Ethan: Tito, trabaho tayo.
+Hindi pictorial.
+Ricardo: Eh sabi mo picture.
+Ethan: Natural lang sana.
+Ricardo: Natural na pogi naman ako.
+update Ethan (glad)
+Ethan laughs.
+Maya: Okay...
+Smile.
+Click.
+Another shot.
+Click.
+One more.
+Click.
+Maya: Okay na.
+Pero isa pa habang nagtatrabaho kayo.
+Ricardo and Ethan return to the engine.
+They continue working while occasionally talking and laughing.)
+Maya quietly takes a few more candid shots.
+Click.
+Click.
+Click.
+She lowers her phone and looks through the photos.
+Most of them show Ricardo and Ethan smiling while working side by side.
+Without realizing it, they already look comfortable together.
+Like they've been doing this for years.
+Maya pockets her phone.
+She glances at the two once more.
+They're already focused on the car again.
+She quietly walks toward a nearby bench and sits down.
+She scrolls through social media, pretending to keep herself occupied.
+The sounds of laughter and conversation continue in the background.
+She hears them...
+But doesn't really listen.
+leave Ricardo [animation="Instant Out"]
+leave Ethan [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+The dining table is filled with home-cooked dishes.
+Jennifer places another serving of food at the center of the table.
+join Ricardo (neutral) right [animation="Instant In"]
+Ricardo, Maya, Jennifer, and Ethan are already eating.
+The atmosphere is warm.
+Comfortable.
+By now, Ethan has become a familiar face in the Ilagan household.
+join Jennifer (neutral) right [animation="Instant In"]
+Jennifer: Ethan, kumuha ka pa.
+Huwag kang mahihiya.
+join Ethan (neutral) right [animation="Instant In"]
+Ethan: Thank you po, Tita.
+Pero okay na po ako.
+Jennifer: Sure ka?
+Ethan: Opo.
+Busog na busog na.
+update Ricardo (glad)
+Ricardo chuckles.
+Ricardo: Hindi pa 'yan busog.
+Nahihiya lang 'yan.
+update Ethan (glad)
+Ethan laughs awkwardly.
+Ethan: Konti lang po.
+The four continue eating.
+Small conversations fill the room.
+School.
+Work.
+The repair shop.
+The food.
+A comfortable silence follows.
+Then...
+Ethan slowly sets his spoon down.
+His expression becomes more serious.
+Ethan: Tito...
+Tita...
+May gusto sana akong sabihin.
+The table quiets.
+Jennifer looks at him.
+Ricardo nods.
+Ricardo: Ano 'yon, hijo?
+Ethan takes a small breath.
+Ethan: Nag-usap kami ni Mom kagabi.
+Pause.
+Yung...
+legal separation nila ni Dad...
+magpu-push through na talaga.
+The room falls silent.
+Maya slowly looks up.
+update Jennifer (worried)
+Jennifer's smile fades.
+Jennifer: Ay hijo, I'm so sorry to hear that.
+Ethan: It's okay po.
+We've been expecting it for a while.
+Mom's been preparing herself.
+So...
+I guess...
+kami rin.
+He gives a small smile.
+Not because he's okay.
+But because he's trying to be.
+Ricardo: Kumusta naman mom mo?
+Ethan: She's doing her best.
+May mga araw na mahirap...pero kinakaya naman.
+I'm just trying to help however I can.
+Ricardo watches Ethan carefully.
+Noticing how calmly he speaks.
+How he chooses his words.
+How, despite everything happening in his family...
+He remains composed.
+Ricardo gives a slow nod.
+Ricardo: Your mom raised you well.
+Ethan smiles politely.
+Ethan: Salamat po.
+I just... don't want to give her more problems than she already has.
+Ricardo reaches over and gives Ethan's shoulder a reassuring pat.
+Ricardo: She's lucky to have you.
+update Ethan (frown)
+Ethan lowers his head slightly.
+Embarrassed.
+But grateful.
+Across the table...
+Maya quietly watches the exchange.
+She doesn't say anything.
+Instead...
+She reaches for her phone beneath the table.
+She opens the photos she took earlier that afternoon.
+Ricardo: .
+Ethan: .
+Standing side by side.
+Laughing.
+Working together.
+Looking proud.
+Maya stares at the screen.
+Something tightens in her chest.
+Even now...
+Even after everything Ethan has shared...
+He still seems so composed.
+So dependable.
+So capable.
+Her thumb slowly scrolls through the photos.
+The comparison quietly creeps back into her mind.
+Once again...
+She finds herself wondering...
+If she'll ever measure up.
+SCENE 3
+The room falls into a comfortable silence.
+The sound of utensils lightly clinking against plates fills the room.
+Jennifer stands and begins collecting the empty dishes.
+[signal arg="emotion:lost"]
+Jennifer: Ako na rito. Kayo na bahala sa dessert.
+Ricardo smiles.
+Ricardo: Sige.
+Tulungan nalang kita mamaya.
+Jennifer heads toward the kitchen.
+Ricardo and Ethan continue talking.
+Their voices become distant.
+Muffled.
+Almost inaudible.
+Maya remains seated.
+She quietly reaches beneath the table and unlocks her phone.
+[signal arg="sfx:phone_lock"]
+The gallery opens.
+The first photo appears.
+Ricardo and Ethan stand beside the car, both smiling.
+Swipe.
+Another photo.
+update Ethan (glad)
+Ethan laughs while Ricardo points at the engine.
+Swipe.
+Another.
+The two work together naturally, completely absorbed in what they're doing.
+Maya lingers on the image.
+Her thumb stops moving.
+A faint smile forms.
+Then slowly disappears.
+Her grip on the phone tightens.
+She glances up.
+Ricardo and Ethan are still talking.
+Ricardo laughs.
+Ethan laughs with him.
+The conversation flows effortlessly.
+As if they'd known each other for years.
+Maya lowers her gaze back to the screen.
+Her reflection faintly appears against the glass of her phone.
+She stares at it.
+Lost in thought.
+join Maya (neutral) left [animation="Instant In"]
+Maya: Dad always says he's proud of people who work hard.
+She looks back at the photos.
+Maya: (CONT'D)He smiles like that around Ethan...
+Her thumb hovers over another picture.
+Maya: (CONT'D)... I wonder if he's ever smiled at me like that.
+She closes the gallery.
+The screen goes dark.
+For a brief moment...
+All she sees is her own reflection.
+Surrounded by everyone.
+Yet somehow...
+Feeling completely alone.
+[signal arg="emotion:lost"]
+Her eyes drift toward Ricardo and Ethan one last time.
+The comparison quietly settles in her mind.
+Persistent.
+Impossible to ignore.
+Maya: Will I ever measure up?
+leave Ricardo [animation="Instant Out"]
+leave Jennifer [animation="Instant Out"]
+leave Ethan [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+
+jump act4/

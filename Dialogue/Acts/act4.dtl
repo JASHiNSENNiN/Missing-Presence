@@ -1,0 +1,695 @@
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+[background arg="res://Art/Backgrounds/mayas_room.png" fade="0.7"]
+The room is dimly lit. A desk lamp casts a warm glow over a cluttered study table.
+Open textbooks. Printed reviewers. Half-finished thesis notes. Sticky notes cover the edges of Maya's laptop.
+The wall calendar hangs nearby.
+Almost every day has been crossed out.
+The end of the term is only a few days away.
+(Maya sits at her desk, staring blankly at her laptop.
+The cursor blinks.
+Waiting.
+She doesn't type a single word.
+She rubs her tired eyes.
+Her phone lights up.
+[signal arg="sfx:phone_notif"]
+[signal arg="emotion_persist:nervous:2"]
+A notification from the class group chat.
+[signal arg="sfx:chat_flood"]
+The class: MATE:"Guys, thesis progress update tomorrow."
+Another message follows.
+The class: MATE 2:"Pakisend na rin ng revisions before 10 PM."
+Maya locks her phone without replying.
+[signal arg="sfx:phone_lock"]
+She leans back in her chair.
+Letting out a long, exhausted sigh.
+Hay...
+She glances at the calendar.
+Then at the mountain of schoolwork covering her desk.
+Another sigh escapes.
+Her eyes slowly drift toward the ceiling.
+Silence.
+She removes the chat notifications from her groupmates and pays her attention to videos she plays on an app.
+The pinging continues...
+Ping...
+Ping...
+Ping...
+Annoyance is evident on her as her groupmates carry on talking.
+She mutes the group chat itself and goes back.
+[signal arg="sfx:chat_flood"]
+[signal arg="emotion_persist:nervous:2"]
+Goes back to scrolling to whatever she sees.
+To calm the thoughts she holds inside.
+The days continue to pass.
+SCRATCH.
+Another date is crossed out on Maya's calendar.
+[background arg="res://Art/Backgrounds/classroom.png" fade="0.7"]
+The professor lectures at the front of the room.
+Most students type notes on their laptops.
+Maya stares blankly at the presentation.
+The lesson continues...
+But her mind is somewhere else.
+She remembers her first days of classes.
+Asking what she wants to do in her life...
+She knows deep down...
+She shakes her head and listens to her prof.
+She checks the time on her phone and sighs.
+Still a long way to go.
+[background arg="res://Art/Backgrounds/mayas_room.png" fade="0.7"]
+Maya sits on her desk, on call with her thesis group.
+Laptops are open.
+Research papers are scattered across the table.
+One of her groupmates checks their phone.
+Another quietly packs up their laptop.
+GROUPMATE 1Guys, may lakad kasi ako.
+I'll finish my part mamaya na lang.
+They leave.
+A second groupmate follows.
+GROUPMATE 2Sorry, Maya.
+May kailangan lang talaga akong asikasuhin.
+Ikaw na muna?
+GROUPMATE 2 (CON'T)
+Ang tahimik mo rin kasi sa GC lately. Akala namin busy ka, ayaw mo nang makisali.
+Maya forces a small smile.
+[signal arg="emotion_persist:sad:2"]
+join Maya (neutral) left [animation="Instant In"]
+Maya: Sige...
+I'll handle it.
+The groupmates leave.
+The call ends.
+Maya looks around her piled up table.
+She slowly sighs.
+Then begins working alone.
+The clock reads 1:37 A. M.
+Maya types continuously.
+Her laptop displays the thesis document.
+Several sections remain unfinished.
+She decided to take a break and scroll a bit to ease her brain.
+This makes her feel satisfied.
+Until—
+A notification appears.
+THESIS GROUP CHAT
+[signal arg="sfx:chat_flood"]
+[signal arg="emotion_persist:nervous:2"]
+"Reminder: Final draft due tomorrow."
+update Maya (soft)
+Maya immediately sighs.
+The smile disappears.
+She looks at the doodles and art hanging around her desk and walls.
+Times were simpler back then, she misses it dearly.
+She's deep in thought.
+Why not give it a try again?
+She opens her ipad and reveals the sketches she has made years back.
+Her art account is still here, she can't believe it!
+She goes back to the quiet hum of creating.
+Her mind is at ease and she prefers it this way.
+leave Maya [animation="Instant Out"]
+[background arg="res://Art/Backgrounds/campus_hallway.png" fade="0.7"]
+Maya walks alone.
+Students excitedly discuss internships...
+Graduation...
+Future plans.
+Their voices overlap as they pass by.
+STUDENT 1Konti na lang, graduate na tayo.
+STUDENT 2Sana makahanap agad ako ng trabaho.
+Maya lowers her gaze.
+She continues walking in silence.
+[background arg="res://Art/Backgrounds/mayas_room.png" fade="0.7"]
+Maya sits at her desk.
+A printed copy of her latest exam results.
+She slowly picks up the paper.
+Several grades are noticeably lower than before.
+Maya quietly stares at them.
+She grips the paper tighter.
+Then folds it.
+This course is taking a toll on her and she isn't sure this is what she wants...
+She dismisses that thought.
+She grabs the papers and starts hiding it beneath a pile of reviewers.
+She knows she'll deal with that later.
+She receives a text from her mother.
+"Kain n, sabihan mu na rin tatay mu."
+Pause. Another message appears
+"Dalhin mu nga rin ung libro sa kama ko. tnx"
+"Sigi po"
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+The family eats dinner together.
+Jennifer notices Maya unusually quiet.
+join Jennifer (neutral) right [animation="Instant In"]
+Jennifer: Anak...
+Okay ka lang ba?
+Maya looks up.
+join Maya (neutral) left [animation="Instant In"]
+Maya: Po?
+Jennifer: Parang ang tahimik mo these past few days.
+Maya: Ay oks lng po, I'm just tired. Marami lang ginagawa sa school.
+Jennifer studies her for a moment.
+Jennifer: Sure ka yan lang?
+Maya nods.
+Maya: Opo yun lang po.
+Ricardo looks between the two.
+join Ricardo (neutral) right [animation="Instant In"]
+Ricardo: Malapit na rin kasi matapos ang term. Normal lang 'yan.
+update Maya (smile)
+Maya gives a small smile.
+Maya: Oo nga po.
+The conversation moves on.
+But Jennifer continues glancing at Maya every now and then.
+Not convinced.
+leave Jennifer [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+leave Ricardo [animation="Instant Out"]
+[background arg="res://Art/Backgrounds/mayas_room.png" fade="0.7"]
+Maya enters her room and quietly closes the door.
+She leans against it.
+Taking a deep breath..
+She opens her phone notifs and see people liking her posts about the art she's shared recently.
+She smiles faintly.
+Then her expression softens.
+Maybe...
+I should just tell them.
+She imagines it.
+Her parents.
+The disappointment.
+The questions.
+The expectations.
+Her smile fades.
+She slowly shakes her head.
+join Maya (neutral) left [animation="Instant In"]
+Maya: Hindi pa... Nothing good would come out of it.
+She places her phone near to her side.
+Her laptop starts on again.
+leave Maya [animation="Instant Out"]
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+Jennifer scrolls through her own feed, half-watching TV.
+A suggested post stops her thumb on an art account she almost swipes past.
+Something about the name and the style feels familiar.
+She taps it.
+Maya's username sits quietly in the bio.
+She stares at the screen for a long moment.
+Blanky staring at all the newest posts.
+One after the other.
+Then locks it, she says nothing.
+The house is unusually quiet.
+The only sounds are the soft clinking of utensils against plates and the occasional hum of the ceiling fan.
+Except the sounds of keyboard texts and videos playing.
+By both Jennifer and Ricardo.
+join Maya (neutral) left [animation="Instant In"]
+Maya, Jennifer, and Ricardo sit around the dining table eating dinner.
+Maya absentmindedly pushes the food around her plate.
+She barely takes a bite.
+Jennifer notices.
+She watches Maya for a few moments before finally speaking.
+Anak...
+Okay ka lang ba?
+Maya looks up.
+Po?
+Ang tahimik mo nitong mga nakaraang araw.
+School doing okay?
+Nodds her head slightly.
+Okay lang po. Just a lot to do.
+Jennifer nods.
+But she doesn't look convinced.
+Normal lang 'yan.
+Malapit na matapos ang term.
+Stress talaga.
+update Maya (smile)
+Maya forces a small smile.
+[signal arg="emotion_persist:sad:2"]
+Oo nga po.
+The conversation dies down.
+For a brief moment...
+Only silence remains.
+Then...
+Jennifer sets her spoon down.
+She looks directly at Maya.
+Maya: ...
+May itatanong ako.
+Jennifer puts her phone down
+Maya slowly meets her mother's eyes.
+Ano po?
+Kanina...
+Naglinis ako ng kwarto mo. Tinext muna kita kung pwede kong ayusin yung kwarto mo. Hindi ka naman sumagot.
+Maya freezes.
+[signal arg="emotion_persist:nervous:2"]
+(Her grip around her spoon tightens).
+Jennifer notices.
+Habang inaayos ko 'yung desk mo...
+May nakita ako.
+A long pause.
+...
+Yung grades ng exams mo.
+Maya's heart sinks.
+Jennifer reaches beside her chair.
+She places the papers with lowering grades on the dining table.
+Silence.
+Ricardo looks between the two.
+Confused.
+Maya? Ano toh?
+Maya cannot take her eyes off it.
+Jennifer slowly opens it.
+Several pages reveal grades much lower than before..
+Ricardo quietly flips through a few pages.
+His expression is solemn.
+Maya, bat ganito yung grades mo, kala ko sinabi mo kakayanin mo?
+Maya slowly nods.
+Opo..pero-
+Maya, this doesn't look like you're handling it, at all.
+Maya doesn't respond.
+Jennifer gently takes all the pages back and fixes them neatly.
+Her voice remains calm.
+Too calm.
+Bakit mo itinago?
+Maya stays silent.
+update Maya (soft)
+Maya lowers her head.
+[signal arg="emotion_persist:sad:2"]
+...
+Kinakaya ko naman po... This is just a small setback for me.
+Since when?
+A beat.
+Hindi ko na po alam.
+Maybe...
+In between midterms week?
+Jennifer exchanges a quick glance with Ricardo.
+join Jennifer (neutral) right [animation="Instant In"]
+Jennifer's voice becomes firmer.
+Not louder.
+Just firmer.
+Maya: .
+I'm asking you.
+What's the reason for this?
+Maya takes a shaky breath.
+Hindi po...
+Hindi lang...
+Pause.
+Things have just been happening lately...
+The room falls silent.
+Jennifer's expression changes.
+Anong ibig mong sabihin?
+Maya stares at the table.
+She struggles to speak.
+- Nothing in your hands. Just the truth.
+	set {Route.good} += 1
+	"Honestly, I feel like I'm having trouble with my studies, Ma."
+	habang tumatagal...
+	mas lalo kong nare-realize...
+	Pause.
+	Hindi ko na kaya.
+	Anak...
+	Putting her fork down.
+	Hindi ko na po alam kung gusto ko pa ba 'tong course.
+	Silence.
+	Jennifer blinks.
+	As if she misheard.
+	Ano?
+	Voice trembling.
+	I don't think...
+	Computer Science is for me.
+	Jennifer sits back.
+	Speechless.
+	Ricardo looks at Maya.
+	Concerned.
+	Maya: ...
+	Bakit ngayon mo lang sinabi?
+	update Maya (glad)
+	Maya laughs softly.
+	Not because it's funny.
+	Because she's exhausted.
+	Kasi natatakot ako.
+	Pause.
+	Natatakot akong madisappoint kayo.
+	Natatakot akong isipin n'yo na sinayang ko lahat.
+	Jennifer grips the edge of the table.
+	Her breathing grows uneven.
+	Lahat ng paghihirap mo...
+	Lahat ng sakripisyo natin...
+	Tapos ngayon mo lang sasabihin?
+	I'm sorry...
+	Sorry?
+	Maya...
+	Alam mo ba kung gaano ka namin pinagtrabahuhan para makarating ka rito?
+	Alam ko po.
+	Kaya nga hindi ko sinabi.
+	Why hide this from us?
+	Because...
+	Pause.
+	It's the pressure of everything...? The expectations? I know this is something I need to fulfill.
+	The words hang heavily in the room.
+	Jennifer falls completely silent.
+	Ricardo lowers his gaze.
+	No one knows what to say.
+	Maya slowly stands from her chair.
+	Tears begin forming in her eyes.
+	[signal arg="emotion_persist:sad:2"]
+	I'm sorry.
+	I...
+	I can't do this right now.
+	She hurriedly walks away.
+	Maya: —
+	Maya doesn't stop.
+	She disappears down the hallway.
+	A bedroom door closes.
+	Then—
+	Silence.
+	Ricardo sighs deeply.
+	Jennifer remains seated.
+	Still staring at the pages
+	Unable to process everything she has just heard.
+	The room suddenly feels much larger.
+	Much quieter.
+	Jennifer's breathing becomes the only audible sound.
+- Half-answer, half-present.
+	Pause.
+	"It's...not something I can't handle, Ma"
+	(Pause.) May konting inconveniences lang. Pero manageable naman.
+	Jennifer studies her.
+	Unconvinced.
+	Jennifer: Be honest with me, Maya. Bat mo tinago toh samin?
+	Maya's chest tightens.
+	She forces herself to stay calm.
+	Maya: Nakalimutan ko po Ma, dahil stress lang rin po ngayon
+	Jennifer: Stress?
+	A beat.
+	Jennifer: Since when ka naging stressed sa school? Wala ka namang ganitong problema noon.
+	Maya looks away.
+	Jennifer: May itinatago ka ba sa amin?
+	Silence.
+	update Jennifer (angry)
+	Jennifer's voice rises.
+	Jennifer: Maya. Bakit ka umiiwas sa tanong ko?
+	Maya: May na-fail po akong requirements.
+	Pause.
+	Maya: Pero hindi big deal, Ma. Kaya ko pa namang bawiin sa susunod.
+	Jennifer's frustration boils over.
+	Before she can respond—
+	join Ricardo (neutral) right [animation="Instant In"]
+	Ricardo: Jen. Tama na muna.
+	[signal arg="heartbeat:on"]
+	[signal arg="emotion_persist:angry:2"]
+	Jennifer looks at him.
+	Ricardo: Sinabi na niya babawiin niya 'yon. Naririnig mo ba siya? Stressed na siya.
+	Jennifer exhales sharply.
+	Torn,
+	Between pushing further.
+	And letting it go.
+	Jennifer: Sige.
+	Beat.
+	Jennifer: Dahil may pag-asa ka pang mabawi, hahayaan ko muna 'to.
+	She looks at Maya.
+	Jennifer: Pero hindi pa tapos 'tong usapan natin, Maya.
+	Maya feels a wave of relief.
+	She doesn't say anything.
+	Ricardo gives her shoulder a quiet pat.
+	The table falls quiet again.
+	But the tension never really leaves the room.
+	Later.
+	Jennifer looks toward Maya's door once more.
+	A stern stare.
+	[signal arg="emotion_persist:angry:2"]
+	Then—
+	She shuts it behind her with controlled force.
+	The sound echoes through the hallway.
+	Maya flinches.
+	Slumped over her desk, her face is caught between two feelings.
+	Guilt.
+	Relief.
+	Both equally heavy.
+	A long beat.
+	She reaches for her phone.
+	Her thumb moves on its own.
+	Scrolling.
+	Not really reading.
+	Just... moving.
+	Anything to drown out the noise in her head.
+	Her mood lightens slightly when seeing the comments of appreciation from her art account.
+	But she continues scrolling.
+	The room stays dim.
+	Only the glow of her screen moves..
+	Maya's breathing becomes the only audible sound.
+- Lie and keep the phone close as your exit.
+	set {Route.bad} += 1
+	"Ma, nothing's happening to my classes right now. Alam mo naman kaya ko toh."
+	Maya exhales, trying to stop her voice from shaking.
+	She tries to focus on her breath, but grows increasingly tense — anxiety growing into frustration.
+	[signal arg="emotion_persist:nervous:2"]
+	Why would her mother even go through her stuff?
+	Everything is under control for me.
+	Maya looks at her mother, now wearing a more confident expression.
+	Those old quizzes.. Wala lang po yan.
+	That happened sa start ng term.
+	Pero right now? Mas okay pa nga ung midterm grade ko, Ma.
+	It hurt for Maya to lie.
+	But her defensiveness only grew when Jennifer narrowed her eyes.
+	Hindi ako naniniwala na wala lang 'yan sayo.
+	It's obvious that you aren't focusing enough, Maya.
+	Bat ka palagi distracted ha? Lalo na pag alam mo may quiz ka? Diba sinasabi ko sayo palagi na magreview ka muna? Everytime we pass by ur room palagi ka nalang nakatutok sa cellphone mo.
+	Jennifer is stern, and unforgiving.
+	update Maya (teary)
+	Maya can feel the tears prickling to the surface.
+	She barely manages to push it down.
+	Before she can even mutter another word, her father cuts in.
+	Jen, Maya. Tama na.
+	[signal arg="grain:surge"]
+	[signal arg="emotion_persist:angry:2"]
+	Ricardo eyes the two of them.
+	Maya slumps into her seat.
+	He offers her a sad look, before turning to Jennifer.
+	Narinig mo naman yung anak natin, Jen.
+	Sabi nya kaya nya edi hayaan na naten.
+	If she doesnt live up to her words then... we need to have a serious talk after this term, Maya.
+	Maya nods slowly, her head is down.
+	Jennifer nods, putting an end to the debacle.
+The room remains silent after Maya rushes upstairs.
+Past the hour where scrolling turns into mindlessness.
+The echo of her bedroom door closing lingers throughout the house.
+Jennifer remains frozen in her seat.
+Her eyes stay fixed on the pages resting in front of her.
+Ricardo quietly exhales and leans back in his chair.
+Neither of them speaks.
+The silence stretches.
+Almost instinctively...
+Ricardo reaches for his phone.
+He unlocks it.
+A few unread work messages fill the screen.
+He stares at them...
+But doesn't read a single one.
+Across the table...
+Jennifer's phone lights up.
+[signal arg="sfx:phone_notif"]
+[signal arg="heartbeat:off"]
+[signal arg="emotion_persist:nervous:2"]
+A notification from social media.
+She picks it up out of habit.
+Her thumb scrolls absentmindedly.
+Family photos.
+Friends.
+Perfect moments.
+She suddenly stops.
+Locks the screen.
+And gently sets the phone back down.
+For the first time in years...
+They don't know what to say.
+Ricardo gently closes his phone.
+He looks toward the hallway leading to Maya's room.
+Then back at Jennifer.
+...
+Tsk bat naman natin di napansin.
+Jennifer doesn't answer.
+She continues staring at her daughters grades.
+Almost as if she's seeing it for the first time.
+Mukhang matagal na niya 'tong dinadala.
+Jennifer finally looks at Ricardo.
+Her voice is barely above a whisper.
+Bakit...
+Bakit hindi niya sinabi saten?
+update Ricardo (frown)
+Ricardo sighs.
+Malamang,natakot yon, she's feeling pressured from us.
+update Jennifer (glad)
+Jennifer lets out a small, disbelieving laugh.
+Not out of amusement.
+Out of frustration.
+Natakot...
+Sa atin?
+Ricardo doesn't answer immediately.
+Instead...
+He quietly nods.
+Jennifer looks away.
+His answer hurts more than she expected.
+Lahat ng ginagawa ko...naten...para sa kaniya.
+Para maging okay ang future niya.
+Para hindi siya mahirapan.
+Pause.
+Mali ba 'yon?
+Ricardo studies her.
+He knows she isn't asking him.
+She's asking herself.
+Hindi naman mali ang gusto mong mangyari.
+Pause.
+Pero...baka mali na 'yung paraan mo.
+update Jennifer (worried)
+Jennifer lowers her head.
+[signal arg="emotion_persist:sad:2"]
+Her hands tighten around the edge of the table.
+I was just trying to protect her.
+Ricardo's expression softens.
+Alam ko,mahal.
+Jennifer takes a shaky breath.
+Nung sinabi niyang...hindi niya na gusto 'yung course...
+Parang...hindi ko siya kilala.
+Ricardo quietly nods.
+Baka matagal na niyang sinusubukang sabihin saten.
+.. Hindi lang natin narinig.
+The words linger.
+Jennifer blinks rapidly.
+Trying to keep herself together.
+Akala ko... I was doing everything right.
+Ricardo gently reaches across the table.
+He places a comforting hand over hers.
+Jen...
+Nobody teaches us how to become parents. We're learning too.
+Every single day.
+Jennifer slowly nods.
+But the reassurance doesn't erase the guilt settling inside her.
+Her fingers carefully brush over the pages.
+The edges are faded.
+The pages have begun to curl.
+It's obvious...
+This wasn't something Maya started yesterday.
+This had been hidden for a long time.
+Jennifer slowly stands.
+if {Route.good} - {Route.bad} >= 2:
+	She picks up the graded papers.
+	Saan ka pupunta?
+	Gusto ko lang...
+	makita 'yung kwarto niya.
+	Ricardo nods.
+	He doesn't stop her.
+	Jennifer quietly walks towards Maya's room.
+	leave Maya [animation="Instant Out"]
+	leave Jennifer [animation="Instant Out"]
+	leave Ricardo [animation="Instant Out"]
+	[background arg="res://Art/Backgrounds/mayas_room.png" fade="0.7"]
+	The bedroom door is slightly open.
+	Jennifer gently pushes it wider.
+	The room is silent.
+	Empty.
+	[signal arg="emotion_persist:lost:2"]
+	Maya is now deep asleep.
+	Jennifer slowly steps inside.
+	She carefully closes the door behind her.
+	Her eyes wander around the room.
+	The study desk.
+	The laptop.
+	Stacks of engineering books.
+	Reviewers highlighted in different colors.
+	Sticky notes reminding Maya of deadlines.
+	Everything looks...
+	Organized.
+	Responsible.
+	Exactly how Jennifer always expected it to be.
+	But now...
+	She notices the little things.
+	A cup of coffee left untouched.
+	A crumpled worksheet in the trash.
+	Several failed quiz papers tucked beneath a notebook.
+	Dark circles sketched into a self-portrait on a loose piece of paper.
+	join Jennifer (neutral) right [animation="Instant In"]
+	Jennifer's expression changes.
+	She hadn't noticed any of it before.
+	She walks toward Maya's desk.
+	Her fingers lightly run across its surface.
+	Whispering.
+	Ang tagal mo na palang...nahihirapan.
+	She skims through the messy table.
+	Jennifer never knew existed.
+	A realization slowly settles over her.
+	How many nights...
+	had Maya been sitting here...
+	Drowning in expectations...
+	while she believed her daughter was fine studying?
+	She looks around the room once more.
+	Everything suddenly feels different.
+	Not because the room changed.
+	But because...
+	Her understanding of her daughter had.
+elif {Route.good} - {Route.bad} <= -2:
+	Jennifer slowly lowers her hands from the table.
+	For a brief moment...
+	It seems like she's considering Ricardo's words.
+	Then...
+	She folds her arms.
+	Her expression hardens.
+	Hindi, Ricardo. Hindi pwede.
+	Ricardo looks at her.
+	Jen...
+	Hindi mo ba napapansin? May tinatago siya. Matagal na.
+	Ricardo sighs.
+	Baka kailangan lang niya ng oras.
+	At 'yan ang problema. Masyado mo siyang pinapalampas.
+	Parang wala lang sa'yo lahat.
+	Ricardo sits quietly.
+	Jennifer continues.
+	Her voice is calm.
+	But firm.
+	Hindi naman bigla na lang bumabagsak ang grades. Hindi rin bigla nawawalan ng gana.
+	May nangyayari.
+	At kung pababayaan natin... Mas lalo lang siyang mapapariwara.
+	Ricardo rubs his forehead.
+	Hindi ko sinasabing pabayaan natin.
+	Ang sinasabi ko... Baka mas kailangan niya tayong makinig.
+	update Jennifer (glad)
+	Jennifer lets out a dry laugh.
+	Makinig?
+	join Ricardo (neutral) right [animation="Instant In"]
+	Ricardo: ... She's throwing her future away.
+	Pause.
+	Computer Science na lang ang kailangan niyang tapusin.
+	Konting tiis na lang. And she wants to throw that away?
+	Ricardo remains silent.
+	Jennifer looks toward the hallway leading to Maya's room.
+	Her eyes narrow.
+	Kung ano man ang pinagkakaabalahan niya...
+	Nakikita mo ba nangyayari sa kanya?
+	Imbes na mag-focus...
+	Lalo siyang nawawala sa dapat nyang gawin.
+	(Ricardo glances toward the hallway.
+	Then back at Jennifer.)
+	Jen...
+	Hindi ba natin dapat alamin muna kung bakit?
+	Alam ko na ang sagot.
+	Pause.
+	Hindi siya seryoso. Hindi niya sineseryoso ang future niya.
+	Silence fills the dining room.
+	update Ricardo (frown)
+	Ricardo looks down.
+	He wants to argue.
+	But the exhaustion on Jennifer's face stops him.
+	She truly believes she's protecting their daughter.
+	Jennifer stands from her chair.
+	She picks up the empty plates from the table.
+else:
+	But slumps right back down to her chair
+	Ano nararamdam mo?
+	Gusto ko lang naman...iproteka si Maya sa mga desisyon sa buhay na alam ko na mahahamak sakanya...
+	Jennifer rubs her temples together
+	It's not like I'm intentionally trying to be the bad guy in her life Riccardo...pero natatakot rin ako para sa future ni Maya, gusto ko lang naman maliwanag ang kinabukasan ng anak natin, diba?
+	Ricardo nods.
+	Jen, I think we know na your'e doing this for Maya, but we should at least let Maya do this for herself...she needs space as well pero kakayanin nya toh.
+	Jennifer thinks it through but she shakes her head
+	It would be easier to believe that if she doesn't push us every time we let her get away with it after giving her the space she needs. Pero hindi eh.
+	He doesn't disagree with her.
+	Ricardo knows that what's happening is slowly disconnecting everyone from his family.
+	He knows that trying to talk things out with their child is an uncertainty in itself.
+	Jennifer sighs and quietly walks toward the hallway.
+	[signal arg="emotion_persist:lost:2"]
+	As if the conversation is over.
+	Hindi ako susuko. Kahit magalit pa siya sa'kin.
+	Mas gugustuhin ko nang magalit siya ngayon...
+	Kaysa pagsisihan niya ang buong buhay niya.
+	Ricardo watches her quietly.
+	Neither of them notices...
+	That the distance between them and Maya has only grown wider.
+leave Jennifer [animation="Instant Out"]
+leave Ricardo [animation="Instant Out"]
+
+jump act5_router/

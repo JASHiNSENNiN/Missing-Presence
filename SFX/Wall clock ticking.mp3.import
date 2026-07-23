@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btl2lg1r7ivs1"
+path="res://.godot/imported/Wall clock ticking.mp3-918136d847fa49b95050164a3a284e3a.mp3str"
+
+[deps]
+
+source_file="res://SFX/Wall clock ticking.mp3"
+dest_files=["res://.godot/imported/Wall clock ticking.mp3-918136d847fa49b95050164a3a284e3a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

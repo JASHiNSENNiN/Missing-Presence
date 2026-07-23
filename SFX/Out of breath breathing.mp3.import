@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b1mbs8n51oa8u"
+path="res://.godot/imported/Out of breath breathing.mp3-320e0f7ff3b91914ed3fbc54d98a0a5f.mp3str"
+
+[deps]
+
+source_file="res://SFX/Out of breath breathing.mp3"
+dest_files=["res://.godot/imported/Out of breath breathing.mp3-320e0f7ff3b91914ed3fbc54d98a0a5f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

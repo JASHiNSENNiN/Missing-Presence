@@ -1,4 +1,7 @@
-[gd_resource type="FontVariation" format=3 uid="uid://cmn3yh1ocwugr"]
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://cmn3yh1ocwugr"]
+
+[ext_resource type="FontFile" uid="uid://dnd12m8ihrdu5" path="res://Fonts/Outfit/static/Outfit-ExtraBold.ttf" id="1_bold"]
 
 [resource]
-variation_embolden = 0.7
+base_font = ExtResource("1_bold")
+variation_embolden = 0.0

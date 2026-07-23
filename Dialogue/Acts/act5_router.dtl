@@ -1,0 +1,8 @@
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+
+if {Route.good} - {Route.bad} >= 2:
+	jump act5_good/
+elif {Route.good} - {Route.bad} <= -2:
+	jump act5_bad/
+else:
+	jump act5_neutral/

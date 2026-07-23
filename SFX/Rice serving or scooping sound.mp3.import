@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgt50wr5u5fkh"
+path="res://.godot/imported/Rice serving or scooping sound.mp3-b27142ebb1661e49027e7e2addf9da03.mp3str"
+
+[deps]
+
+source_file="res://SFX/Rice serving or scooping sound.mp3"
+dest_files=["res://.godot/imported/Rice serving or scooping sound.mp3-b27142ebb1661e49027e7e2addf9da03.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

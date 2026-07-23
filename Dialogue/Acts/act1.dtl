@@ -1,0 +1,717 @@
+[style name="res://Dialogue/Styles/CozyPersonaVN.tres"]
+[background arg="res://Art/Backgrounds/classroom.png" fade="0.7"]
+The first day of the new term.
+Students slowly fill the classroom. Some chat with friends while others scroll through their phones. The room buzzes with excitement and nervous energy.
+Maya Ilagan (21), a Computer Science student, enters carrying her bag and several notebooks.
+She scans the room.
+A familiar voice calls out.
+join Ethan (neutral) right [animation="Instant In"]
+Ethan: Uy, Maya!
+Maya turns.
+Ethan Yap waves from his seat.
+Maya smiles, relieved.
+join Maya (neutral) left [animation="Instant In"]
+Maya: Ethan!
+She walks over and sits beside him.
+Ethan: Long time no see ah.
+Maya: Parang one sem lang naman.
+Ethan: One sem is too long. It's still one sem.
+Maya: Drama mo talaga.
+Ethan: Musta naman?
+update Maya (soft)
+Maya sighs.
+Maya: Okay lang siguro? Kinakabahan lang sa subjects this term kasi graduating na tayo. Oh! I did also see my favorite artist in this event I went too!
+[signal arg="emotion:nervous"]
+It. was. amazing.
+update Ethan (glad)
+Ethan brings out an encouraging smile.
+Ethan: That sounds so fun! and Hey, normal lang 'yan Maya, I know kakayanin naman naten toh.
+Maya nods, wanting to change the subject.
+Maya: Eh Ikaw? Musta ka na?
+Ethan: Mmm same old same old. Busy. Surviving.
+Maya: Surviving daw. Ikaw nga lagi mataas grades.
+Ethan: Grades don't make everything easy.
+Maya: Wow. Sabagay.
+The classroom begins settling down.
+A Professor enters.
+Everyone quickly returns to their seats.
+join Professor (neutral) right [animation="Instant In"]
+Professor: Good morning, class.
+The class: Good morning, sir.
+Professor: Since this is our first meeting, let's get to know each other first.
+The professor writes on the board.
+"What are your future dreams and goals?"
+Professor: When I call your name, introduce yourself and tell us what you hope to achieve in the future.
+Students begin introducing themselves.
+One after another.
+Some confidently talk about their future careers.
+Others discuss plans abroad.
+Maya listens quietly.
+Each answer makes her uncertainty sink deeper into her thoughts.
+Eventually...
+Professor: Ethan Yap?
+Ethan stands.
+Ethan: Good morning everyone, nice to meet you all! I'm Ethan Yap.
+He speaks naturally and confidently.
+Ethan: After graduation, I want to work in software development and gain experience first. Hopefully someday makapag-start din ako ng sarili kong tech company.
+Several students nod.
+Professor: Ambitious but very good. May you go far.
+The professor says with a smile
+Ethan nods and sits.
+Maya glances down at her notebook.
+Professor: Next up is Maya Ilagan.
+Maya freezes.
+[signal arg="emotion:nervous"]
+A few seconds pass.
+The entire room waits.
+Slowly, she stands.
+Maya: Uh...
+She grips her notebook tighter.
+Maya: I'm Maya Ilagan.
+The silence feels heavier.
+Professor: And your future plans?
+Maya searches for an answer.
+Nothing comes.
+Maya: Honestly po...
+She swallows.
+Maya: I haven't really thought about it yet.
+A few students exchange glances.
+The professor simply nods.
+Professor: That's fine. Take your seat, Ms. Ilagan.
+Maya sits down.
+A moment of relief—
+Yet somehow more uncertain than before.
+She avoids eye contact for the rest of class.
+leave Ethan [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+leave Professor [animation="Instant Out"]
+[background arg="res://Art/Backgrounds/campus_hallway.png" fade="0.7"]
+The lunch bell rings.
+[signal arg="sfx:school_bell"]
+Students pour out of classrooms.
+Maya and Ethan walk together.
+join Ethan (neutral) right [animation="Instant In"]
+Ethan: Mukhang ninerbyos ka kanina ah.
+join Maya (neutral) left [animation="Instant In"]
+Maya: Ughhh, nooo... Super halata ba?
+Maya asks nervously.
+Ethan: Mmm medj.
+update Ethan (glad)
+Ethan grins.
+Maya: Shucks nakaakahiya.
+Ethan: Pshh, hindi naman. Lots of people don't know what to do in life.
+Maya: ... But everyone had answers to what they want in their future.
+Maya interjects.
+Ethan: Hindi naman lahat... Trust me, maraming nagkukunwari lang.
+update Maya (glad)
+Maya just chuckles nervously.
+Ethan: Pero real, okay ka lang ba?
+update Ethan (frown)
+Ethan shares a concerned look towards her and she sighs.
+Maya: Yeah... I guess..
+Maya: Actually... wait, no. Not really, I honestly don't know ano talaga gusto kong gawin and it feels like I'm stuck.
+Ethan: And that's okay, as I've said a lot of people don't know what to do in life
+Maya: 'Bat parang hindi.
+Ethan: Maya, we're in our twenties. Hindi naman kailangan alam mo agad lahat.
+Maya's expression becomes more neutral and solemn.
+Maya: Edi sana ganyan din tingin ng parents ko.
+Ethan notices the seriousness in her voice.
+Ethan: Are things okay at home? You know you can always tell me.
+update Maya (soft)
+Maya sighs.
+Maya: Everythings okay naman.
+A pause.
+Maya: Just... a lot of expectations placed on my lap now.
+Ethan: Yikes,gets kita jan.
+Maya notices Ethan looking away.
+Maya: Ikaw?
+Ethan: Huh?
+Maya: May problema ka rin ba? Seems like something on your mind?
+Ethan hesitates.
+Ethan: ... Medyo meron.
+Maya: What happened?
+Ethan: Just family stuff.
+Ethan waves his hand around like it's nothing.
+Maya waits patiently.
+Ethan: Mom and Dad aren't...really doing great right now.
+Maya: Oh gosh, I'm so sorry to hear that...
+Ethan: It's okay, It's fine. It's not that big of a deal.
+Maya: No, Ethan seriously, this is a hard thing to experience.
+update Maya (frown)
+Maya frowns and shows her concern.
+Ethan: Ehh we'll figure it out, we always do naman. It shouldn't take that much of a toll on us... I suppose?
+Maya: Hey, Still. Ethan if you ever need someone to talk to...
+Ethan: I know Maya, it's okay.
+He smiles tightly.
+Ethan: Thanks for your support. It means a lot.
+The two continue walking.
+For a moment, neither of them feels completely alone.
+[signal arg="emotion:lost"]
+leave Ethan [animation="Instant Out"]
+leave Maya [animation="Instant Out"]
+[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+Dinner.
+The family sits around the table.
+Ricardo Ilagan has just returned from work.
+His demeanor is tired but gives a half hello.
+Jennifer greets him excitedly but is stopped from her husband.
+She gets an earful sayin how tired he is.
+Not now.
+Next time.
+Jennifer slowly nods and gives a small smile.
+She understands
+Jennifer decided to scroll through social media while eating.
+She notes that Maya is also exhausted from studying, she eats her meal whilst watching youtube.
+join Ricardo (neutral) right [animation="Instant In"]
+Ricardo: Alam mo, Maya.
+Maya looks up.
+Ricardo: Yung anak ng katrabaho ko, graduate na.
+join Maya (neutral) left [animation="Instant In"]
+Maya: Ohhh talaga po?
+Ricardo: Oo.
+Jennifer immediately joins the conversation.
+join Jennifer (neutral) right [animation="Instant In"]
+Jennifer: Yes anak, alam mo may trabaho na rin sya agad.
+Ricardo: Mhm tama.
+update Jennifer (glad)
+Jennifer smiles.
+Jennifer: Malapit ka na rin grumaduate kaya ikaw naman next.
+update Maya (smile)
+Maya forces a smile.
+Maya: Hopefully po-
+Ricardo cuts Maya off.
+Ricardo: Aba syempre, before you know it you'll have your very own job.
+Jennifer: Eto Maya tingnan mo, marami na rin akong nakikitang opportunities abroad.
+She taps her phone and puts it right in front of her face.
+Jennifer: Padala ko sayo mamaya ha Diba maganda toh Ric?
+Ricardo nods but doesnt say anything.
+Maya's smile weakens but nods nonetheless.
+Maya: Sige lang po.
+Ricardo: Basta mag focus lang sa classes mo ha.
+Maya: Yes po Tay.
+Jennifer looks up from her phone and studies her daughter.
+Jennifer: Kumusta nga pala grades mo?
+Maya freezes.
+[signal arg="emotion:nervous"]
+Only slightly.
+But enough.
+Her gaze is fixed on her phone, too unsure of what to say next.
+Jennifer furrows her brows,her silence is mistaken as indiference.
+As if Maya would rather be anywhere else than answer her.
+Jennifer: Okay naman?
+Maya: Uh...
+She forces herself to stay calm. The grip on her phone tightens.
+- Set the phone face down and answer for yourself.
+	set {Route.good} += 1
+	Maya sets her phone face down beside her plate before answering.
+	Maya: Oh! About that, I still don't know yet for certain, but I can definitely consider that naman din po.
+	Jennifer nods.
+	Not fully convinced.
+	Jennifer: You better.
+	Ricardo: Jen.
+	update Jennifer (worried)
+	Jennifer sighs.
+	Jennifer: I'm just worried.
+	Maya: I know.
+	The conversation moves on.
+	But Maya barely hears it.
+	Her thoughts are louder.
+	Everyone keeps asking about her future.
+	The truth is...
+	She doesn't even know if she's on the right path.
+	[signal arg="emotion:lost"]
+- Fake a text. Let the phone end the conversation.
+	Maya: Yes po Ma, okay na...teka lng po may announcement lang sa isang subject ko. Gawin ko lang toh muna.
+	She looked at her mom and tried to shrug and deflect the situation.
+	Jennifer nods.
+	Not fully convinced.
+	Jennifer: You better.
+	Ricardo: Jen.
+	Jennifer sighs.
+	Jennifer: I'm just worried.
+	Maya: I know.
+	The conversation moves on.
+	But Maya barely hears it; she digs these thoughts deep within.
+	Her thoughts are louder but she cares not to voice them.
+	Everyone keeps asking about her future.
+	The truth is...
+	She doesn't even know if she's on the right path.
+	[signal arg="emotion:lost"]
+- Hide behind the screen and tell them what they want to hear.
+	set {Route.bad} += 1
+	update Maya (soft)
+	Maya lowers her gaze for a brief moment and she blankly stares at her phone screen.
+	The noise around her deafens to a small hum around.
+	Trapped in a feeling deep within her chest that keeps her silent.
+	Maya.. Maya!
+	Maya looks up from her phone.
+	Ay yes po Ma? Jennifer
+	Nakinig ka ba saakin? Nevermind, yun nga, kamusta naman grades mo?
+	Everything is going well for my acads. Things are looking smooth naman for me!
+	update Maya (smile)
+	Maya smiles widen yet she fidget with her hands and her phone.
+	Something to sooth her in this moment of pressure.
+	That's great to hear! Alam mo naman ngayon kasi, hirap maghanap ng trabaho, nak.
+	Don't worry, Pa.
+	Gagraduate din po ako soon.
+	Pause.
+	Ang ganda rin naman mag-abroad...
+	pa-send na lang, Mama.
+	Jennifer's face immediately brightens.
+	Ayan.
+	'Yan ang gusto kong marinig.
+	Alam kong kaya mo, anak.
+	update Maya (glad)
+	Maya lets out a small laugh.
+	It sounds convincing.
+	Almost natural.
+	But her smile doesn't quite reach her eyes.
+	[signal arg="emotion:jealous"]
+	Good.
+	Focus ka lang sa studies mo.
+	Everything else will follow.
+	Opo.
+	Jennifer nods, satisfied.
+	update Ricardo (glad)
+	Ricardo smiles proudly.
+	The conversation continues.
+	Jennifer excitedly talks about opportunities abroad.
+	Ricardo begins mentioning companies that hire Computer Science graduates.
+	They continue planning for Maya's future...
+	As if the decision has already been made.
+	Maya quietly listens.
+	She nods whenever she's expected to.
+	She laughs when appropriate.
+	She says all the right things.
+	But inside...
+	She feels herself slowly disappearing.
+	[signal arg="emotion:lost"]
+	Instead of voicing what she truly wants...
+	She chooses to tell her parents exactly what they want to hear.
+	The confident smile on her face becomes a mask—
+	One that convinces everyone...
+	Except herself.
+	School projects pile up.
+	Maya studies late at night.
+	Calendar pages turn.
+	Deadlines approach.
+	Maya stares at unfinished notes.
+	Ethan sends encouraging messages.
+	"Kaya mo yan, Maya! Wag kalimutan uminom ng tubig haha."
+	"Salamat, Ethan. Konti na lang, matatapos ko na tong documentation."
+	"Sige lang, push lang!"
+	update Maya (smile)
+	Maya continues smiling whenever her parents ask if she's okay.
+	Even when she isn't.
+Exam day.
+The family eats breakfast together.
+Ricardo quietly skims through paperwork for the auto repair shop while finishing his coffee.
+Jennifer packs Maya's lunch and mentally goes over the day's errands.
+Meanwhile...
+The knot in her stomach only loosens when she checks her phone.
+Anything to keep from thinking about the exam waiting for her.
+Maya scrolls through messages beneath the table.
+A notification appears.
+join Ethan (neutral) right [animation="Instant In"]
+Ethan: "Good luck sa exam later."
+Maya smiles and begins typing.
+Jennifer notices immediately.
+Jennifer: Maya.
+No response.
+Jennifer: Maya.
+Maya: Po?
+Jennifer: Phone na naman habang kumakain? Alam mo naman may exam ka mamaya. Bat di ka muna nagrereview anak?
+Maya immediately looks guilty.
+- Explain why you're on the phone, while putting it away.
+	set {Route.good} += 1
+	Maya: Ay sorry Ma. ! I'll finish this na so I won't be late.
+	Jennifer crosses her arms.
+	Jennifer remains unconvinced.
+	Jennifer: You should focus more on what's in front of you.
+	An awkward silence follows.
+	Ricardo notices Maya tense up.
+	[signal arg="emotion:nervous"]
+	Ricardo: Jen.
+	Jennifer looks at him.
+	Ricardo: Hayaan mo na.
+	Jennifer sighs.
+	Ricardo: Exam day naman niya. Baka may kailangan pa sya asikasuhin.
+	Ricardo gives Maya a reassuring smile.
+	Ricardo: Good luck later.
+	Maya smiles.
+	A genuine one.
+	Maya: Thanks, Pa.
+	Maya exits the house.
+	She adjusts her backpack.
+	Takes a deep breath.
+	[signal arg="sfx:breath_shaky"]
+	And begins walking.
+	leave Ricardo [animation="Instant Out"]
+	leave Maya [animation="Instant Out"]
+	leave Jennifer [animation="Instant Out"]
+	leave Ethan [animation="Instant Out"]
+	[background arg="res://Art/Backgrounds/campus_courtyard.png" fade="0.7"]
+	Jeepneys passing.
+	Students rushing.
+	Cars filling intersections.
+	Maya reviewing flashcards during the commute.
+	Her phone buzzes.
+	[signal arg="emotion:nervous"]
+	join Ethan (neutral) right [animation="Instant In"]
+	Ethan: "You got this."
+	Maya smiles.
+	Maya enters campus.
+	Checks the time.
+	She stops.
+	Surprised.
+	join Maya (neutral) left [animation="Instant In"]
+	Maya: Ang aga ko.
+	For once, nothing has gone wrong.
+	No delays.
+	No rushing.
+	No panic.
+	Just silence.
+	And time.
+	She heads toward the examination building.
+	Determined.
+	leave Ethan [animation="Instant Out"]
+	leave Maya [animation="Instant Out"]
+	[background arg="res://Art/Backgrounds/classroom.png" fade="0.7"]
+	Students slowly arrive.
+	Maya sits outside the classroom.
+	She opens her reviewer.
+	The morning sunlight streams through the hallway windows.
+	For the first time in days, she feels prepared.
+	Not confident.
+	But prepared.
+	She takes a deep breath and begins reviewing.
+	[signal arg="sfx:breath_shaky"]
+	[background arg="res://Art/Backgrounds/campus_courtyard.png" fade="0.7"]
+	The exam is over.
+	Students begin leaving the building.
+	Maya walks out, looking mentally drained.
+	Ethan spots her from a nearby bench and waves.
+	join Ethan (neutral) right [animation="Instant In"]
+	Ethan: Uy, survivor.
+	join Maya (neutral) left [animation="Instant In"]
+	Maya: Barely.
+	She sits beside him.
+	Ethan: So? How'd it go?
+	update Maya (soft)
+	Maya sighs.
+	Maya: Honestly? Ang hirap.
+	Ethan: Yikess, That bad?
+	Maya: I studied naman. Pero parang lahat ng pressure sabay-sabay pumasok sa utak ko.
+	Ethan: Ah. The classic.
+	Maya: Classic?
+	Ethan: Yep. "I reviewed everything but my brain decided to clock out during the exam."
+	Maya: Ugh exactly, you know what I'm talking about.
+	Ethan: Grabe. Unprofessional brain.
+	update Maya (glad)
+	Maya chuckles.
+	Ethan notices her smile fade.
+	Ethan: Hey.
+	Maya: Hmm?
+	Ethan: I hope you can see this but, you're putting too much pressure on yourself.
+	Maya: Pshh, easy for you to say.
+	Ethan: Trust me, nobody has everything figured out.
+	Maya: Could've fooled me.
+	Ethan: Maya, one exam won't destroy your future.
+	beat
+	Probably.
+	Maya: "Probably?"
+	Possibly.
+	update Ethan (frown)
+	Ethan fakes a frown.
+	Possibly?!
+	Ethan: Look on the bright side okay? I'm trying to comfort you and I'm telling you, don't focus on the details when your whole life isn't planned yet.
+	Maya laughs despite herself.
+	Ethan: Seriously. You did your best, alright?
+	Maya: I guess so, yeah.
+	Ethan: Then that's all you can do...for now.
+	A brief silence.
+	Maya: Thanks Ethan, for cheering me up.
+	Ethan: No problem at all, my friend.
+	stands
+	Now come on.
+	Maya: What? Where?
+	Ethan: Uhh duh, to get food?
+	Maya: I thought you were saving some money right now?
+	Ethan: I am. But being stressed and hungry at the same time is a terrible combo.
+	Maya: Fair enough, I can't argue with that.
+	The two walk off together.
+- Pocket the phone and apologize to put Jennifer at ease
+	Maya: Sorry Ma... Ethan is just asking about a class project we'll have. I'll put this away na.
+	Jennifer crosses her arms.
+	Jennifer remains unconvinced.
+	join Jennifer (neutral) right [animation="Instant In"]
+	Jennifer: You should focus more on what's in front of you. Do you think Ethan does this to his mom? Hindi diba?
+	An awkward silence follows.
+	Ricardo sternly clears his throat
+	[signal arg="emotion:angry"]
+	Ricardo notices Maya tense up and immediately places her phone in her pocket.
+	join Ricardo (neutral) right [animation="Instant In"]
+	Ricardo: Jen.
+	Jennifer looks at him.
+	Ricardo: Hayaan mo na.
+	update Jennifer (worried)
+	Jennifer sighs.
+	Ricardo: Exam day naman niya. Baka may kailangan pa sya asikasuhin.
+	update Ricardo (glad)
+	Ricardo gives Maya a reassuring smile.
+	Ricardo: Good luck later.
+	update Maya (smile)
+	Maya half smiles but looks down.
+	She chokes down her remaining food in silence..
+	Maya: Thanks, Ma, Pa. Alis na po ako
+	leave Ethan [animation="Instant Out"]
+	leave Maya [animation="Instant Out"]
+	leave Jennifer [animation="Instant Out"]
+	leave Ricardo [animation="Instant Out"]
+	[background arg="res://Mocks/Novel UI/image 3.png" fade="0.7"]
+	Maya exits the house.
+	She adjusts her backpack.
+	Takes a deep breath.
+	[signal arg="sfx:breath_shaky"]
+	And begins running towards the jeepneys.
+	She's almost late and she needs to hurry to make it to class.
+	[background arg="res://Art/Backgrounds/campus_courtyard.png" fade="0.7"]
+	Jeepneys passing.
+	Students rushing.
+	Cars filling intersections.
+	Maya reviewing flashcards during the commute.
+	Her phone buzzes.
+	[signal arg="emotion:nervous"]
+	join Ethan (neutral) right [animation="Instant In"]
+	Ethan: "Huy saan ka n?? Magsstart na ung quiz :(("
+	Maya is urgent and rushes even faster.
+	Maya enters campus.
+	Checks the time.
+	She runs.
+	She's late.
+	Panic arises.
+	join Maya (neutral) left [animation="Instant In"]
+	Maya: Oh no,aabutin ko pa ba? .
+	Things are about to go wrong.
+	Added delays.
+	Rushing.
+	Full on panicking.
+	Quick short breaths.
+	No time to lose.
+	She heads toward the examination building.
+	Determination fleeting quickly.
+	leave Ethan [animation="Instant Out"]
+	leave Maya [animation="Instant Out"]
+	[background arg="res://Art/Backgrounds/classroom.png" fade="0.7"]
+	Students are already taking the exam.
+	Maya looks from outside the classroom.
+	She opens the door urgently.
+	The late sunlight streams through the hallway windows.
+	For the first time in days, she feels like her preparedness was all for nothing.
+	Not confident at all.
+	All preparedness thrown out the window.
+	She takes a deep breath and tries to ask the professor if she can still take the exam.
+	[signal arg="sfx:breath_shaky"]
+	The professor is weary but still gives her a merciful chance, but with a point reduction given to her final grade.
+	[background arg="res://Art/Backgrounds/campus_courtyard.png" fade="0.7"]
+	The exam is over.
+	Students begin leaving the building.
+	Maya walks out, looking mentally drained.
+	Ethan spots her from a nearby bench and waves.
+	join Ethan (neutral) right [animation="Instant In"]
+	Ethan: Uy, survivor.
+	join Maya (neutral) left [animation="Instant In"]
+	Maya: Ugh...barely.
+	She sits beside him.
+	Ethan: So? How'd it go?
+	update Maya (soft)
+	Maya sighs feeling dejected.
+	Maya: Honestly? Ang hirap.
+	Ethan: Yikes, that bad?
+	Maya: I studied naman pero nalate ako. Ayun matik minus points ako tas lahat ng pressure sabay-sabay pumasok sa utak ko ughh.
+	Ethan: Ah. The classic.
+	Maya: Huh? The Classic? Ano yon?
+	Ethan: Yep. "I did my best, but I guess my best wasn't good enough huhuu."
+	Maya: ...ha?
+	Ethan: Grabe. Unprofessional brain.
+	update Maya (glad)
+	Maya chuckles.
+	Ethan notices her smile fade.
+	Ethan: Hey.
+	Maya: Hmm?
+	Ethan: I hope you know that you're putting too much pressure on yourself.
+	Maya scoffs.
+	Maya: Easy for you to say, talino mo kasi.
+	Ethan: Trust me, nobody has everything figured out in life.
+	Maya: Could've fooled me.
+	Ethan: Maya, one exam won't destroy your future.
+	beat
+	Probably.
+	Maya: "Probably?"
+	Possibly...?
+	update Ethan (frown)
+	Ethan fakes a frown
+	Possibly?!
+	Ethan: Look, I'm trying to comfort you. Don't focus on the details when your whole future isn't planned yet.
+	Maya laughs despite herself.
+	Ethan: Seriously. You did your best, aright? Believe in yourself okay?
+	Maya: Yeah. I'll try to do just that
+	Ethan: Then that's all you can do...for now.
+	A brief silence.
+	Maya: Thanks for your words.
+	Ethan: No problem.
+	stands
+	Now come on.
+	Maya: What? Where?
+	Ethan: Uhh duh, to get food.
+	Maya: I thought you were broke.
+	Ethan: ... I am. But being stressed and hungry at the same time is a terrible combo.
+	Maya: Fair enough, Let's go.
+	The two walk off together.
+- Keep typing. She can wait, it's not that serious.
+	set {Route.bad} += 1
+	Relax lang, Ma.
+	Quick text lang naman.
+	May oras pa.
+	Jennifer slowly puts her fork down.
+	The room falls silent.
+	She stares at Maya.
+	...
+	Relax?
+	Maya looks up.
+	Realizing too late how that sounded.
+	Ma, I just—
+	Hindi, Maya.
+	Makinig ka sakin ha.
+	Jennifer places her phone down and points a finger at her.
+	Im reminding you, Exam day mo ngayon.
+	Tapos ang iniintindi mo...
+	Cellphone?
+	Hindi mo ba kayang ipagpaliban 'yan kahit ilang minuto lang?
+	Maya quietly places her phone on the table.
+	Sorry po...
+	Alam mo, ilang beses na kitang pinagsasabihan.
+	Kung gusto mong maging successful, kailangan matuto kang mag-prioritize.
+	Hindi puwedeng puro "mamaya na."
+	Hindi puwedeng puro dahilan.
+	update Maya (soft)
+	Maya lowers her head.
+	[signal arg="emotion:sad"]
+	She quietly nods.
+	Jennifer continues.
+	Graduating ka na sa college, Maya.
+	Hindi na puwedeng petiks.
+	Hindi habang-buhay may sasalo sa'yo kapag nagkamali ka.
+	Kung simpleng oras hindi mo kayang i-manage...
+	Paano pa 'yang future mo?
+	Maya glances at the clock.
+	Then at her phone.
+	The minutes continue to pass.
+	She grips the edge of her chair.
+	Growing more anxious by the second.
+	Ricardo notices.
+	He looks at Maya.
+	Then at Jennifer.
+	For a brief moment...
+	It seems like he's about to step in.
+	Instead...
+	Makinig ka na lang muna sa mama mo.
+	Maya quietly nods.
+	Opo.
+	Jennifer finally lets out a sigh.
+	Sana tandaan mo 'to.
+	Hindi namin ginagawa 'to para pahirapan ka.
+	Ginagawa namin 'to dahil gusto naming maging maayos ang future mo.
+	Maya forces a small nod.
+	She can barely hear the rest.
+	Her eyes remain fixed on the time.
+	The front door swings open.
+	Maya rushes out of the house.
+	She hurriedly shoves her reviewer into her backpack.
+	Almost dropping it.
+	She checks the time.
+	Her face immediately fills with panic.
+	Ay, SHUCKS...
+	She starts running.
+	Maya reaches the jeepney stop.
+	Just as she arrives...
+	Her usual jeepney pulls away.
+	She raises her hand.
+	Kuya! Sandali!
+	The driver doesn't hear her.
+	The jeepney disappears into traffic.
+	Maya exhales sharply.
+	She looks around.
+	No vacant jeepneys.
+	No tricycles.
+	Only long lines of commuters.
+	She nervously checks the time again.
+	The roads are packed.
+	Jeepneys crawl through traffic.
+	Buses barely move.
+	Cars fill every intersection.
+	Maya sits inside a crowded jeepney.
+	Her knee bounces uncontrollably.
+	She keeps checking the clock on her phone.
+	Every minute feels heavier than the last.
+	Her phone buzzes.
+	[signal arg="emotion:nervous"]
+	"Good luck! Kaya mo 'yan :)"
+	Maya stares at the message.
+	"Salamat. Pero grabe, traffic pa rin dito sa barangay road. Kinakabahan ako."
+	"Hala, sige lang, abot pa 'yan! Takbo na lang pagbaba."
+	She doesn't reply.
+	She simply locks her phone.
+	[signal arg="sfx:phone_lock"]
+	She looks out the window.
+	Traffic remains completely still.
+	Maya sprints through the campus.
+	Students are already leaving the examination building.
+	Some laugh.
+	Others discuss the exam.
+	Maya slows down.
+	Confused.
+	Then...
+	Her eyes widen.
+	She looks at the time.
+	Then toward the classroom.
+	No.
+	leave Ethan [animation="Instant Out"]
+	leave Maya [animation="Instant Out"]
+	[background arg="res://Art/Backgrounds/classroom.png" fade="0.7"]
+	Maya rushes toward the classroom.
+	The door is already open.
+	Most of the seats are empty.
+	[signal arg="emotion:lost"]
+	The professor gathers the remaining test papers.
+	Maya stands at the doorway.
+	Completely out of breath.
+	Sir...
+	Sorry po...
+	Na-late po ako.
+	The professor looks at her sympathetically.
+	I'm sorry, Maya.
+	The examination period ended a few minutes ago.
+	Maya's face falls.
+	Sir...
+	Pwede pa po ba?
+	Please...
+	The professor slowly shakes his head.
+	The exam has already been submitted.
+	You'll receive a zero for today's examination.
+	Pause.
+	You may apply for a make-up exam through the department office, but approval isn't guaranteed.
+	Maya doesn't respond.
+	She simply stands there.
+	Frozen.
+	The classroom suddenly feels much larger.
+	Much quieter.
+	The words echo inside her head.
+	Zero.
+	Make-up exam.
+	Not guaranteed.
+	Her grip on her backpack slowly loosens.
+	The morning she thought she still had control over...
+	Has slipped away.
+
+jump act2/
